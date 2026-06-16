@@ -2,23 +2,23 @@ import Link from "next/link";
 import { FadeIn } from "@/components/fade-in";
 
 const steps = [
-  { num: "01", cat: "Structural_Foundation", title: "Build the foundation", desc: "Create pages, sections, and core messaging in a clean visual workflow.", tags: ["Page Builder", "Component Library"] },
-  { num: "02", cat: "Knowledge_Graphing", title: "Structure the content", desc: "Turn your website into a clear knowledge layer that AI and search systems can interpret.", tags: ["AI Structuring", "Semantic Content Layer"] },
-  { num: "03", cat: "Logic_Orchestration", title: "Add logic and flows", desc: "Connect forms, intent paths, automations, and personalized experiences.", tags: ["Personalization Logic", "Automation Workflows"] },
-  { num: "04", cat: "Signal_Optimization", title: "Improve over time", desc: "Use signals, content performance, and conversion insights to keep refining the system.", tags: ["Insight Signals", "Feedback Loops"] },
+  { num: "01", cat: "Market_Intelligence", title: "Identify opportunities", desc: "We analyze markets, industries, and emerging trends to identify high-potential opportunities.", tags: ["Market Analysis", "Strategic Intelligence"] },
+  { num: "02", cat: "Company_Building", title: "Build and develop", desc: "We create companies, technologies, and operational structures designed for long-term growth.", tags: ["Business Creation", "Technology Development"] },
+  { num: "03", cat: "Execution_Model", title: "Scale and execute", desc: "We focus on disciplined execution, operational excellence, and sustainable expansion across strategic sectors.", tags: ["Operational Systems", "Scalable Growth"] },
+  { num: "04", cat: "Value_Creation", title: "Create long-term value", desc: "We generate value through innovation, diversification, strategic partnerships, and intelligent capital allocation.", tags: ["Strategic Partnerships", "Long-Term Value"] },
 ];
 
 export function HowItWorksSection() {
   return (
     <section className="section-glow flex min-h-[80vh] flex-col justify-center py-24">
       <FadeIn>
-        <div className="eyebrow">How It Works</div>
+        <div className="eyebrow">How We Build</div>
         <h2 className="max-w-[600px] text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-          From website to intelligent system
+          From opportunity to operating company
         </h2>
         <p className="mt-6 max-w-[600px] text-lg leading-[1.5] text-secondary">
-          AETH gives founders one platform to build, structure, and evolve a website
-          that works across people, AI, and search.
+          BLACK& transforms strategic opportunities into companies, platforms, and
+          assets built for long-term value creation.
         </p>
       </FadeIn>
 
@@ -40,7 +40,7 @@ export function HowItWorksSection() {
       </FadeIn>
 
       <FadeIn delay={0.3} className="mt-12">
-        <Link href="/contact" className="btn btn-primary">Book a demo</Link>
+        <Link href="/contact" className="btn btn-primary">Contact Us</Link>
       </FadeIn>
     </section>
   );
