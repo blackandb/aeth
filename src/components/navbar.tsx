@@ -109,15 +109,15 @@ BLACK& </Link>
         </Link>
       ))}
 
-      <Link
-        href="/login"
-        onClick={() => setMenuOpen(false)}
-        className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-accent-cyan"
-      >
-        LOGIN →
-      </Link>
-    </div>
-  )}
-</nav>
-);
+               <Link
+            href="/login"
+            onClick={() => setMenuOpen(false)}
+            className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-accent-cyan"
+          >
+            LOGIN →
+          </Link>
+        </div>
+      )}
+    </nav>
+  );
 }
