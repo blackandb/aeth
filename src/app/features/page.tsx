@@ -2,39 +2,80 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Product Architecture — AETH",
-  description: "Explore the multi-layered architecture behind AETH: AI readiness, personalization, automation, SEO, and telemetry.",
+  title: "Industries — BLACK&",
+  description: "Discover the industries where BLACK& develops businesses, technologies, and long-term strategic opportunities.",
 };
 
 const layers = [
-  { num: "01", cat: "AI Readiness Layer", desc: "Structures content semantically for Large Language Models. Generates parseable knowledge, AI-ready metadata, and optimized entity relationships ensuring AI correctly interprets and recommends your product or company.", metrics: [{ label: "Proto_Level", val: "AI" }, { label: "Parse_Rate", val: "99.8%" }, { label: "Compliance", val: "IDEAL" }] },
-  { num: "02", cat: "Dynamic Personalization", desc: "Adapts UI and messaging based on visitor intent, referral source, and firmographic data. Creates tailored experiences without complex rules engines, powered by predictive modelling.", metrics: [{ label: "Personalization_Rate", val: "<50ms" }, { label: "Match_Type", val: "DYNAMIC" }] },
-  { num: "03", cat: "Workflow Automation", desc: "Connects engagement directly to pipeline. Triggers sequences, updates CTAs, and notifies sales teams based on behaviour scoring calculated from interactions.", metrics: [{ label: "Proto_Active_Seq", val: "200+ ACTIVE" }, { label: "Throughput", val: "HIGH" }] },
-  { num: "04", cat: "Search Discoverability", desc: "Automated technical SEO optimization. Handles core web vitals, semantic indexing, cross-linking, and structured data surfacing without manual intervention.", metrics: [{ label: "Proto_Seo_Health", val: "98/100 AVG" }, { label: "Status", val: "OPTIMIZED" }] },
-  { num: "05", cat: "Telemetry & Insights", desc: "Cross-channel analytics feeding AI-powered attribution models. Tracks user journeys from first touch to closed-won, identifying friction points automatically.", metrics: [{ label: "Proto_Insight", val: "MULTI-100+" }, { label: "Signal_Type", val: "CROSS-CHANNEL" }] },
+  {
+    num: "01",
+    cat: "Technology",
+    desc: "Development of software platforms, artificial intelligence solutions, digital infrastructure, data systems, and emerging technologies.",
+    metrics: [
+      { label: "Focus", val: "AI & SOFTWARE" },
+      { label: "Growth", val: "HIGH" },
+      { label: "Status", val: "ACTIVE" },
+    ],
+  },
+  {
+    num: "02",
+    cat: "Construction",
+    desc: "Civil, commercial, and industrial construction projects focused on sustainable development and long-term infrastructure value.",
+    metrics: [
+      { label: "Sector", val: "INDUSTRIAL" },
+      { label: "Scope", val: "MULTI-ASSET" },
+    ],
+  },
+  {
+    num: "03",
+    cat: "Defense",
+    desc: "Strategic participation in defense-related technologies, security systems, industrial capabilities, and innovation initiatives.",
+    metrics: [
+      { label: "Focus", val: "SECURITY" },
+      { label: "Status", val: "STRATEGIC" },
+    ],
+  },
+  {
+    num: "04",
+    cat: "Clothing",
+    desc: "Development of consumer brands, apparel manufacturing, distribution networks, and international market expansion.",
+    metrics: [
+      { label: "Market", val: "GLOBAL" },
+      { label: "Model", val: "BRAND-LED" },
+    ],
+  },
+  {
+    num: "05",
+    cat: "Food & Hospitality",
+    desc: "Investment and development of food production, hospitality concepts, restaurant operations, and consumer-focused experiences.",
+    metrics: [
+      { label: "Sector", val: "CONSUMER" },
+      { label: "Growth", val: "EXPANDING" },
+    ],
+  },
 ];
 
 export default function FeaturesPage() {
   return (
     <>
       <section className="flex min-h-[70vh] flex-col justify-center py-24">
-        <div className="eyebrow">Product Architecture</div>
+        <div className="eyebrow">Industries</div>
         <h1 className="max-w-[500px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
-          The anatomy of a living digital presence.
+          Building across industries with intelligence and opportunity.
         </h1>
         <p className="mt-6 max-w-[500px] text-lg leading-[1.5] text-secondary">
-          AETH operates on a multi-layered architecture designed to process, structure,
-          and optimize your website for both human engagement and artificial intelligence indexing.
+          BLACK& develops and supports businesses across strategic sectors where
+          innovation, execution, and long-term value creation intersect.
         </p>
         <div className="mt-8">
-          <a href="#system-stack" className="btn btn-secondary">Explore Stack</a>
+          <a href="#system-stack" className="btn btn-secondary">Explore Industries</a>
         </div>
       </section>
 
       <section id="system-stack" className="py-24">
         <div className="mb-12 text-center">
-          <div className="eyebrow justify-center">Technical Blueprint</div>
-          <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em] max-md:text-[28px]">System Stack</h2>
+          <div className="eyebrow justify-center">Strategic Focus</div>
+          <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em] max-md:text-[28px]">Industry Portfolio</h2>
         </div>
 
         <div className="flex flex-col gap-px">
@@ -58,13 +99,13 @@ export default function FeaturesPage() {
       </section>
 
       <section className="flex flex-col items-center py-24 text-center">
-        <div className="eyebrow justify-center">System Initialization</div>
-        <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em]">Deploy the AETH stack.</h2>
+        <div className="eyebrow justify-center">Opportunities</div>
+        <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em]">Let's build the future together.</h2>
         <p className="mt-4 max-w-[440px] text-secondary">
-          Upgrade your digital presence to a system built for modern distribution.
+          We are open to discussing strategic partnerships, investments, and new opportunities.
         </p>
         <div className="mt-8">
-          <Link href="/login" className="btn btn-primary">Initialize Demo</Link>
+          <Link href="/login" className="btn btn-primary">Contact Us</Link>
         </div>
       </section>
     </>
