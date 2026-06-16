@@ -1,9 +1,9 @@
 import { FadeIn } from "@/components/fade-in";
 
 const levels = [
-  { label: "For Humans", desc: "Clear messaging, stronger trust, better journeys, and sharper calls to action." },
-  { label: "For AI", desc: "Structured content, semantic clarity, and a site AI systems can read and use correctly." },
-  { label: "For Growth", desc: "Personalization, automation, discoverability, and conversion paths that improve how the site performs over time." },
+  { label: "For Strategy", desc: "Market intelligence, opportunity analysis, disciplined decision-making, and clear direction across industries." },
+  { label: "For Companies", desc: "Business creation, operational structure, technology development, and execution systems built for scale." },
+  { label: "For Value", desc: "Diversified growth, long-term assets, strategic partnerships, and measurable value creation over time." },
 ];
 
 export function NewModelSection() {
@@ -12,11 +12,12 @@ export function NewModelSection() {
       <FadeIn>
         <div className="eyebrow justify-center">A New Model</div>
         <h2 className="max-w-[700px] text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-          A website is no longer a brochure. It is your growth infrastructure.
+          BLACK& is built as a platform for companies, technology, and opportunity.
         </h2>
         <p className="mx-auto mt-6 max-w-[560px] text-lg leading-[1.5] text-secondary">
-          The new standard is a website that works on three levels at once: for human
-          visitors, for AI systems, and for business growth.
+          The new standard is not a single business in a single industry. It is a
+          diversified platform that identifies opportunities, builds companies, and
+          creates long-term value.
         </p>
       </FadeIn>
 
@@ -35,7 +36,7 @@ export function NewModelSection() {
       </FadeIn>
 
       <p className="mt-12 font-[var(--font-mono)] text-sm text-secondary">
-        [ ANALYSIS: THIS IS NOT A PRETTIER WEBSITE. IT IS A SMARTER ONE. ]
+        [ ANALYSIS: THIS IS NOT A SINGLE COMPANY. IT IS A VALUE CREATION PLATFORM. ]
       </p>
     </section>
   );
