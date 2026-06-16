@@ -2,28 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About — AETH",
-  description: "Building the operating system for digital presence. Learn about our mission, values, and vision for the future of the web.",
+  title: "About — BLACK&",
+  description: "BLACK& builds companies, develops technology, and creates long-term value across technology, construction, defense, clothing, food industry, and hospitality.",
 };
 
 const values = [
-  { num: "01", title: "Owned infrastructure", desc: "We believe every business deserves to own its digital presence, not rent it from algorithms." },
-  { num: "02", title: "AI-native thinking", desc: "AI is not an add-on. It is the foundation of how we design, build, and optimize every layer." },
-  { num: "03", title: "Clarity over complexity", desc: "The best systems feel simple. We obsess over removing friction, not adding features." },
-  { num: "04", title: "Future-ready by default", desc: "Every decision we make prepares your digital presence for how the internet is evolving." },
+  { num: "01", title: "Intelligence First", desc: "We use data, technology, and strategic analysis to identify opportunities and create sustainable competitive advantages." },
+  { num: "02", title: "Long-Term Value", desc: "We focus on building resilient businesses and assets designed to generate lasting value across economic cycles." },
+  { num: "03", title: "Operational Excellence", desc: "Execution matters. We prioritize efficiency, discipline, and measurable outcomes in every project we undertake." },
+  { num: "04", title: "Diversified Growth", desc: "Our portfolio spans technology, construction, defense, clothing, food industry, and hospitality to capture opportunities across sectors." },
 ];
 
 export default function AboutPage() {
   return (
     <>
       <section className="flex min-h-[70vh] flex-col justify-center py-24">
-        <div className="eyebrow">System Origin</div>
+        <div className="eyebrow">Company Overview</div>
         <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
-          Building the operating system for digital presence.
+          Building companies. Creating value.
         </h1>
         <p className="mt-6 max-w-[500px] text-lg leading-[1.5] text-secondary">
-          AETH was created for a simple reason: the websites we build today are not
-          designed for how the internet works tomorrow. We set out to change that.
+          BLACK& was founded to identify opportunities, build businesses, develop
+          technology, and create long-term value across strategic industries.
         </p>
       </section>
 
@@ -32,20 +32,20 @@ export default function AboutPage() {
           <div className="max-w-[400px] shrink-0">
             <div className="eyebrow">Mission</div>
             <h2 className="text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">
-              A website should be more than a brochure.
+              Business should be built on intelligence and execution.
             </h2>
           </div>
           <div className="max-w-[500px] space-y-6 text-sm leading-relaxed text-secondary">
-            <p>In 2026, the internet is no longer just about human visitors browsing pages. AI agents, LLMs, recommendation systems, and automated workflows are now primary consumers of digital content.</p>
-            <p>Yet most websites are still built as static brochures — beautiful to look at, but invisible to machines, fragmented across tools, and disconnected from the systems that drive modern growth.</p>
-            <p>AETH exists to close that gap. We are building a platform where founders, creators, and modern businesses can create intelligent websites that work simultaneously for humans, AI agents, and search engines.</p>
+            <p>BLACK& operates at the intersection of technology, capital, and industry. We identify market opportunities and transform them into scalable businesses.</p>
+            <p>Our activities span technology development, civil and industrial construction, defense-related projects, clothing, food industry, and hospitality.</p>
+            <p>By combining strategic intelligence, operational expertise, and long-term vision, we create companies and initiatives designed to generate sustainable growth and measurable value.</p>
           </div>
         </div>
       </section>
 
       <section className="py-24">
         <div className="eyebrow">Core Values</div>
-        <h2 className="text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">What we believe.</h2>
+        <h2 className="text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">Our principles.</h2>
         <div className="mt-12 grid grid-cols-1 gap-px md:grid-cols-2">
           {values.map((v) => (
             <div key={v.num} className="aeth-card">
@@ -59,15 +59,15 @@ export default function AboutPage() {
 
       <section className="py-24">
         <div className="eyebrow">Vision</div>
-        <h2 className="max-w-[500px] text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">Where we are going.</h2>
+        <h2 className="max-w-[500px] text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">Our long-term vision.</h2>
         <p className="mt-6 max-w-[500px] text-sm leading-relaxed text-secondary">
-          We envision a world where every business has access to intelligent digital
-          infrastructure — where your website is not just a cost center, but a strategic
-          asset that gets smarter over time, attracts the right attention, and converts
-          it into lasting relationships.
+          We envision BLACK& as a diversified international group recognized for
+          developing innovative businesses, supporting strategic industries, and
+          creating long-term value through intelligence, technology, and disciplined
+          execution.
         </p>
         <div className="mt-8">
-          <Link href="/login" className="btn btn-primary">Join the Mission</Link>
+          <Link href="/login" className="btn btn-primary">Contact Us</Link>
         </div>
       </section>
     </>
