@@ -2,28 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How It Works — AETH",
-  description: "From website to intelligent system: build, structure, automate, and optimize your digital presence with AETH.",
+  title: "How We Build — BLACK&",
+  description: "Discover how BLACK& identifies opportunities, builds companies, scales operations, and creates long-term value.",
 };
 
 const steps = [
-  { num: "01", cat: "Build", title: "Build the foundation", desc: "Create pages, sections, and core messaging in a clean visual workflow.", metrics: [{ l: "Pages", v: "12 active" }, { l: "Sections", v: "48 deployed" }] },
-  { num: "02", cat: "Structure", title: "Structure the content", desc: "Turn your website into a clear knowledge layer that AI and search systems can interpret.", metrics: [{ l: "AI_Readiness", v: "94%" }, { l: "Semantic_Score", v: "A+" }] },
-  { num: "03", cat: "Automate", title: "Add logic and flows", desc: "Connect forms, intent paths, automations, and personalized experiences.", metrics: [{ l: "Workflows", v: "6 running" }, { l: "Automations", v: "12 active" }] },
-  { num: "04", cat: "Optimize", title: "Improve over time", desc: "Use signals, content performance, and conversion insights to keep refining the system.", metrics: [{ l: "Conversion", v: "+34%" }, { l: "AI_Citations", v: "18/week" }] },
+  { num: "01", cat: "Identify", title: "Identify opportunities", desc: "We analyze markets, sectors, trends, and strategic gaps to identify opportunities with long-term potential.", metrics: [{ l: "Focus", v: "Market Intelligence" }, { l: "Signal", v: "High Potential" }] },
+  { num: "02", cat: "Build", title: "Build the foundation", desc: "We structure companies, technologies, partnerships, and operating models designed for disciplined execution.", metrics: [{ l: "Model", v: "Company Building" }, { l: "Structure", v: "Scalable" }] },
+  { num: "03", cat: "Execute", title: "Scale operations", desc: "We focus on execution, operational systems, strategic partnerships, and measurable growth across active industries.", metrics: [{ l: "Execution", v: "Active" }, { l: "Operations", v: "Aligned" }] },
+  { num: "04", cat: "Create", title: "Create long-term value", desc: "We develop resilient businesses and strategic assets built to generate sustainable value over time.", metrics: [{ l: "Value", v: "Long-Term" }, { l: "Vision", v: "Strategic" }] },
 ];
 
 export default function HowItWorksPage() {
   return (
     <>
       <section className="flex min-h-[70vh] flex-col justify-center py-24">
-        <div className="eyebrow">Operating Protocol</div>
+        <div className="eyebrow">Operating Model</div>
         <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
-          The Architecture of Action.
+          From opportunity to operating company.
         </h1>
         <p className="mt-6 max-w-[560px] text-lg leading-[1.5] text-secondary">
-          AETH gives founders one platform to build, structure, and evolve a website
-          that works across people, AI, and search.
+          BLACK& transforms strategic opportunities into companies, platforms,
+          partnerships, and assets built for long-term growth.
         </p>
 
         <div className="mt-16 grid grid-cols-1 gap-px sm:grid-cols-2">
@@ -45,7 +45,7 @@ export default function HowItWorksPage() {
         </div>
 
         <div className="mt-12">
-          <Link href="/login" className="btn btn-primary">Initialize Workflow</Link>
+          <Link href="/login" className="btn btn-primary">LOGIN</Link>
         </div>
       </section>
     </>
