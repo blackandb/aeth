@@ -112,7 +112,7 @@ return ( <footer className="mt-16">
         BLACKANDI.COM
       </a>
 
-      <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
         <span className="h-2 w-2 rounded-full bg-accent-cyan" />
         <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary">
           Platform_Online
@@ -121,7 +121,5 @@ return ( <footer className="mt-16">
     </div>
   </div>
 </footer>
-```
-
-);
+  );
 }
