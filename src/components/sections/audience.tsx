@@ -33,11 +33,12 @@ export function AudienceSection() {
       <FadeIn>
         <div className="eyebrow justify-center">Who We Work With</div>
         <h2 className="max-w-[600px] text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-          Building value alongside ambitious people and organizations.
+          Working with those shaping the future of industry.
         </h2>
         <p className="mx-auto mt-6 max-w-[480px] text-lg leading-[1.5] text-secondary">
-          BLACK& collaborates with entrepreneurs, investors, partners, and institutions
-          that share a long-term vision for growth and value creation.
+          BLACK& works with entrepreneurs, strategic partners, investors,
+          corporations, and institutions seeking sustainable growth,
+          innovation, and long-term impact.
         </p>
       </FadeIn>
 
