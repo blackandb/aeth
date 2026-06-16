@@ -1,11 +1,12 @@
 import { FadeIn } from "@/components/fade-in";
 
 const stats = [
-  { label: "Websites_Deployed", value: "2,400+", accent: false },
-  { label: "Avg_AI_Score", value: "94.2%", accent: true },
-  { label: "Conversion_Uplift", value: "+44%", accent: false },
-  { label: "Pages_Indexed", value: "1.2M", accent: false },
-  { label: "Uptime", value: "99.98%", accent: true },
+  { label: "Technology", value: "01", accent: false },
+  { label: "Construction", value: "02", accent: true },
+  { label: "Defense", value: "03", accent: false },
+  { label: "Clothing", value: "04", accent: false },
+  { label: "Food_Industry", value: "05", accent: true },
+  { label: "Hospitality", value: "06", accent: false },
 ];
 
 export function MetricsBar() {
