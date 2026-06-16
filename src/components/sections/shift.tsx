@@ -1,11 +1,11 @@
 import { FadeIn } from "@/components/fade-in";
 
 const problems = [
-  { num: "01", cat: "Architecture", title: "Static by design", desc: "Built as fixed templates that require manual updates for every change in market or product positioning." },
-  { num: "02", cat: "Distribution", title: "Dependent on platforms", desc: "Relies entirely on external algorithms and social feeds for visibility rather than owning its search intent." },
-  { num: "03", cat: "Readability", title: "Hard for AI to understand", desc: "Obscure semantics and heavy scripts prevent LLMs from accurately indexing your value proposition." },
-  { num: "04", cat: "Integration", title: "Too fragmented", desc: "Disconnected from the actual tools founders use to run their business, creating a lag in data reporting." },
-  { num: "05", cat: "Performance", title: "Weak at conversion", desc: "Optimized for \u201Ctraffic\u201D rather than the specific, high-intent interactions that move the needle for modern independent founders." },
+  { num: "01", cat: "Strategy", title: "Markets move fast", desc: "Opportunities change quickly across industries, requiring clear intelligence, disciplined analysis, and fast execution." },
+  { num: "02", cat: "Execution", title: "Ideas need structure", desc: "Strong ideas only become valuable when they are transformed into companies, systems, operations, and measurable outcomes." },
+  { num: "03", cat: "Technology", title: "Digital advantage matters", desc: "Modern businesses need technology, automation, data, and AI to compete, scale, and remain relevant in changing markets." },
+  { num: "04", cat: "Portfolio", title: "Growth must be diversified", desc: "Long-term value is created by building across multiple strategic sectors rather than depending on a single market cycle." },
+  { num: "05", cat: "Value", title: "Execution creates value", desc: "BLACK& focuses on turning opportunity into operational businesses, strategic assets, and sustainable long-term growth." },
 ];
 
 export function ShiftSection() {
@@ -14,17 +14,17 @@ export function ShiftSection() {
       <div className="flex flex-col gap-16 lg:flex-row lg:items-start">
         {/* Left column */}
         <FadeIn className="max-w-[480px] shrink-0">
-          <div className="eyebrow">The Shift</div>
+          <div className="eyebrow">The Opportunity Shift</div>
           <h2 className="text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-            Most websites were built for the last version of the internet.
+            The next generation of companies will be built on intelligence.
           </h2>
           <p className="mt-6 text-lg leading-[1.5] text-secondary">
-            Traditional digital presences are silos designed for manual browsing.
-            In a world where AI agents and LLMs are the primary consumers of data,
-            the old architecture creates friction, loss of signal, and missed opportunities.
+            Markets are changing faster than traditional businesses can react.
+            BLACK& exists to identify opportunities, build scalable companies,
+            and create value across strategic industries.
           </p>
           <p className="mt-8 border-l border-secondary/30 pl-4 font-[var(--font-mono)] text-sm text-secondary">
-            In the AI era, your website cannot be a static page. It has to be a system.
+            In the new economy, opportunity is not enough. Execution is the advantage.
           </p>
         </FadeIn>
 
