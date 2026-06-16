@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About — BLACK&",
-  description: "BLACK& builds companies, develops technology, and creates long-term value across technology, construction, defense, clothing, food industry, and hospitality.",
+  description: "BLACK& is a diversified business group focused on building companies, developing technology, and creating long-term value across strategic industries.",
 };
 
 const values = [
@@ -19,11 +19,11 @@ export default function AboutPage() {
       <section className="flex min-h-[70vh] flex-col justify-center py-24">
         <div className="eyebrow">Company Overview</div>
         <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
-          Building companies. Creating value.
+          Built on Intelligence. Driven by Opportunity.
         </h1>
         <p className="mt-6 max-w-[500px] text-lg leading-[1.5] text-secondary">
-          BLACK& was founded to identify opportunities, build businesses, develop
-          technology, and create long-term value across strategic industries.
+          BLACK& is a diversified business group focused on identifying opportunities,
+          building companies, and creating long-term value across strategic industries.
         </p>
       </section>
 
@@ -32,13 +32,13 @@ export default function AboutPage() {
           <div className="max-w-[400px] shrink-0">
             <div className="eyebrow">Mission</div>
             <h2 className="text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">
-              Business should be built on intelligence and execution.
+              Intelligence creates opportunity. Execution creates value.
             </h2>
           </div>
           <div className="max-w-[500px] space-y-6 text-sm leading-relaxed text-secondary">
-            <p>BLACK& operates at the intersection of technology, capital, and industry. We identify market opportunities and transform them into scalable businesses.</p>
-            <p>Our activities span technology development, civil and industrial construction, defense-related projects, clothing, food industry, and hospitality.</p>
-            <p>By combining strategic intelligence, operational expertise, and long-term vision, we create companies and initiatives designed to generate sustainable growth and measurable value.</p>
+            <p>BLACK& operates across multiple industries where innovation, execution, and long-term thinking create competitive advantage.</p>
+            <p>Our activities span technology, construction, defense, clothing, food industry, hospitality, and emerging opportunities aligned with our strategic vision.</p>
+            <p>We combine market intelligence, operational expertise, and disciplined execution to develop businesses capable of generating sustainable growth and long-term value.</p>
           </div>
         </div>
       </section>
@@ -59,15 +59,15 @@ export default function AboutPage() {
 
       <section className="py-24">
         <div className="eyebrow">Vision</div>
-        <h2 className="max-w-[500px] text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">Our long-term vision.</h2>
+        <h2 className="max-w-[500px] text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">Where we are going.</h2>
         <p className="mt-6 max-w-[500px] text-sm leading-relaxed text-secondary">
-          We envision BLACK& as a diversified international group recognized for
-          developing innovative businesses, supporting strategic industries, and
-          creating long-term value through intelligence, technology, and disciplined
-          execution.
+          We envision BLACK& as a globally recognized business group developing
+          companies, technologies, and strategic initiatives that create lasting
+          economic value while contributing to the advancement of the industries
+          in which we operate.
         </p>
         <div className="mt-8">
-          <Link href="/login" className="btn btn-primary">Contact Us</Link>
+          <Link href="/login" className="btn btn-primary">Explore Opportunities</Link>
         </div>
       </section>
     </>
