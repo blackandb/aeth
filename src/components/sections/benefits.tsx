@@ -1,12 +1,12 @@
 import { FadeIn } from "@/components/fade-in";
 
 const benefits = [
-  { num: "01", title: "Own your digital presence", desc: "Reduce dependence on platforms you do not control." },
-  { num: "02", title: "Explain your business better", desc: "Give visitors and AI systems a clearer understanding of what you do and why it matters." },
-  { num: "03", title: "Improve discoverability", desc: "Make your content easier to find, interpret, and surface in the AI era." },
-  { num: "04", title: "Create better journeys", desc: "Guide different visitors to the right message, offer, or next step." },
-  { num: "05", title: "Automate more of the path to conversion", desc: "Support lead capture, routing, follow-up, and decision-making with less manual work." },
-  { num: "06", title: "Build for what comes next", desc: "Create a web presence designed for how the internet is changing, not how it used to work." },
+  { num: "01", title: "Intelligence-Driven", desc: "We identify opportunities through market research, strategic analysis, technology, and data-driven decision making." },
+  { num: "02", title: "Diversified Platform", desc: "Our portfolio spans multiple strategic industries, reducing dependency on a single market cycle." },
+  { num: "03", title: "Operational Excellence", desc: "We prioritize disciplined execution, efficiency, accountability, and measurable business outcomes." },
+  { num: "04", title: "Long-Term Vision", desc: "Every initiative is designed to create sustainable value and resilient growth over time." },
+  { num: "05", title: "Technology Enabled", desc: "Technology, automation, and AI are embedded across our operations, processes, and decision-making systems." },
+  { num: "06", title: "Strategic Partnerships", desc: "We collaborate with founders, operators, investors, and industry leaders to accelerate growth and unlock new opportunities." },
 ];
 
 export function BenefitsSection() {
@@ -15,13 +15,14 @@ export function BenefitsSection() {
       <div className="flex flex-col gap-16 lg:flex-row lg:items-start">
         {/* Left: sticky headline */}
         <FadeIn className="max-w-[360px] shrink-0 lg:sticky lg:top-32">
-          <div className="eyebrow">What You Get</div>
+          <div className="eyebrow">Why BLACK&</div>
           <h2 className="text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-            A website that becomes an asset, not a placeholder
+            Building value through intelligence, execution, and diversification
           </h2>
           <p className="mt-6 text-lg leading-[1.5] text-secondary">
-            AETH helps founders move from fragmented tools and passive pages to a system
-            that supports trust, discoverability, and conversion.
+            BLACK& combines strategic thinking, operational expertise, and technology
+            to build businesses, develop assets, and create long-term value across
+            multiple industries.
           </p>
         </FadeIn>
 
