@@ -4,10 +4,10 @@ import Link from "next/link";
 import { FadeIn } from "@/components/fade-in";
 
 const metrics = [
-  { label: "AI_Readiness", value: "94%", status: "OPTIMAL" },
-  { label: "LLM_Parse_Rate", value: "99.8%", status: "ACTIVE" },
-  { label: "Conversion_Lift", value: "+44%", status: "TRACKING" },
-  { label: "SEO_Health", value: "98/100", status: "INDEXED" },
+  { label: "Strategic_Readiness", value: "94%", status: "OPTIMAL" },
+  { label: "Opportunity_Index", value: "99.8%", status: "ACTIVE" },
+  { label: "Value_Creation", value: "+44%", status: "TRACKING" },
+  { label: "Market_Position", value: "98/100", status: "INDEXED" },
 ];
 
 export function HeroSection() {
@@ -29,27 +29,27 @@ export function HeroSection() {
         {/* Left: headline + CTA */}
         <div className="max-w-[520px]">
           <FadeIn delay={0}>
-            <div className="eyebrow">Built for the AI era</div>
+            <div className="eyebrow">Built on Intelligence. Driven by Opportunity.</div>
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 className="mb-8 text-[72px] font-bold leading-[0.9] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
-              Your website should do more than exist.
+              Building companies. Creating value.
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="mb-12 max-w-[440px] text-lg leading-[1.5] text-secondary">
-              AETH helps founders build websites that are clear to visitors,
-              readable by AI, structured for search, and designed to turn attention
-              into pipeline.
+              BLACK& develops technology, builds companies, and creates long-term
+              value across strategic industries including construction, defense,
+              clothing, food industry, and hospitality.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
             <div className="flex items-center gap-5">
               <Link href="/contact" className="btn btn-primary">
-                Book a demo
+                Contact Us
               </Link>
               <Link href="/features" className="btn btn-secondary">
-                See the system
+                Explore BLACK&
               </Link>
             </div>
           </FadeIn>
