@@ -1,4 +1,3 @@
-```tsx
 "use client";
 
 import Link from "next/link";
@@ -28,10 +27,7 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="system-label mb-1.5 block">
-                Email
-              </label>
-
+              <label className="system-label mb-1.5 block">Email</label>
               <input
                 type="email"
                 placeholder="name@blackandi.com"
@@ -40,10 +36,7 @@ export default function LoginPage() {
             </div>
 
             <div>
-              <label className="system-label mb-1.5 block">
-                Password
-              </label>
-
+              <label className="system-label mb-1.5 block">Password</label>
               <input
                 type="password"
                 placeholder="••••••••"
@@ -51,10 +44,7 @@ export default function LoginPage() {
               />
             </div>
 
-            <button
-              type="submit"
-              className="btn btn-primary w-full text-center"
-            >
+            <button type="submit" className="btn btn-primary w-full text-center">
               Access Platform
             </button>
           </form>
@@ -67,4 +57,3 @@ export default function LoginPage() {
     </section>
   );
 }
-```
