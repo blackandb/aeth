@@ -1,3 +1,4 @@
+```tsx
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,37 +29,38 @@ export default function TermsPage() {
             </h2>
 
             <p>
-              By accessing, browsing, or using the BLACK& website, services,
-              content, applications, or digital platforms, you acknowledge that
-              you have read, understood, and agree to be bound by these Terms of
-              Service and all applicable laws and regulations.
+              By accessing or using BLACK& websites, services, platforms, or
+              content, you agree to comply with and be bound by these Terms of
+              Service. If you do not agree with any part of these terms, you
+              should discontinue use of our websites and services.
             </p>
           </div>
 
           <div>
             <h2 className="mb-3 text-base font-bold text-primary">
-              2. Company Activities
+              2. Service Description
             </h2>
 
             <p>
-              BLACK& operates as a diversified business group engaged in the
-              development of companies, technology, strategic projects, and
-              commercial activities across multiple industries, including but not
-              limited to technology, construction, defense, clothing, food
-              industry, hospitality, and related sectors.
+              BLACK& operates as a diversified holding and development group
+              focused on building companies, developing technology, supporting
+              strategic industries, and creating long-term value across
+              technology, construction, defense, clothing, food industry,
+              hospitality, and related sectors.
             </p>
           </div>
 
           <div>
             <h2 className="mb-3 text-base font-bold text-primary">
-              3. Use of Website
+              3. User Responsibilities
             </h2>
 
             <p>
-              Users may access the website solely for lawful purposes. You agree
-              not to use the website in any manner that could damage, disable,
-              overburden, or impair the website, its infrastructure, or interfere
-              with any other party's use of the services.
+              Users are responsible for ensuring that their use of BLACK&
+              websites and services complies with applicable laws and
+              regulations. Users agree not to engage in unlawful activities,
+              unauthorized access attempts, or actions that could compromise the
+              security, availability, or integrity of our systems.
             </p>
           </div>
 
@@ -68,11 +70,11 @@ export default function TermsPage() {
             </h2>
 
             <p>
-              All content available through BLACK&, including trademarks, logos,
-              branding elements, text, graphics, software, designs, reports,
-              business materials, and proprietary information, are owned by or
-              licensed to BLACK& and are protected under applicable intellectual
-              property laws.
+              All BLACK& trademarks, logos, branding elements, website content,
+              graphics, reports, software, designs, and related materials are
+              owned by BLACK& or licensed to BLACK& and are protected by
+              applicable intellectual property laws. Unauthorized use is
+              prohibited.
             </p>
           </div>
 
@@ -82,12 +84,12 @@ export default function TermsPage() {
             </h2>
 
             <p>
-              Information presented on this website is provided for general
-              informational purposes only and does not constitute investment,
-              financial, legal, tax, or professional advice. Nothing contained on
-              this website should be interpreted as an offer, solicitation, or
-              recommendation to buy, sell, or invest in any asset, security,
-              company, or financial instrument.
+              Information presented through BLACK& websites or communications is
+              provided for informational purposes only and should not be
+              interpreted as investment, financial, legal, tax, or professional
+              advice. Nothing on this website constitutes an offer or
+              solicitation to buy, sell, or invest in any asset, company, or
+              financial instrument.
             </p>
           </div>
 
@@ -99,7 +101,7 @@ export default function TermsPage() {
             <p>
               BLACK& shall not be liable for any direct, indirect, incidental,
               consequential, or special damages arising from the use of, or
-              inability to use, this website, its content, services, or any
+              inability to use, the website, its content, services, or any
               information made available through the platform.
             </p>
           </div>
@@ -110,10 +112,9 @@ export default function TermsPage() {
             </h2>
 
             <p>
-              The website may contain links to third-party websites or resources.
-              BLACK& is not responsible for the availability, content, accuracy,
-              or practices of any external websites and does not endorse any
-              third-party content unless explicitly stated.
+              BLACK& websites may contain links to third-party websites,
+              resources, or services. We are not responsible for the content,
+              policies, availability, or practices of such external resources.
             </p>
           </div>
 
@@ -124,8 +125,8 @@ export default function TermsPage() {
 
             <p>
               BLACK& reserves the right to modify these Terms of Service at any
-              time. Continued use of the website following the publication of
-              updated terms constitutes acceptance of the revised Terms.
+              time. Continued use of the website following publication of
+              updated terms constitutes acceptance of those modifications.
             </p>
           </div>
 
@@ -135,9 +136,9 @@ export default function TermsPage() {
             </h2>
 
             <p>
-              These Terms shall be governed and interpreted in accordance with the
-              applicable laws governing the jurisdiction in which BLACK& is
-              incorporated and operates.
+              These Terms shall be governed and interpreted in accordance with
+              the laws applicable in the jurisdiction in which BLACK& operates,
+              without regard to conflict of law provisions.
             </p>
           </div>
 
@@ -147,8 +148,8 @@ export default function TermsPage() {
             </h2>
 
             <p>
-              For legal inquiries, compliance matters, or questions regarding
-              these Terms of Service, please contact:
+              For legal inquiries, compliance matters, partnership requests, or
+              questions regarding these Terms of Service, please contact:
               <span className="text-accent-cyan">
                 {" "}legal@blackandi.com
               </span>
@@ -160,3 +161,4 @@ export default function TermsPage() {
     </>
   );
 }
+```
