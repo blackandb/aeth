@@ -1,18 +1,14 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-
-interface ScrollRevealTextProps {
-  text: string;
-  className?: string;
-  delay?: number;
-}
+import { motion } from "framer-motion";
 
 export function ScrollRevealText({ text, className = "", delay = 0 }: ScrollRevealTextProps) {
-  const [isActive, setIsActive] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
 
+  // IntersectionObserver manual — mai fiabil
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
@@ -20,7 +16,7 @@ export function ScrollRevealText({ text, className = "", delay = 0 }: ScrollReve
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsActive(true);
+          setIsVisible(true);
           observer.unobserve(element);
         }
       },
@@ -34,22 +30,22 @@ export function ScrollRevealText({ text, className = "", delay = 0 }: ScrollReve
     return () => observer.disconnect();
   }, []);
 
-  const active = isActive || isHovered;
+  const isActive = isVisible || isHovered;
 
   return (
-    <span
+    <motion.span
       ref={ref}
-      className={`inline-block transition-all duration-700 ease-out ${className}`}
-      style={{
-        color: active ? "#ffffff" : "#888888",
-        opacity: active ? 1 : 0.3,
-        transitionDelay: `${delay}ms`,
-        textShadow: active ? "none" : "0 0 0px rgba(136,136,136,0.5)",
+      className={`inline-block ${className}`}
+      initial={{ color: "#888888", opacity: 0.3 }}
+      animate={{ 
+        color: isActive ? "#ffffff" : "#888888",
+        opacity: isActive ? 1 : 0.3
       }}
+      transition={{ duration: 0.8, delay, ease: [0.25, 0.1, 0.25, 1] }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {text}
-    </span>
+    </motion.span>
   );
 }
