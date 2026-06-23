@@ -14,12 +14,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="relative z-20 flex min-h-screen flex-col">
+    <main className="relative z-20 flex min-h-screen flex-col justify-between p-[60px] max-md:p-6">
       <Navbar />
-      <main className="flex-1 px-4 py-24 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        {children}
-      </main>
+      <div className="flex-1">{children}</div>
       {!isLogin && <Footer />}
-    </div>
+    </main>
   );
 }
