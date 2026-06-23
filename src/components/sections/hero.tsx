@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FadeIn } from "@/components/fade-in";
 import { HeroBackground } from "@/components/hero-background";
-import { ScrollRevealText } from "@/components/text-reveal";
+import { TextReveal } from "@/components/text-reveal";
 import { MagneticButton } from "@/components/magnetic-button";
 
 const metrics = [
