@@ -37,6 +37,18 @@ export function HeroBackground() {
       { x: 0.65, y: 0.60, active: false, label: "Jakarta" },
     ];
 
+    // Rute predefinite pentru LED-uri (perechi de noduri)
+    const routes = [
+      [0, 3], [0, 11], [3, 4], [3, 11], [4, 6], [4, 12],
+      [6, 7], [6, 14], [7, 14], [11, 12], [11, 2], [2, 1],
+      [1, 15], [15, 0], [5, 8], [8, 16], [16, 10], [10, 17],
+      [17, 9], [9, 13], [13, 5], [14, 7], [12, 4], [6, 9],
+      [0, 6], [3, 11], [11, 4], [4, 14], [14, 7], [7, 9],
+      [1, 11], [11, 3], [3, 4], [4, 12], [12, 17], [17, 10],
+      [15, 1], [1, 2], [2, 11], [11, 0], [0, 3], [3, 5],
+      [5, 13], [13, 9], [9, 6], [6, 14], [14, 7], [7, 4],
+    ];
+
     // Texte OSINT style
     const osintTexts = [
       { text: "SIGINT", x: 0.55, y: 0.15, appear: 0, duration: 3 },
@@ -82,7 +94,7 @@ export function HeroBackground() {
           const maxDist = Math.min(w, h) * 0.5;
           
           if (dist < maxDist) {
-            const opacity = (1 - dist/maxDist) * 0.1; // Mai subtil
+            const opacity = (1 - dist/maxDist) * 0.1;
             ctx.strokeStyle = `rgba(0, 240, 255, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
@@ -99,29 +111,24 @@ export function HeroBackground() {
         const y = node.y * h;
         
         if (node.active) {
-          // Pulse animation — mai subtil
           const pulse = Math.sin(time * 2) * 0.2 + 0.8;
           
-          // Glow exterior — mai mic și mai transparent
           ctx.beginPath();
           ctx.arc(x, y, 12 * pulse, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(0, 240, 255, ${0.04 * pulse})`;
           ctx.fill();
           
-          // Inel mediu — mai subțire
           ctx.beginPath();
           ctx.arc(x, y, 6 * pulse, 0, Math.PI * 2);
           ctx.strokeStyle = `rgba(0, 240, 255, ${0.15 * pulse})`;
           ctx.lineWidth = 1;
           ctx.stroke();
           
-          // Nucleu — mai mic
           ctx.beginPath();
           ctx.arc(x, y, 2.5, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(0, 240, 255, ${0.6 * pulse})`;
           ctx.fill();
         } else {
-          // Noduri inactive — foarte discrete
           ctx.beginPath();
           ctx.arc(x, y, 1.5, 0, Math.PI * 2);
           ctx.fillStyle = "rgba(136, 136, 136, 0.15)";
@@ -129,24 +136,22 @@ export function HeroBackground() {
         }
       });
 
-      // Pachete de date — LED-uri roșii MENȚIN intensitatea
-      const packetCount = 6;
+      // LED-uri roșii pe rute predefinite — MAI MULTE
+      const packetCount = 12; // Dublat de la 6
       for (let i = 0; i < packetCount; i++) {
-        const t = ((time * 0.5) + i / packetCount) % 1;
-        const nodeIndex = Math.floor(t * nodes.length);
-        const nextNodeIndex = (nodeIndex + 1) % nodes.length;
+        const routeIndex = (i + Math.floor(time * 2)) % routes.length;
+        const route = routes[routeIndex];
+        const node = nodes[route[0]];
+        const next = nodes[route[1]];
         
-        const node = nodes[nodeIndex];
-        const next = nodes[nextNodeIndex];
+        if (!node.active && !next.active) continue;
         
-        if (!node.active || !next.active) continue;
+        const t = ((time * 0.8) + i / packetCount) % 1; // Viteză mai mare
+        const x = node.x * w + (next.x * w - node.x * w) * t;
+        const y = node.y * h + (next.y * h - node.y * h) * t;
         
-        const progress = (t * nodes.length) % 1;
-        const x = node.x * w + (next.x * w - node.x * w) * progress;
-        const y = node.y * h + (next.y * h - node.y * h) * progress;
-        
-        // Trail — menținut intens
-        const trailLength = 35;
+        // Trail
+        const trailLength = 40; // Mai lung
         const dx = next.x * w - node.x * w;
         const dy = next.y * h - node.y * h;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -155,8 +160,8 @@ export function HeroBackground() {
         
         const trailGradient = ctx.createLinearGradient(tx, ty, x, y);
         trailGradient.addColorStop(0, "rgba(255, 45, 85, 0)");
-        trailGradient.addColorStop(0.5, "rgba(255, 45, 85, 0.3)");
-        trailGradient.addColorStop(1, "rgba(255, 45, 85, 0.9)");
+        trailGradient.addColorStop(0.5, "rgba(255, 45, 85, 0.4)"); // Mai intens
+        trailGradient.addColorStop(1, "rgba(255, 45, 85, 0.95)");
         
         ctx.strokeStyle = trailGradient;
         ctx.lineWidth = 3;
@@ -165,7 +170,7 @@ export function HeroBackground() {
         ctx.lineTo(x, y);
         ctx.stroke();
         
-        // LED head — menținut luminos
+        // LED head
         ctx.beginPath();
         ctx.arc(x, y, 3.5, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(255, 255, 255, 0.95)";
@@ -176,7 +181,7 @@ export function HeroBackground() {
         ctx.fillStyle = "rgba(255, 45, 85, 0.9)";
         ctx.fill();
         
-        // Glow intens — menținut
+        // Glow intens
         ctx.beginPath();
         ctx.arc(x, y, 10, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(255, 45, 85, 0.25)";
@@ -199,19 +204,15 @@ export function HeroBackground() {
           const x = item.x * w;
           const y = item.y * h;
           
-          // Font mai subțire
-          ctx.font = "300 10px 'IBM Plex Mono', monospace"; // 300 = light weight
+          ctx.font = "300 10px 'IBM Plex Mono', monospace";
           ctx.textAlign = "center";
           
-          // Glow sub text — mai subtil
           ctx.fillStyle = `rgba(255, 45, 85, ${opacity * 0.08})`;
           ctx.fillText(item.text, x + 1, y + 1);
           
-          // Text principal — mai subțire
           ctx.fillStyle = `rgba(0, 240, 255, ${opacity * 0.5})`;
           ctx.fillText(item.text, x, y);
           
-          // Brackets — mai subțiri
           const textWidth = ctx.measureText(item.text).width;
           ctx.fillStyle = `rgba(0, 240, 255, ${opacity * 0.2})`;
           ctx.font = "300 9px 'IBM Plex Mono', monospace";
