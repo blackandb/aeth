@@ -31,7 +31,7 @@ export function FadeIn({
   once = true,
   amount = 0.15,
 }: FadeInProps) {
-  const ref = useRef<<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once, amount });
 
   const directions = {
@@ -73,7 +73,7 @@ export function StaggerContainer({
   className = '',
   delayStart = 0,
 }: StaggerContainerProps) {
-  const ref = useRef<<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const containerVariants: Variants = {
@@ -135,7 +135,7 @@ export function Counter({
   duration = 1.5,
   className = '',
 }: CounterProps) {
-  const ref = useRef<<HTMLSpanElement>(null);
+  const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
@@ -167,10 +167,9 @@ export function Counter({
 
 // Simple count-up hook component
 function CountUp({ end, duration, decimals }: { end: number; duration: number; decimals: number }) {
-  const ref = useRef<<HTMLSpanElement>(null);
+  const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
   
-  // Use framer motion's useSpring for smooth interpolation
   return (
     <motion.span
       ref={ref}
@@ -183,10 +182,6 @@ function CountUp({ end, duration, decimals }: { end: number; duration: number; d
 }
 
 function AnimatedNumber({ value, duration, decimals }: { value: number; duration: number; decimals: number }) {
-  const ref = useRef<<HTMLSpanElement>(null);
-  const motionValue = useRef(0);
-  
-  // Simple implementation - in production, use a proper counting hook
   return <span>{value.toFixed(decimals)}</span>;
 }
 
@@ -202,7 +197,7 @@ export function LineDraw({
   className = '',
   delay = 0,
 }: LineDrawProps) {
-  const ref = useRef<<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
   const scaleAxis = direction === 'horizontal' ? 'scaleX' : 'scaleY';
@@ -270,7 +265,7 @@ export function TextReveal({
   delay = 0,
   lineDelay = 0.15,
 }: TextRevealProps) {
-  const ref = useRef<<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const lines = text.split('\n');
 
