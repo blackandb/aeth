@@ -52,7 +52,6 @@ export function HeroSection() {
           </FadeIn>
         </div>
 
-        {/* Right: data telemetry panel */}
         <FadeIn delay={0.4} direction="right" className="flex flex-col gap-4 max-lg:mt-12 max-lg:flex-row max-lg:flex-wrap max-lg:gap-6">
           {metrics.map((m) => (
             <div key={m.label} className="border-l border-[rgba(255,255,255,0.1)] pl-4">
