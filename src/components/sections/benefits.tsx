@@ -1,12 +1,12 @@
 import { FadeIn } from "@/components/fade-in";
 
 const benefits = [
-  { num: "01", title: "Intelligence-Driven", desc: "We identify opportunities through market research, strategic analysis, technology, and data-driven decision making." },
-  { num: "02", title: "Diversified Platform", desc: "Our portfolio spans multiple strategic industries, reducing dependency on a single market cycle." },
-  { num: "03", title: "Operational Excellence", desc: "We prioritize disciplined execution, efficiency, accountability, and measurable business outcomes." },
-  { num: "04", title: "Long-Term Vision", desc: "Every initiative is designed to create sustainable value and resilient growth over time." },
-  { num: "05", title: "Technology Enabled", desc: "Technology, automation, and AI are embedded across our operations, processes, and decision-making systems." },
-  { num: "06", title: "Strategic Partnerships", desc: "We collaborate with founders, operators, investors, and industry leaders to accelerate growth and unlock new opportunities." },
+  { num: "01", title: "Intelligence Before Capital", desc: "Insight creates conviction. Capital follows. We understand what others miss before deploying resources." },
+  { num: "02", title: "Long-Term By Design", desc: "We build with decades in mind. Every initiative is designed to create sustainable value and resilient growth over time." },
+  { num: "03", title: "Enterprise Over Speculation", desc: "We prioritize real businesses, real products and real value creation. Not ideas. Not trends. Enterprise." },
+  { num: "04", title: "Conviction Over Consensus", desc: "Meaningful opportunities rarely emerge from conventional thinking. We act on conviction, not crowd consensus." },
+  { num: "05", title: "Execution Creates Value", desc: "Ideas inspire. Execution compounds. We turn intelligence into operating realities that generate measurable outcomes." },
+  { num: "06", title: "Enduring Assets Matter", desc: "Our objective is not temporary success. Our objective is lasting relevance. We build assets that endure and compound." },
 ];
 
 export function BenefitsSection() {
@@ -15,14 +15,13 @@ export function BenefitsSection() {
       <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-12">
         {/* Left: fixed width headline */}
         <FadeIn className="w-full max-w-[360px] shrink-0 lg:w-[360px]">
-          <div className="eyebrow">Why BLACK&</div>
+          <div className="eyebrow">Why We Exist</div>
           <h2 className="text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-            Building value through intelligence, execution, and diversification
+            We believe the future belongs to organizations that think differently and build for the long term.
           </h2>
           <p className="mt-6 text-lg leading-[1.5] text-secondary">
-            BLACK& combines strategic thinking, operational expertise, and technology
-            to build businesses, develop assets, and create long-term value across
-            multiple industries.
+            The world does not need more information. It needs better intelligence.
+            It does not need more ideas. It needs more execution. BLACK& exists to bridge that gap.
           </p>
         </FadeIn>
 
