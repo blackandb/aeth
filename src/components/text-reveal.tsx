@@ -11,10 +11,11 @@ interface ScrollRevealTextProps {
 
 export function ScrollRevealText({ text, className = "", delay = 0 }: ScrollRevealTextProps) {
   const ref = useRef<HTMLDivElement>(null);
+  
+  // CORECT: fără margin negativ, amount mic
   const isInView = useInView(ref, { 
-    once: true, 
-    margin: "-100px",
-    amount: 0.5 
+    once: true,
+    amount: 0.1  // doar 10% vizibil = declanșează
   });
 
   return (
