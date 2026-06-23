@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://blackandi.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "BLACK& — Built on Intelligence. Driven by Opportunity.",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
     description:
       "A diversified business group building companies and creating long-term value across strategic industries.",
-    images: ["/og-image.jpg"],
+    images: ["https://blackandi.com/og-image.jpg"],
     creator: "@blackandgroup",
   },
   robots: {
@@ -89,6 +89,12 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* OG Image explicit pentru motoarele de căutare */}
+        <meta property="og:image" content="https://blackandi.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="BLACK& — Built on Intelligence. Driven by Opportunity." />
         
         <script
           type="application/ld+json"
