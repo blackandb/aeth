@@ -3,21 +3,21 @@ import { FadeIn } from "@/components/fade-in";
 const testimonials = [
   {
     quote:
-      "Intelligence is the foundation of every decision. We believe sustainable growth begins with understanding markets, industries, and opportunities before committing capital and resources.",
+      "Intelligence Before Capital. Insight creates conviction. Capital follows. We understand what others miss before deploying resources.",
     author: "BLACK&",
-    role: "Intelligence First",
+    role: "Intelligence Before Capital",
   },
   {
     quote:
-      "Execution transforms ideas into businesses. Strategy matters, but disciplined execution is what creates measurable results and long-term success.",
+      "Long-Term By Design. We build with decades in mind. Every initiative is designed to create sustainable value and resilient growth over time.",
     author: "BLACK&",
-    role: "Operational Excellence",
+    role: "Long-Term By Design",
   },
   {
     quote:
-      "Diversification creates resilience. By operating across multiple strategic industries, we position ourselves to capture opportunities across changing economic cycles.",
+      "Enterprise Over Speculation. We prioritize real businesses, real products and real value creation. Not ideas. Not trends. Enterprise.",
     author: "BLACK&",
-    role: "Long-Term Vision",
+    role: "Enterprise Over Speculation",
   },
 ];
 
@@ -25,9 +25,9 @@ export function SocialProofSection() {
   return (
     <section className="section-glow flex min-h-[80vh] flex-col justify-center py-24">
       <FadeIn>
-        <div className="eyebrow">Our Principles</div>
+        <div className="eyebrow">The BLACK& Principles</div>
         <h2 className="max-w-[560px] text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-          The principles that guide every decision.
+          The BLACK& Principles
         </h2>
       </FadeIn>
 
