@@ -9,17 +9,16 @@ export function FinalCtaSection() {
 
       <div className="relative z-10">
         <FadeIn>
-          <div className="eyebrow justify-center">Built on Intelligence</div>
+          <div className="eyebrow justify-center">Building What Comes Next</div>
           <h2 className="mt-6 max-w-[800px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
-            Creating companies, developing industries, building long-term value.
+            We transform information into intelligence, intelligence into enterprise and enterprise into enduring assets.
           </h2>
         </FadeIn>
 
         <FadeIn delay={0.15}>
           <p className="mx-auto mt-8 max-w-[560px] text-lg leading-[1.5] text-secondary">
-            BLACK& identifies opportunities, develops businesses, and partners with
-            entrepreneurs, investors, corporations, and institutions to create
-            sustainable growth across strategic industries.
+            BLACK& develops intelligence technologies, deploys strategic capital
+            and builds enterprises designed to create lasting value across generations.
           </p>
 
           <div className="mt-12 flex items-center justify-center gap-5">
@@ -33,7 +32,7 @@ export function FinalCtaSection() {
           </div>
 
           <p className="mt-8 font-[var(--font-mono)] text-xs uppercase tracking-[0.15em] text-secondary">
-            Technology • Construction • Defense • Clothing • Food Industry • Hospitality
+            Information → Intelligence → Enterprise → Assets
           </p>
         </FadeIn>
       </div>
