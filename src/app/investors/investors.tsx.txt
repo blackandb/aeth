@@ -1,0 +1,104 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Investors — BLACK&",
+  description: "Investor relations and opportunities. Learn about BLACK&'s investment approach, portfolio performance, and strategic vision.",
+  alternates: { canonical: "https://blackandi.com/investors" },
+  openGraph: {
+    title: "Investors — BLACK&",
+    description: "Investment opportunities and relations.",
+    url: "https://blackandi.com/investors",
+    images: [{ url: "/og-investors.jpg", width: 1200, height: 630 }],
+  },
+};
+
+const metrics = [
+  { label: "Portfolio Companies", value: "5+" },
+  { label: "Industries", value: "6" },
+  { label: "Growth Rate", value: "+44%" },
+  { label: "Market Position", value: "98/100" },
+];
+
+const documents = [
+  { title: "Annual Report 2025", type: "PDF", size: "2.4 MB" },
+  { title: "Investment Thesis", type: "PDF", size: "1.8 MB" },
+  { title: "Portfolio Overview", type: "PDF", size: "3.1 MB" },
+];
+
+export default function InvestorsPage() {
+  return (
+    <>
+      <section className="flex min-h-[70vh] flex-col justify-center py-24">
+        <div className="eyebrow">Investors</div>
+        <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
+          Investment opportunities and relations.
+        </h1>
+        <p className="mt-6 max-w-[500px] text-lg leading-[1.5] text-secondary">
+          BLACK& offers selective investment opportunities for partners seeking
+          exposure to high-potential, strategically managed businesses.
+        </p>
+      </section>
+
+      <section className="py-24">
+        <div className="mb-12">
+          <div className="eyebrow">Performance</div>
+          <h2 className="mt-4 text-[32px] font-bold tracking-[-0.04em]">
+            Key Metrics
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-4">
+          {metrics.map((m) => (
+            <div key={m.label} className="aeth-card text-center">
+              <span className="block font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary">
+                {m.label}
+              </span>
+              <span className="mt-2 block text-4xl font-bold tracking-tight text-accent-cyan">
+                {m.value}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-elevated py-24">
+        <div className="mb-12">
+          <div className="eyebrow">Documents</div>
+          <h2 className="mt-4 text-[32px] font-bold tracking-[-0.04em]">
+            Investor Resources
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-px">
+          {documents.map((doc) => (
+            <div key={doc.title} className="aeth-card flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-bold">{doc.title}</h3>
+                <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary">
+                  {doc.type} • {doc.size}
+                </span>
+              </div>
+              <button className="btn btn-secondary">Download</button>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="flex flex-col items-center py-24 text-center">
+        <div className="eyebrow justify-center">Get in Touch</div>
+        <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em]">
+          Interested in investing?
+        </h2>
+        <p className="mt-4 max-w-[440px] text-secondary">
+          Reach out to our investment team to discuss opportunities.
+        </p>
+        <div className="mt-8">
+          <Link href="/contact" className="btn btn-primary">
+            Contact Investment Team
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
