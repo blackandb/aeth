@@ -10,6 +10,7 @@ interface TextRevealProps {
 
 export function TextReveal({ text, className = "", delay = 0 }: TextRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -33,15 +34,19 @@ export function TextReveal({ text, className = "", delay = 0 }: TextRevealProps)
     return () => observer.disconnect();
   }, []);
 
+  const active = isVisible || isHovered;
+
   return (
     <span
       ref={ref}
       className={`inline-block transition-all duration-700 ease-out ${className}`}
       style={{
-        color: isVisible ? "#ffffff" : "#888888",
-        opacity: isVisible ? 1 : 0.3,
+        color: active ? "#ffffff" : "#888888",
+        opacity: active ? 1 : 0.3,
         transitionDelay: `${delay}ms`,
       }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {text}
     </span>
