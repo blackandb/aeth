@@ -27,12 +27,14 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="py-24">
-        <div className="flex flex-col gap-16 lg:flex-row">
-          <div className="max-w-[400px] shrink-0">
+         <section className="py-24">
+        <div className="flex flex-col gap-16 lg:flex-row lg:items-start">
+          <div className="max-w-[480px] shrink-0">
             <div className="eyebrow">Mission</div>
-            <h2 className="text-[40px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[28px]">
-              Intelligence creates opportunity. Execution creates value.
+            <h2 className="text-[40px] font-bold leading-[1.1] tracking-[-0.04em] max-md:text-[28px]">
+              Intelligence creates opportunity.
+              <br />
+              Execution creates value.
             </h2>
           </div>
           <div className="max-w-[500px] space-y-6 text-sm leading-relaxed text-secondary">
