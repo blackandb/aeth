@@ -1,0 +1,107 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Team — BLACK&",
+  description: "Meet the leadership team behind BLACK& — a diverse group of professionals driving innovation and long-term value creation.",
+  alternates: { canonical: "https://blackandi.com/team" },
+  openGraph: {
+    title: "Team — BLACK&",
+    description: "The people building the future of industry.",
+    url: "https://blackandi.com/team",
+    images: [{ url: "/og-team.jpg", width: 1200, height: 630 }],
+  },
+};
+
+const leadership = [
+  {
+    name: "Leadership",
+    role: "Executive Team",
+    description: "Experienced professionals with deep expertise across technology, finance, and operations.",
+  },
+];
+
+const advisors = [
+  {
+    name: "Strategic Advisors",
+    role: "Advisory Board",
+    description: "Industry veterans providing strategic guidance and market intelligence.",
+  },
+];
+
+export default function TeamPage() {
+  return (
+    <>
+      <section className="flex min-h-[70vh] flex-col justify-center py-24">
+        <div className="eyebrow">Team</div>
+        <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
+          The people building the future.
+        </h1>
+        <p className="mt-6 max-w-[500px] text-lg leading-[1.5] text-secondary">
+          BLACK& is led by a team of experienced professionals with deep
+          expertise across technology, finance, operations, and strategic
+          industries.
+        </p>
+      </section>
+
+      <section className="py-24">
+        <div className="mb-12">
+          <div className="eyebrow">Leadership</div>
+          <h2 className="mt-4 text-[32px] font-bold tracking-[-0.04em]">
+            Executive Team
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-3">
+          {leadership.map((person) => (
+            <div key={person.name} className="aeth-card">
+              <div className="h-48 w-full bg-[rgba(255,255,255,0.03)] rounded flex items-center justify-center">
+                <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+                  Photo Coming Soon
+                </span>
+              </div>
+              <div className="mt-4">
+                <h3 className="text-xl font-bold">{person.name}</h3>
+                <span className="mt-1 block font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-accent-cyan">
+                  {person.role}
+                </span>
+                <p className="mt-3 text-sm leading-relaxed text-secondary">
+                  {person.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-elevated py-24">
+        <div className="mb-12">
+          <div className="eyebrow">Advisors</div>
+          <h2 className="mt-4 text-[32px] font-bold tracking-[-0.04em]">
+            Strategic Advisory Board
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-3">
+          {advisors.map((person) => (
+            <div key={person.name} className="aeth-card">
+              <div className="h-48 w-full bg-[rgba(255,255,255,0.03)] rounded flex items-center justify-center">
+                <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+                  Photo Coming Soon
+                </span>
+              </div>
+              <div className="mt-4">
+                <h3 className="text-xl font-bold">{person.name}</h3>
+                <span className="mt-1 block font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-accent-cyan">
+                  {person.role}
+                </span>
+                <p className="mt-3 text-sm leading-relaxed text-secondary">
+                  {person.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
