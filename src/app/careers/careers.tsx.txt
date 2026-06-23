@@ -1,0 +1,127 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Careers — BLACK&",
+  description: "Join BLACK& and help build the future of industry. Explore career opportunities across technology, operations, and strategic development.",
+  alternates: { canonical: "https://blackandi.com/careers" },
+  openGraph: {
+    title: "Careers — BLACK&",
+    description: "Build the future with us.",
+    url: "https://blackandi.com/careers",
+    images: [{ url: "/og-careers.jpg", width: 1200, height: 630 }],
+  },
+};
+
+const openings = [
+  {
+    title: "Strategic Analyst",
+    department: "Strategy",
+    location: "Remote",
+    type: "Full-time",
+    description: "Analyze markets, identify opportunities, and support strategic decision-making across industries.",
+  },
+  {
+    title: "Operations Manager",
+    department: "Operations",
+    location: "Remote / Hybrid",
+    type: "Full-time",
+    description: "Lead operational excellence initiatives and drive measurable business outcomes across portfolio companies.",
+  },
+  {
+    title: "Technology Lead",
+    department: "Technology",
+    location: "Remote",
+    type: "Full-time",
+    description: "Drive technology strategy, AI implementation, and digital transformation across the group.",
+  },
+];
+
+const benefits = [
+  "Competitive compensation",
+  "Equity participation",
+  "Remote-first culture",
+  "Professional development",
+  "Strategic exposure",
+  "Global opportunities",
+];
+
+export default function CareersPage() {
+  return (
+    <>
+      <section className="flex min-h-[70vh] flex-col justify-center py-24">
+        <div className="eyebrow">Careers</div>
+        <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
+          Build the future with us.
+        </h1>
+        <p className="mt-6 max-w-[500px] text-lg leading-[1.5] text-secondary">
+          Join a team that is reshaping industries through intelligence,
+          execution, and long-term thinking.
+        </p>
+      </section>
+
+      <section className="py-24">
+        <div className="mb-12">
+          <div className="eyebrow">Open Positions</div>
+          <h2 className="mt-4 text-[32px] font-bold tracking-[-0.04em]">
+            Current Opportunities
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-px">
+          {openings.map((job) => (
+            <div key={job.title} className="aeth-card group">
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                  <h3 className="text-xl font-bold group-hover:text-accent-cyan transition-colors">
+                    {job.title}
+                  </h3>
+                  <div className="mt-2 flex flex-wrap gap-3">
+                    <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-accent-cyan">
+                      {job.department}
+                    </span>
+                    <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary">
+                      {job.location}
+                    </span>
+                    <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary">
+                      {job.type}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-secondary max-w-[600px]">
+                    {job.description}
+                  </p>
+                </div>
+                <Link
+                  href="/contact"
+                  className="btn btn-secondary shrink-0"
+                >
+                  Apply Now
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-elevated py-24">
+        <div className="mb-12">
+          <div className="eyebrow">Benefits</div>
+          <h2 className="mt-4 text-[32px] font-bold tracking-[-0.04em]">
+            Why Work at BLACK&
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-3">
+          {benefits.map((benefit) => (
+            <div key={benefit} className="aeth-card">
+              <span className="flex h-8 w-8 items-center justify-center border border-accent-cyan/30 font-[var(--font-mono)] text-xs text-accent-cyan">
+                ✓
+              </span>
+              <p className="mt-3 text-sm font-medium">{benefit}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
