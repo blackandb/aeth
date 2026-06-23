@@ -3,7 +3,14 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Industries — BLACK&",
-  description: "Discover the industries where BLACK& develops businesses, technologies, and long-term strategic opportunities.",
+  description: "Discover the industries where BLACK& develops businesses, technologies, and long-term strategic opportunities across technology, construction, defense, clothing, and hospitality.",
+  alternates: { canonical: "https://blackandi.com/industries" },
+  openGraph: {
+    title: "Industries — BLACK&",
+    description: "Building across industries with intelligence and opportunity.",
+    url: "https://blackandi.com/industries",
+    images: [{ url: "/og-industries.jpg", width: 1200, height: 630 }],
+  },
 };
 
 const layers = [
@@ -55,7 +62,7 @@ const layers = [
   },
 ];
 
-export default function FeaturesPage() {
+export default function IndustriesPage() {
   return (
     <>
       <section className="flex min-h-[70vh] flex-col justify-center py-24">
@@ -68,22 +75,33 @@ export default function FeaturesPage() {
           innovation, execution, and long-term value creation intersect.
         </p>
         <div className="mt-8">
-          <a href="#system-stack" className="btn btn-secondary">Explore Industries</a>
+          <a href="#industry-portfolio" className="btn btn-secondary">
+            Explore Industries
+          </a>
         </div>
       </section>
 
-      <section id="system-stack" className="py-24">
+      <section id="industry-portfolio" className="py-24">
         <div className="mb-12 text-center">
           <div className="eyebrow justify-center">Strategic Focus</div>
-          <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em] max-md:text-[28px]">Industry Portfolio</h2>
+          <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em] max-md:text-[28px]">
+            Industry Portfolio
+          </h2>
         </div>
 
         <div className="flex flex-col gap-px">
           {layers.map((l) => (
-            <div key={l.num} className="aeth-card flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div
+              key={l.num}
+              className="aeth-card flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+            >
               <div className="max-w-[500px]">
-                <span className="section-number">{l.num} // {l.cat}</span>
-                <p className="mt-3 text-sm leading-relaxed text-secondary">{l.desc}</p>
+                <span className="section-number">
+                  {l.num} // {l.cat}
+                </span>
+                <p className="mt-3 text-sm leading-relaxed text-secondary">
+                  {l.desc}
+                </p>
               </div>
               <div className="flex shrink-0 flex-col gap-2">
                 {l.metrics.map((m) => (
@@ -100,12 +118,17 @@ export default function FeaturesPage() {
 
       <section className="flex flex-col items-center py-24 text-center">
         <div className="eyebrow justify-center">Opportunities</div>
-        <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em]">Let's build the future together.</h2>
+        <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em]">
+          Let's build the future together.
+        </h2>
         <p className="mt-4 max-w-[440px] text-secondary">
-          We are open to discussing strategic partnerships, investments, and new opportunities.
+          We are open to discussing strategic partnerships, investments, and new
+          opportunities.
         </p>
         <div className="mt-8">
-          <Link href="/login" className="btn btn-primary">Contact Us</Link>
+          <Link href="/contact" className="btn btn-primary">
+            Contact Us
+          </Link>
         </div>
       </section>
     </>
