@@ -75,13 +75,13 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* OG Image — static file only */}
-        <meta property="og:image" content="https://blackandi.com/og-image.png" />
+        <meta property="og:image" content="https://blackandi.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="BLACK& — Built on Intelligence. Driven by Opportunity." />
         
         {/* Twitter Image */}
-        <meta name="twitter:image" content="https://blackandi.com/og-image.png" />
+        <meta name="twitter:image" content="https://blackandi.com/og-image.jpg" />
         <meta name="twitter:image:alt" content="BLACK& — Built on Intelligence. Driven by Opportunity." />
         
         <script
