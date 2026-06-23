@@ -1,12 +1,10 @@
 import { FadeIn } from "@/components/fade-in";
 
 const stats = [
-  { label: "Innovation", value: "Technology", accent: true },
-  { label: "Infrastructure", value: "Construction", accent: false },
-  { label: "Security", value: "Defense", accent: true },
-  { label: "Consumer", value: "Clothing", accent: false },
-  { label: "Production", value: "Food Industry", accent: true },
-  { label: "Experience", value: "Hospitality", accent: false },
+  { label: "Intelligence", value: "Technologies", accent: true },
+  { label: "Strategic", value: "Ventures", accent: false },
+  { label: "Operating", value: "Businesses", accent: true },
+  { label: "Strategic", value: "Assets", accent: false },
 ];
 
 export function MetricsBar() {
