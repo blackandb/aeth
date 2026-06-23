@@ -11,7 +11,6 @@ export function ShiftSection() {
   return (
     <section className="flex min-h-[80vh] flex-col justify-center py-24">
       <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-12">
-        {/* Left column — fixed width, doesn't stretch */}
         <FadeIn className="w-full max-w-[480px] shrink-0 lg:w-[480px]">
           <div className="eyebrow">Intelligence Is The Foundation</div>
           <h2 className="text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
@@ -27,7 +26,6 @@ export function ShiftSection() {
           </p>
         </FadeIn>
 
-        {/* Right column — cards in a compact grid */}
         <FadeIn delay={0.2} direction="right" className="w-full lg:flex-1">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-4">
             {pillars.map((p) => (
