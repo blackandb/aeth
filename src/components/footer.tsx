@@ -103,13 +103,14 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="mt-12 flex items-center justify-between border-t border-[rgba(255,255,255,0.08)] py-6">
-        <div className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary">
+      {/* Bottom bar — centrat pe mobil, flex pe desktop */}
+      <div className="mt-12 flex flex-col items-center justify-center border-t border-[rgba(255,255,255,0.08)] py-6 md:flex-row md:justify-between">
+        <div className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary text-center">
           © 2026 BLACK&. All rights reserved.
         </div>
 
-        <div className="flex items-center gap-4">
+        {/* Ascuns pe mobil, vizibil doar pe desktop */}
+        <div className="hidden items-center gap-4 md:flex">
           <a
             href="https://blackandi.com"
             target="_blank"
