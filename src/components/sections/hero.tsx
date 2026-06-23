@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { FadeIn } from "@/components/fade-in";
+import { HeroBackground } from "@/components/hero-background";
+import { TextReveal } from "@/components/text-reveal";
+import { MagneticButton } from "@/components/magnetic-button";
 
 const metrics = [
   { label: "Strategic_Readiness", value: "94%", status: "OPTIMAL" },
@@ -13,44 +16,39 @@ const metrics = [
 export function HeroSection() {
   return (
     <section className="relative flex min-h-[85vh] items-center">
-      {/* Monolith visual — centered */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="relative h-[320px] w-[320px]">
-          <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,45,85,0.15)_0%,transparent_70%)] blur-[40px] animate-[breathe_8s_ease-in-out_infinite]" />
-          <div className="absolute left-1/2 top-1/2 h-px w-[400px] -translate-x-1/2 -translate-y-1/2 rotate-45 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.8),transparent)] opacity-60 animate-[pulse_4s_infinite]" />
-          <div className="absolute left-1/2 top-1/2 h-px w-[600px] -translate-x-1/2 -translate-y-1/2 -rotate-[30deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.8),transparent)] opacity-30" />
-          <div className="absolute left-1/2 top-1/2 h-px w-[500px] -translate-x-1/2 -translate-y-1/2 rotate-[160deg] bg-[linear-gradient(90deg,transparent,#FF2D55,transparent)] opacity-40" />
-          <div className="absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black shadow-[0_0_80px_rgba(255,45,85,0.2),inset_0_0_40px_rgba(0,240,255,0.1)]" />
-        </div>
-      </div>
+      {/* Fundal animat — înlocuiește monolith-ul static */}
+      <HeroBackground />
 
-      {/* Content — two-column balanced layout */}
+      {/* Content */}
       <div className="relative z-10 flex w-full items-end justify-between gap-12 max-lg:flex-col max-lg:items-start">
         {/* Left: headline + CTA */}
         <div className="max-w-[520px]">
           <FadeIn delay={0}>
             <div className="eyebrow">Built on Intelligence. Driven by Opportunity.</div>
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <h1 className="mb-8 text-[72px] font-bold leading-[0.9] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
-              Building companies. Creating value.
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
+
+          <h1 className="mb-8 text-[72px] font-bold leading-[0.9] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
+            <TextReveal text="Building companies." delay={0.2} />
+            <br />
+            <TextReveal text="Creating value." delay={0.5} />
+          </h1>
+
+          <FadeIn delay={0.8}>
             <p className="mb-12 max-w-[440px] text-lg leading-[1.5] text-secondary">
               BLACK& develops technology, builds companies, and creates long-term
               value across strategic industries including construction, defense,
               clothing, food industry, and hospitality.
             </p>
           </FadeIn>
-          <FadeIn delay={0.3}>
+
+          <FadeIn delay={1}>
             <div className="flex items-center gap-5">
-              <Link href="/contact" className="btn btn-primary">
-                Contact Us
-              </Link>
-              <Link href="/industries" className="btn btn-secondary">
-                Explore BLACK&
-              </Link>
+              <MagneticButton className="btn btn-primary">
+                <Link href="/contact">Contact Us</Link>
+              </MagneticButton>
+              <MagneticButton className="btn btn-secondary">
+                <Link href="/industries">Explore BLACK&</Link>
+              </MagneticButton>
             </div>
           </FadeIn>
         </div>
