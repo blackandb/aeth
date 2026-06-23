@@ -31,29 +31,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  openGraph: {
-    title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
-    description:
-      "A diversified business group building companies and creating long-term value across strategic industries.",
-    url: "https://blackandi.com",
-    siteName: "BLACK&",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "https://blackandi.com/og-image.jpg?v=2",
-        width: 1200,
-        height: 630,
-        alt: "BLACK& — Built on Intelligence. Driven by Opportunity.",
-      },
-    ],
-  },
+  // NU mai pune openGraph.images aici — îl punem manual în <head>
   twitter: {
     card: "summary_large_image",
     title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
     description:
       "A diversified business group building companies and creating long-term value across strategic industries.",
-    images: ["https://blackandi.com/og-image.jpg?v=2"],
+    images: ["https://blackandi.com/og-image.png"],
     creator: "@blackandgroup",
   },
   robots: {
@@ -90,14 +74,14 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         
-        {/* OG Image — explicit cu cache-buster pentru a evita cache AETH */}
-        <meta property="og:image" content="https://blackandi.com/og-image.jpg?v=2" />
+        {/* OG Image — static file only */}
+        <meta property="og:image" content="https://blackandi.com/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="BLACK& — Built on Intelligence. Driven by Opportunity." />
         
-        {/* Twitter Image — explicit */}
-        <meta name="twitter:image" content="https://blackandi.com/og-image.jpg?v=2" />
+        {/* Twitter Image */}
+        <meta name="twitter:image" content="https://blackandi.com/og-image.png" />
         <meta name="twitter:image:alt" content="BLACK& — Built on Intelligence. Driven by Opportunity." />
         
         <script
