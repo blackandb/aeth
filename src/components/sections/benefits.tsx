@@ -12,9 +12,9 @@ const benefits = [
 export function BenefitsSection() {
   return (
     <section className="section-elevated flex min-h-[80vh] flex-col justify-center py-24">
-      <div className="flex flex-col gap-16 lg:flex-row lg:items-start">
-        {/* Left: sticky headline */}
-        <FadeIn className="max-w-[360px] shrink-0 lg:sticky lg:top-32">
+      <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-12">
+        {/* Left: fixed width headline */}
+        <FadeIn className="w-full max-w-[360px] shrink-0 lg:w-[360px]">
           <div className="eyebrow">Why BLACK&</div>
           <h2 className="text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
             Building value through intelligence, execution, and diversification
@@ -26,19 +26,21 @@ export function BenefitsSection() {
           </p>
         </FadeIn>
 
-        {/* Right: benefit items with left accent borders */}
-        <FadeIn delay={0.2} direction="right" className="flex flex-1 flex-col gap-0">
-          {benefits.map((b) => (
-            <div key={b.num} className="group flex items-start gap-5 border-b border-[rgba(255,255,255,0.06)] py-6 transition-colors hover:bg-[rgba(0,240,255,0.02)]">
-              <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center border border-accent-cyan/20 font-[var(--font-mono)] text-xs text-accent-cyan transition-colors group-hover:border-accent-cyan/50 group-hover:bg-accent-cyan/5">
-                {b.num}
-              </span>
-              <div>
-                <h3 className="text-lg font-bold">{b.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-secondary">{b.desc}</p>
+        {/* Right: benefit items in a compact container */}
+        <FadeIn delay={0.2} direction="right" className="w-full lg:flex-1">
+          <div className="flex flex-col">
+            {benefits.map((b) => (
+              <div key={b.num} className="group flex items-start gap-5 border-b border-[rgba(255,255,255,0.06)] py-6 transition-colors hover:bg-[rgba(0,240,255,0.02)]">
+                <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center border border-accent-cyan/20 font-[var(--font-mono)] text-xs text-accent-cyan transition-colors group-hover:border-accent-cyan/50 group-hover:bg-accent-cyan/5">
+                  {b.num}
+                </span>
+                <div className="min-w-0">
+                  <h3 className="text-lg font-bold">{b.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-secondary">{b.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </FadeIn>
       </div>
     </section>
