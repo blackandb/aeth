@@ -22,24 +22,23 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_auto_auto_auto]">
           {/* Brand column */}
           <div>
-            <Link href="/" className="brand text-xl">
+            <Link href="/" className="brand text-xl text-primary">
               BLACK&
             </Link>
 
-            <p className="mt-4 font-[var(--font-mono)] text-[11px] uppercase leading-relaxed tracking-[0.15em] text-accent-cyan">
-              Built on Intelligence. Driven by Opportunity.
+            <p className="mt-4 font-[var(--font-mono)] text-[11px] uppercase leading-relaxed tracking-[0.15em] text-primary">
+              The Intelligence Company Builder
             </p>
 
-            <p className="mt-3 max-w-[280px] text-sm leading-relaxed text-secondary">
-              BLACK& develops companies, technology, and strategic initiatives across
-              construction, defense, clothing, food industry, hospitality, and
-              emerging opportunities.
+            <p className="mt-3 max-w-[280px] text-sm leading-relaxed text-primary">
+              BLACK& develops intelligence technologies, deploys strategic capital
+              and builds enterprises designed to create lasting value across generations.
             </p>
           </div>
 
           {/* Company column */}
           <div>
-            <div className="mb-4 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+            <div className="mb-4 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-primary">
               Company
             </div>
 
@@ -58,7 +57,7 @@ export function Footer() {
 
           {/* Resources column */}
           <div>
-            <div className="mb-4 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+            <div className="mb-4 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-primary">
               Resources
             </div>
 
@@ -79,14 +78,14 @@ export function Footer() {
           <div>
             <Link
               href="/contact"
-              className="btn btn-secondary mb-4 block text-center"
+              className="btn btn-secondary mb-4 block text-center text-primary"
             >
               Contact Us
             </Link>
 
             <a
               href="mailto:contact@blackandi.com"
-              className="block font-[var(--font-mono)] text-[11px] text-secondary transition-colors hover:text-accent-cyan"
+              className="block font-[var(--font-mono)] text-[11px] text-primary transition-colors hover:text-accent-cyan"
             >
               <span className="text-accent-cyan">&gt;</span> contact@blackandi.com
             </a>
@@ -95,7 +94,7 @@ export function Footer() {
               href="https://blackandi.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 block font-[var(--font-mono)] text-[11px] text-secondary transition-colors hover:text-accent-cyan"
+              className="mt-2 block font-[var(--font-mono)] text-[11px] text-primary transition-colors hover:text-accent-cyan"
             >
               <span className="text-accent-cyan">&gt;</span> blackandi.com
             </a>
@@ -103,26 +102,25 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar — centrat pe mobil, flex pe desktop */}
+      {/* Bottom bar */}
       <div className="mt-12 flex flex-col items-center justify-center border-t border-[rgba(255,255,255,0.08)] py-6 md:flex-row md:justify-between">
-        <div className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary text-center">
+        <div className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary text-center">
           © 2026 BLACK&. All rights reserved.
         </div>
 
-        {/* Ascuns pe mobil, vizibil doar pe desktop */}
         <div className="hidden items-center gap-4 md:flex">
           <a
             href="https://blackandi.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary transition-colors hover:text-accent-cyan"
+            className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary transition-colors hover:text-accent-cyan"
           >
             BLACKANDI.COM
           </a>
 
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-accent-cyan" />
-            <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary">
+            <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary">
               GROUP_ONLINE
             </span>
           </div>
