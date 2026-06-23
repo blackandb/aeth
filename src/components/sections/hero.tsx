@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FadeIn } from "@/components/fade-in";
 import { HeroBackground } from "@/components/hero-background";
-import { TextReveal } from "@/components/text-reveal";
+import { ScrollRevealText } from "@/components/text-reveal";
 import { MagneticButton } from "@/components/magnetic-button";
 
 const metrics = [
@@ -16,22 +16,21 @@ const metrics = [
 export function HeroSection() {
   return (
     <section className="relative flex min-h-[85vh] items-center">
-      {/* Fundal animat — înlocuiește monolith-ul static */}
       <HeroBackground />
 
-      {/* Content */}
       <div className="relative z-10 flex w-full items-end justify-between gap-12 max-lg:flex-col max-lg:items-start">
-        {/* Left: headline + CTA */}
         <div className="max-w-[520px]">
           <FadeIn delay={0}>
             <div className="eyebrow">Built on Intelligence. Driven by Opportunity.</div>
           </FadeIn>
 
           <h1 className="mb-8 text-[72px] font-bold leading-[0.9] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
-            <TextReveal text="Building companies." delay={0.2} />
+            <ScrollRevealText text="Building companies." />
             <br />
-            <TextReveal text="Creating value." delay={0.5} />
+            <ScrollRevealText text="Creating value." />
           </h1>
+          
+          {/* restul rămâne la fel */}
 
           <FadeIn delay={0.8}>
             <p className="mb-12 max-w-[440px] text-lg leading-[1.5] text-secondary">
