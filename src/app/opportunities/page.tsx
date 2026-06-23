@@ -88,11 +88,12 @@ export default function OpportunitiesPage() {
           {opportunities.map((opp, i) => (
             <div
               key={opp.title}
-              className={`aeth-card flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between ${
+              className={`aeth-card flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between ${
                 opp.accent ? "border-accent-cyan/20" : ""
               }`}
             >
-              <div className="max-w-[500px]">
+              {/* Coloana 1: Titlu + Descriere — latime fixa */}
+              <div className="w-full max-w-[420px] shrink-0">
                 <span className="section-number">
                   {String(i + 1).padStart(2, "0")} // {opp.status}
                 </span>
@@ -102,7 +103,8 @@ export default function OpportunitiesPage() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-3">
+              {/* Coloana 2: Lista de items — latime fixa, aliniata sus */}
+              <div className="flex w-full max-w-[280px] flex-col gap-3 lg:pt-8">
                 {opp.items.map((item) => (
                   <div
                     key={item}
@@ -114,10 +116,13 @@ export default function OpportunitiesPage() {
                 ))}
               </div>
 
-              <div className="shrink-0">
+              {/* Coloana 3: Buton — latime fixa, aliniat sus, aceeasi dimensiune */}
+              <div className="shrink-0 lg:pt-8">
                 <Link
                   href={opp.href}
-                  className={`btn ${opp.accent ? "btn-primary" : "btn-secondary"}`}
+                  className={`btn block w-[220px] text-center ${
+                    opp.accent ? "btn-primary" : "btn-secondary"
+                  }`}
                 >
                   {opp.cta}
                 </Link>
