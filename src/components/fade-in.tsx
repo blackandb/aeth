@@ -7,7 +7,7 @@ import { useRef, ReactNode } from 'react';
 const EASE = {
   corporate: [0.25, 0.1, 0.25, 1] as const,
   smooth: [0.43, 0.13, 0.23, 0.96] as const,
-  snap: [0.16, 1, 0.3, 1] as const,
+  snap: [0.16, 1, 0.3, 1] as const, 
 };
 
 interface FadeInProps {
