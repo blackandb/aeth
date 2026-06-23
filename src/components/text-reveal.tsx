@@ -10,36 +10,33 @@ interface ScrollRevealTextProps {
 }
 
 export function ScrollRevealText({ text, className = "", delay = 0 }: ScrollRevealTextProps) {
-  const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  
+  // REF pe motion.span direct, nu pe wrapper
+  const ref = useRef<HTMLSpanElement>(null);
   
   const isInView = useInView(ref, { 
     once: true,
-    amount: 0.1
+    amount: 0.3  // mărit la 30% pentru siguranță
   });
 
-  // Activ când e în viewport SAU când e hover
   const isActive = isInView || isHovered;
 
   return (
-    <div 
-      ref={ref} 
-      className={className}
+    <motion.span
+      ref={ref}
+      className={`inline-block ${className}`}
+      initial={{ color: "#888888", opacity: 0.3 }}
+      animate={isActive ? { color: "#ffffff", opacity: 1 } : { color: "#888888", opacity: 0.3 }}
+      transition={{
+        duration: 0.8,
+        delay: delay,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <motion.span
-        className="inline-block"
-        initial={{ color: "#888888", opacity: 0.3 }}
-        animate={isActive ? { color: "#ffffff", opacity: 1 } : { color: "#888888", opacity: 0.3 }}
-        transition={{
-          duration: 0.8,
-          delay: delay,
-          ease: [0.25, 0.1, 0.25, 1],
-        }}
-      >
-        {text}
-      </motion.span>
-    </div>
+      {text}
+    </motion.span>
   );
 }
