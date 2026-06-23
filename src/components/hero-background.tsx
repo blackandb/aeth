@@ -16,11 +16,14 @@ export function HeroBackground() {
     let time = 0;
 
     function resize() {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
 
     function draw() {
+      if (!canvas || !ctx) return;
+      
       time += 0.005;
 
       const gradient = ctx.createRadialGradient(
