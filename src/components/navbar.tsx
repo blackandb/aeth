@@ -36,14 +36,14 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav>
-      <div className="relative flex items-center justify-between">
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-[rgba(5,5,5,0.95)] backdrop-blur-xl border-b border-[rgba(255,255,255,0.08)]">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         {/* Left: Logo */}
         <Link href="/" className="brand shrink-0">
           BLACK&
         </Link>
 
-        {/* Center: Nav links — absolutely centered on page */}
+        {/* Center: Nav links */}
         <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 md:flex">
           {navLinks.map((link) => (
             <Link
