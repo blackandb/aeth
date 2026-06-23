@@ -1,39 +1,42 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-interface TextRevealProps {
+interface ScrollRevealTextProps {
   text: string;
   className?: string;
-  delay?: number;
 }
 
-export function TextReveal({ text, className = "", delay = 0 }: TextRevealProps) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+export function ScrollRevealText({ text, className = "" }: ScrollRevealTextProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 0.9", "start 0.3"], // Când începe și când se termină animația
+  });
 
-  const words = text.split(" ");
+  // Textul pornește gri (invizibil) și devine alb (vizibil)
+  const color = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["#888888", "#ffffff"] // gray → white
+  );
+
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0.3, 1] // semi-transparent → fully visible
+  );
 
   return (
-    <span ref={ref} className={`inline-flex flex-wrap ${className}`}>
-      {words.map((word, i) => (
-        <span key={i} className="overflow-hidden inline-block">
-          <motion.span
-            className="inline-block"
-            initial={{ y: "100%" }}
-            animate={isInView ? { y: 0 } : { y: "100%" }}
-            transition={{
-              duration: 0.5,
-              delay: delay + i * 0.05,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-          >
-            {word}
-            <span className="inline-block w-[0.3em]"> </span>
-          </motion.span>
-        </span>
-      ))}
-    </span>
+    <div ref={ref} className={className}>
+      <motion.span
+        style={{ color, opacity }}
+        className="inline-block"
+      >
+        {text}
+      </motion.span>
+    </div>
   );
 }
