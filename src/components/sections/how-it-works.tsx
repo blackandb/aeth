@@ -2,23 +2,23 @@ import Link from "next/link";
 import { FadeIn } from "@/components/fade-in";
 
 const steps = [
-  { num: "01", cat: "Market_Intelligence", title: "Identify opportunities", desc: "We analyze markets, industries, and emerging trends to identify high-potential opportunities.", tags: ["Market Analysis", "Strategic Intelligence"] },
-  { num: "02", cat: "Company_Building", title: "Build and develop", desc: "We create companies, technologies, and operational structures designed for long-term growth.", tags: ["Business Creation", "Technology Development"] },
-  { num: "03", cat: "Execution_Model", title: "Scale and execute", desc: "We focus on disciplined execution, operational excellence, and sustainable expansion across strategic sectors.", tags: ["Operational Systems", "Scalable Growth"] },
-  { num: "04", cat: "Value_Creation", title: "Create long-term value", desc: "We generate value through innovation, diversification, strategic partnerships, and intelligent capital allocation.", tags: ["Strategic Partnerships", "Long-Term Value"] },
+  { num: "01", cat: "Information", title: "Signals, data, knowledge", desc: "Every enterprise begins with signals, data, knowledge and market observations.", tags: ["Data Acquisition", "Market Signals"] },
+  { num: "02", cat: "Intelligence", title: "Analysis, context, conviction", desc: "We transform information into analysis, context, conviction and strategic understanding.", tags: ["Strategic Analysis", "Context Building"] },
+  { num: "03", cat: "Enterprise", title: "Companies, technologies, products", desc: "We build companies, technologies, products and operating businesses designed for long-term growth.", tags: ["Business Creation", "Technology Development"] },
+  { num: "04", cat: "Assets", title: "Long-term value", desc: "We create long-term value designed to endure, grow and compound across multiple economic cycles.", tags: ["Enduring Value", "Compounding Growth"] },
 ];
 
 export function HowItWorksSection() {
   return (
     <section className="section-glow flex min-h-[80vh] flex-col justify-center py-24">
       <FadeIn>
-        <div className="eyebrow">How We Build</div>
+        <div className="eyebrow">From Information To Enduring Assets</div>
         <h2 className="max-w-[600px] text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-          From opportunity to operating company
+          From Information To Enduring Assets
         </h2>
         <p className="mt-6 max-w-[600px] text-lg leading-[1.5] text-secondary">
-          BLACK& transforms strategic opportunities into companies, platforms, and
-          assets built for long-term value creation.
+          Every enterprise begins with information. Most organizations stop there.
+          BLACK& follows a different path.
         </p>
       </FadeIn>
 
