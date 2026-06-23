@@ -1,5 +1,4 @@
-
-layout_code = '''import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteShell } from "@/components/site-shell";
@@ -117,9 +116,3 @@ export default function RootLayout({
     </html>
   );
 }
-'''
-
-with open('/mnt/agents/output/layout.tsx', 'w') as f:
-    f.write(layout_code)
-
-print("✅ layout.tsx salvat")
