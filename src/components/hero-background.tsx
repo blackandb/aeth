@@ -109,7 +109,7 @@ export function HeroBackground() {
         }
       });
 
-      // Pachete de date care circulă (LED-uri roșii)
+       // Pachete de date care circulă (LED-uri roșii)
       const packetCount = 4;
       for (let i = 0; i < packetCount; i++) {
         const t = ((time * 0.3) + i / packetCount) % 1;
@@ -128,8 +128,11 @@ export function HeroBackground() {
         
         // Trail
         const trailLength = 20;
-        const tx = x - (next.x * w - node.x * w) * (trailLength / maxDist);
-        const ty = y - (next.y * h - node.y * h) * (trailLength / maxDist);
+        const dx = next.x * w - node.x * w;
+        const dy = next.y * h - node.y * h;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const tx = x - dx * (trailLength / dist);
+        const ty = y - dy * (trailLength / dist);
         
         const trailGradient = ctx.createLinearGradient(tx, ty, x, y);
         trailGradient.addColorStop(0, "rgba(255, 45, 85, 0)");
