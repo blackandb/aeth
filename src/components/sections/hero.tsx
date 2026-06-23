@@ -33,7 +33,7 @@ export function HeroSection() {
           </h1>
 
           <FadeIn delay={0.6}>
-            <p className="mb-12 max-w-[480px] text-lg leading-[1.6] text-secondary">
+            <p className="mb-12 max-w-[480px] text-lg leading-[1.6] text-primary">
               BLACK& develops intelligence technologies, deploys strategic capital 
               and builds companies across sectors where insight creates opportunity 
               and execution creates value.
@@ -55,7 +55,7 @@ export function HeroSection() {
         <FadeIn delay={0.4} direction="right" className="flex flex-col gap-4 max-lg:mt-12 max-lg:flex-row max-lg:flex-wrap max-lg:gap-6">
           {metrics.map((m) => (
             <div key={m.label} className="border-l border-[rgba(255,255,255,0.1)] pl-4">
-              <span className="block font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-secondary">
+              <span className="block font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary">
                 {m.label}
               </span>
               <span className="mt-1 block text-2xl font-bold tracking-tight">{m.value}</span>
