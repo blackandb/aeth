@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteShell } from "@/components/site-shell";
+import { SmoothScroll } from "@/components/smooth-scroll";
+import { PageTransition } from "@/components/page-transition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -90,7 +92,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         
-        {/* OG Image — explicit pentru a evita cache AETH */}
+        {/* OG Image */}
         <meta property="og:image" content="https://blackandi.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -125,8 +127,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-bg text-primary antialiased">
-        <div className="grid-overlay" />
-        <SiteShell>{children}</SiteShell>
+        <SmoothScroll>
+          <div className="grid-overlay" />
+          <PageTransition>
+            <SiteShell>{children}</SiteShell>
+          </PageTransition>
+        </SmoothScroll>
       </body>
     </html>
   );
