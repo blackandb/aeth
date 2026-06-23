@@ -24,13 +24,11 @@ export function HeroSection() {
             <div className="eyebrow">Built on Intelligence. Driven by Opportunity.</div>
           </FadeIn>
 
-          <h1 className="mb-8 text-[72px] font-bold leading-[0.9] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
-          <ScrollRevealText text="Building companies." delay={0.2} />
+          <h1 className="mb-8 text-[72px] font-bold leading-[1.05] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
+            <ScrollRevealText text="Building companies." delay={0.2} />
             <br />
             <ScrollRevealText text="Creating value." />
           </h1>
-          
-          {/* restul rămâne la fel */}
 
           <FadeIn delay={0.8}>
             <p className="mb-12 max-w-[440px] text-lg leading-[1.5] text-secondary">
