@@ -88,12 +88,12 @@ export default function OpportunitiesPage() {
           {opportunities.map((opp, i) => (
             <div
               key={opp.title}
-              className={`aeth-card flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between ${
+              className={`aeth-card flex flex-col gap-8 xl:flex-row xl:items-start xl:justify-between ${
                 opp.accent ? "border-accent-cyan/20" : ""
               }`}
             >
-              {/* Coloana 1: Titlu + Descriere — latime fixa */}
-              <div className="w-full max-w-[420px] shrink-0">
+              {/* Coloana 1: Titlu + Descriere */}
+              <div className="min-w-0 xl:w-[380px] xl:shrink-0">
                 <span className="section-number">
                   {String(i + 1).padStart(2, "0")} // {opp.status}
                 </span>
@@ -103,21 +103,21 @@ export default function OpportunitiesPage() {
                 </p>
               </div>
 
-              {/* Coloana 2: Lista de items — latime fixa, aliniata sus */}
-              <div className="flex w-full max-w-[280px] flex-col gap-3 lg:pt-8">
+              {/* Coloana 2: Lista de items */}
+              <div className="flex flex-col gap-3 xl:flex-1 xl:px-8">
                 {opp.items.map((item) => (
                   <div
                     key={item}
                     className="flex items-center gap-2 font-[var(--font-mono)] text-[11px] uppercase tracking-wider text-secondary"
                   >
-                    <span className="text-accent-cyan">+</span>
-                    {item}
+                    <span className="text-accent-cyan shrink-0">+</span>
+                    <span className="truncate">{item}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Coloana 3: Buton — latime fixa, aliniat sus, aceeasi dimensiune */}
-              <div className="shrink-0 lg:pt-8">
+              {/* Coloana 3: Buton */}
+              <div className="shrink-0 xl:pt-0">
                 <Link
                   href={opp.href}
                   className={`btn block w-[220px] text-center ${
