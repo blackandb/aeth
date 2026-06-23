@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 interface ScrollRevealTextProps {
@@ -11,19 +11,27 @@ interface ScrollRevealTextProps {
 
 export function ScrollRevealText({ text, className = "", delay = 0 }: ScrollRevealTextProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
   
-  // CORECT: fără margin negativ, amount mic
   const isInView = useInView(ref, { 
     once: true,
-    amount: 0.1  // doar 10% vizibil = declanșează
+    amount: 0.1
   });
 
+  // Activ când e în viewport SAU când e hover
+  const isActive = isInView || isHovered;
+
   return (
-    <div ref={ref} className={className}>
+    <div 
+      ref={ref} 
+      className={className}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <motion.span
         className="inline-block"
         initial={{ color: "#888888", opacity: 0.3 }}
-        animate={isInView ? { color: "#ffffff", opacity: 1 } : { color: "#888888", opacity: 0.3 }}
+        animate={isActive ? { color: "#ffffff", opacity: 1 } : { color: "#888888", opacity: 0.3 }}
         transition={{
           duration: 0.8,
           delay: delay,
