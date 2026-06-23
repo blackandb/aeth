@@ -13,10 +13,10 @@ export function ScrollRevealText({ text, className = "" }: ScrollRevealTextProps
   
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.9", "start 0.3"], // Când începe și când se termină animația
+    offset: ["end 0.9", "end 0.3"], // INVERSAT: când elementul iese din viewport
   });
 
-  // Textul pornește gri (invizibil) și devine alb (vizibil)
+  // Textul pornește gri (invizibil) și devine alb (vizibil) la scroll DOWN
   const color = useTransform(
     scrollYProgress,
     [0, 1],
