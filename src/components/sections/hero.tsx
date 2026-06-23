@@ -19,26 +19,28 @@ export function HeroSection() {
       <HeroBackground />
 
       <div className="relative z-10 flex w-full items-end justify-between gap-12 max-lg:flex-col max-lg:items-start">
-        <div className="max-w-[520px]">
+        <div className="max-w-[600px]">
           <FadeIn delay={0}>
-            <div className="eyebrow">Built on Intelligence. Driven by Opportunity.</div>
+            <div className="eyebrow">The Intelligence Company Builder</div>
           </FadeIn>
 
-          <h1 className="mb-8 text-[72px] font-bold leading-[1.05] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
-            <TextReveal text="Building companies." delay={0.2} />
+          <h1 className="mb-8 text-[64px] font-bold leading-[1.05] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
+            <TextReveal text="Transforming" delay={0.1} />
             <br />
-            <TextReveal text="Creating value." />
+            <TextReveal text="Intelligence Into" delay={0.2} />
+            <br />
+            <TextReveal text="Enterprise." delay={0.3} />
           </h1>
 
-          <FadeIn delay={0.8}>
-            <p className="mb-12 max-w-[440px] text-lg leading-[1.5] text-secondary">
-              BLACK& develops technology, builds companies, and creates long-term
-              value across strategic industries including construction, defense,
-              clothing, food industry, and hospitality.
+          <FadeIn delay={0.6}>
+            <p className="mb-12 max-w-[480px] text-lg leading-[1.6] text-secondary">
+              BLACK& develops intelligence technologies, deploys strategic capital 
+              and builds companies across sectors where insight creates opportunity 
+              and execution creates value.
             </p>
           </FadeIn>
 
-          <FadeIn delay={1}>
+          <FadeIn delay={0.8}>
             <div className="flex items-center gap-5">
               <MagneticButton className="btn btn-primary">
                 <Link href="/contact">Contact Us</Link>
