@@ -16,9 +16,12 @@ const protocolLinks = [
 
 export function Footer() {
   return (
-    <footer className="mt-16">
+    <footer className="relative z-10 mt-16">
+      {/* Layer de fundal semi-transparent pentru contrast */}
+      <div className="absolute inset-0 bg-bg/80 backdrop-blur-sm -z-10" />
+      
       {/* Main footer content */}
-      <div className="border-t border-[rgba(255,255,255,0.08)] pt-16">
+      <div className="border-t border-[rgba(255,255,255,0.12)] pt-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_auto_auto_auto]">
           {/* Brand column */}
           <div>
@@ -26,11 +29,11 @@ export function Footer() {
               BLACK&
             </Link>
 
-            <p className="mt-4 font-[var(--font-mono)] text-[11px] uppercase leading-relaxed tracking-[0.15em] text-primary">
+            <p className="mt-4 font-[var(--font-mono)] text-[11px] uppercase leading-relaxed tracking-[0.15em] text-primary font-medium">
               The Intelligence Company Builder
             </p>
 
-            <p className="mt-3 max-w-[280px] text-sm leading-relaxed text-primary">
+            <p className="mt-3 max-w-[280px] text-sm leading-relaxed text-primary/90">
               BLACK& develops intelligence technologies, deploys strategic capital
               and builds enterprises designed to create lasting value across generations.
             </p>
@@ -38,7 +41,7 @@ export function Footer() {
 
           {/* Company column */}
           <div>
-            <div className="mb-4 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-primary">
+            <div className="mb-4 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-primary font-bold">
               Company
             </div>
 
@@ -47,7 +50,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-primary transition-colors hover:text-accent-cyan"
+                  className="text-sm text-primary font-medium transition-colors hover:text-accent-cyan"
                 >
                   {link.label}
                 </Link>
@@ -57,7 +60,7 @@ export function Footer() {
 
           {/* Resources column */}
           <div>
-            <div className="mb-4 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-primary">
+            <div className="mb-4 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-primary font-bold">
               Resources
             </div>
 
@@ -66,7 +69,7 @@ export function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-primary transition-colors hover:text-accent-cyan"
+                  className="text-sm text-primary font-medium transition-colors hover:text-accent-cyan"
                 >
                   {link.label}
                 </Link>
@@ -78,14 +81,14 @@ export function Footer() {
           <div>
             <Link
               href="/contact"
-              className="btn btn-secondary mb-4 block text-center text-primary"
+              className="btn btn-secondary mb-4 block text-center text-primary font-bold border-primary/30 hover:border-primary"
             >
               Contact Us
             </Link>
 
             <a
               href="mailto:contact@blackandi.com"
-              className="block font-[var(--font-mono)] text-[11px] text-primary transition-colors hover:text-accent-cyan"
+              className="block font-[var(--font-mono)] text-[11px] text-primary font-medium transition-colors hover:text-accent-cyan"
             >
               <span className="text-accent-cyan">&gt;</span> contact@blackandi.com
             </a>
@@ -94,7 +97,7 @@ export function Footer() {
               href="https://blackandi.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 block font-[var(--font-mono)] text-[11px] text-primary transition-colors hover:text-accent-cyan"
+              className="mt-2 block font-[var(--font-mono)] text-[11px] text-primary font-medium transition-colors hover:text-accent-cyan"
             >
               <span className="text-accent-cyan">&gt;</span> blackandi.com
             </a>
@@ -103,8 +106,8 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="mt-12 flex flex-col items-center justify-center border-t border-[rgba(255,255,255,0.08)] py-6 md:flex-row md:justify-between">
-        <div className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary text-center">
+      <div className="mt-12 flex flex-col items-center justify-center border-t border-[rgba(255,255,255,0.12)] py-6 md:flex-row md:justify-between">
+        <div className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary font-medium text-center">
           © 2026 BLACK&. All rights reserved.
         </div>
 
@@ -113,14 +116,14 @@ export function Footer() {
             href="https://blackandi.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary transition-colors hover:text-accent-cyan"
+            className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary font-medium transition-colors hover:text-accent-cyan"
           >
             BLACKANDI.COM
           </a>
 
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-accent-cyan" />
-            <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary">
+            <span className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary font-medium">
               GROUP_ONLINE
             </span>
           </div>
