@@ -1,3 +1,4 @@
+// src/components/text-reveal.tsx
 "use client";
 
 import { useRef, useState, useEffect } from "react";
@@ -17,21 +18,30 @@ export function TextReveal({ text, className = "", delay = 0 }: TextRevealProps)
     const element = ref.current;
     if (!element) return;
 
+    // Fallback: dacă IntersectionObserver nu funcționează, forțează după 100ms
+    const fallbackTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          clearTimeout(fallbackTimer);
           observer.unobserve(element);
         }
       },
       { 
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.01, // coborât la 1% pentru siguranță
+        rootMargin: "100px 0px 100px 0px" // margin generoasă
       }
     );
 
     observer.observe(element);
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(fallbackTimer);
+      observer.disconnect();
+    };
   }, []);
 
   const active = isVisible || isHovered;
