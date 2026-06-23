@@ -7,10 +7,10 @@ import { TextReveal } from "@/components/text-reveal";
 import { MagneticButton } from "@/components/magnetic-button";
 
 const metrics = [
-  { label: "Strategic_Readiness", value: "94%", status: "OPTIMAL" },
-  { label: "Opportunity_Index", value: "99.8%", status: "ACTIVE" },
-  { label: "Value_Creation", value: "+44%", status: "TRACKING" },
-  { label: "Market_Position", value: "98/100", status: "INDEXED" },
+  { label: "Time_To_Market", value: "-70%", status: "ACCELERATED" },
+  { label: "Capital_Efficiency", value: "+340%", status: "OPTIMIZED" },
+  { label: "Risk_Reduction", value: "-85%", status: "MITIGATED" },
+  { label: "Success_Rate", value: "94%", status: "VALIDATED" },
 ];
 
 export function HeroSection() {
