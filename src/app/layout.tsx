@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
     description:
       "A diversified business group building companies and creating long-term value across strategic industries.",
-    images: ["https://blackandi.com/og-image.png"],
+    images: ["https://blackandi.com/og-image.jpg"],
     creator: "@blackandgroup",
   },
   robots: {
