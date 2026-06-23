@@ -3,27 +3,27 @@ import { FadeIn } from "@/components/fade-in";
 const segments = [
   {
     num: "01",
-    title: "Entrepreneurs",
-    desc: "Founders and business builders looking to create, scale, and diversify companies across strategic industries.",
-    tag: "FOUNDERS",
+    title: "Technology Platforms",
+    desc: "Intelligence products, decision-support systems and advanced information environments that transform complexity into clarity.",
+    tag: "TECHNOLOGY",
   },
   {
     num: "02",
-    title: "Strategic Partners",
-    desc: "Organizations seeking long-term partnerships, joint ventures, and collaboration opportunities.",
-    tag: "PARTNERSHIPS",
+    title: "Strategic Ventures",
+    desc: "New companies and initiatives created around high-conviction opportunities identified through research, intelligence and market understanding.",
+    tag: "VENTURES",
   },
   {
     num: "03",
-    title: "Investors",
-    desc: "Private investors, family offices, and institutional capital seeking exposure to high-potential opportunities.",
-    tag: "CAPITAL",
+    title: "Operating Businesses",
+    desc: "Businesses with sustainable competitive advantages, strong leadership and long-term growth potential across strategic sectors.",
+    tag: "OPERATIONS",
   },
   {
     num: "04",
-    title: "Corporate & Institutional Clients",
-    desc: "Businesses, public entities, and institutions looking for innovation, execution, and strategic development capabilities.",
-    tag: "ENTERPRISE",
+    title: "Strategic Assets",
+    desc: "Investments and ownership positions designed to create durable value across multiple economic cycles.",
+    tag: "ASSETS",
   },
 ];
 
@@ -31,14 +31,13 @@ export function AudienceSection() {
   return (
     <section className="section-glow flex min-h-[80vh] flex-col items-center justify-center py-24 text-center">
       <FadeIn>
-        <div className="eyebrow justify-center">Who We Work With</div>
+        <div className="eyebrow justify-center">The Companies We Build</div>
         <h2 className="max-w-[600px] text-[48px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[32px]">
-          Working with those shaping the future of industry.
+          The Companies We Build
         </h2>
         <p className="mx-auto mt-6 max-w-[480px] text-lg leading-[1.5] text-secondary">
-          BLACK& works with entrepreneurs, strategic partners, investors,
-          corporations, and institutions seeking sustainable growth,
-          innovation, and long-term impact.
+          BLACK& is not limited to a single industry. Our model is designed to create,
+          support and scale companies wherever intelligence can create lasting advantage.
         </p>
       </FadeIn>
 
