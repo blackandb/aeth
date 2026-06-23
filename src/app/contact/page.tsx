@@ -2,49 +2,164 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact — BLACK&",
-  description: "Contact BLACK& to discuss strategic partnerships, opportunities, investments, and business development initiatives.",
+  description: "Get in touch with BLACK& to discuss strategic partnerships, business building opportunities, and investments.",
+  alternates: { canonical: "https://blackandi.com/contact" },
+  openGraph: {
+    title: "Contact — BLACK&",
+    description: "Let's build the future together.",
+    url: "https://blackandi.com/contact",
+    images: [{ url: "/og-contact.jpg", width: 1200, height: 630 }],
+  },
 };
+
+const contactMethods = [
+  {
+    label: "Email",
+    value: "contact@blackandi.com",
+    href: "mailto:contact@blackandi.com",
+    description: "For general inquiries and partnership discussions.",
+  },
+  {
+    label: "Partnerships",
+    value: "partnerships@blackandi.com",
+    href: "mailto:partnerships@blackandi.com",
+    description: "For joint ventures and strategic collaboration.",
+  },
+  {
+    label: "Investments",
+    value: "invest@blackandi.com",
+    href: "mailto:invest@blackandi.com",
+    description: "For investment opportunities and capital allocation.",
+  },
+];
 
 export default function ContactPage() {
   return (
     <>
-      <section className="flex min-h-[calc(100vh-120px)] flex-col items-center justify-center py-24 text-center">
-        <div className="eyebrow">Contact BLACK&</div>
-        <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-md:text-[36px]">
-          Let&apos;s discuss opportunities.
+      <section className="flex min-h-[70vh] flex-col justify-center py-24">
+        <div className="eyebrow">Contact</div>
+        <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
+          Let's build the future together.
         </h1>
-        <p className="mt-6 max-w-[480px] text-lg leading-[1.5] text-secondary">
-          Contact us to discuss partnerships, investments, business development,
-          or strategic opportunities across our active industries.
+        <p className="mt-6 max-w-[500px] text-lg leading-[1.5] text-secondary">
+          We are open to discussing strategic partnerships, investments, and new
+          opportunities. Reach out and let's explore what's possible.
         </p>
+      </section>
 
-        <form className="mt-12 w-full max-w-[440px] space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="system-label mb-1.5 block text-left">Name</label>
-              <input type="text" placeholder="Your name" className="w-full border border-[rgba(255,255,255,0.1)] bg-transparent px-4 py-3 text-sm text-primary outline-none transition-colors placeholder:text-secondary/50 focus:border-accent-cyan/50" />
-            </div>
-            <div>
-              <label className="system-label mb-1.5 block text-left">Company</label>
-              <input type="text" placeholder="Company name" className="w-full border border-[rgba(255,255,255,0.1)] bg-transparent px-4 py-3 text-sm text-primary outline-none transition-colors placeholder:text-secondary/50 focus:border-accent-cyan/50" />
-            </div>
-          </div>
-          <div>
-            <label className="system-label mb-1.5 block text-left">Email</label>
-            <input type="email" placeholder="you@company.com" className="w-full border border-[rgba(255,255,255,0.1)] bg-transparent px-4 py-3 text-sm text-primary outline-none transition-colors placeholder:text-secondary/50 focus:border-accent-cyan/50" />
-          </div>
-          <div>
-            <label className="system-label mb-1.5 block text-left">Message</label>
-            <textarea rows={3} placeholder="Tell us about the opportunity..." className="w-full resize-none border border-[rgba(255,255,255,0.1)] bg-transparent px-4 py-3 text-sm text-primary outline-none transition-colors placeholder:text-secondary/50 focus:border-accent-cyan/50" />
-          </div>
-          <button type="submit" className="btn btn-primary w-full text-center">
-            Send Message
-          </button>
-        </form>
+      <section className="py-24">
+        <div className="mb-12">
+          <div className="eyebrow">Get in Touch</div>
+          <h2 className="mt-4 text-[32px] font-bold tracking-[-0.04em]">
+            Contact Methods
+          </h2>
+        </div>
 
-        <p className="mt-6 font-[var(--font-mono)] text-[10px] uppercase tracking-wider text-secondary">
-          Or email us directly at <span className="text-accent-cyan">contact@blackandi.com</span>
-        </p>
+        <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-3">
+          {contactMethods.map((method) => (
+            <a
+              key={method.label}
+              href={method.href}
+              className="aeth-card group transition-all hover:border-accent-cyan/30"
+            >
+              <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+                {method.label}
+              </span>
+              <span className="mt-2 block text-lg font-bold text-accent-cyan transition-colors group-hover:text-white">
+                {method.value}
+              </span>
+              <p className="mt-2 text-sm leading-relaxed text-secondary">
+                {method.description}
+              </p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-elevated py-24">
+        <div className="max-w-2xl">
+          <div className="eyebrow">Direct Message</div>
+          <h2 className="mt-4 text-[32px] font-bold tracking-[-0.04em]">
+            Send a Message
+          </h2>
+          <p className="mt-4 text-secondary">
+            Fill out the form below and we'll get back to you within 48 hours.
+          </p>
+
+          <form className="mt-12 space-y-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div>
+                <label className="mb-2 block font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="w-full border-b border-[rgba(255,255,255,0.1)] bg-transparent py-3 text-primary outline-none transition-colors focus:border-accent-cyan"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label className="mb-2 block font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  required
+                  className="w-full border-b border-[rgba(255,255,255,0.1)] bg-transparent py-3 text-primary outline-none transition-colors focus:border-accent-cyan"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="mb-2 block font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+                Company
+              </label>
+              <input
+                type="text"
+                className="w-full border-b border-[rgba(255,255,255,0.1)] bg-transparent py-3 text-primary outline-none transition-colors focus:border-accent-cyan"
+                placeholder="Your company name"
+              />
+            </div>
+
+            <div>
+              <label className="mb-2 block font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+                Interest *
+              </label>
+              <select
+                required
+                className="w-full border-b border-[rgba(255,255,255,0.1)] bg-transparent py-3 text-primary outline-none transition-colors focus:border-accent-cyan"
+              >
+                <option value="">Select an option...</option>
+                <option value="partnership">Strategic Partnership</option>
+                <option value="business-building">Business Building</option>
+                <option value="investment">Investment</option>
+                <option value="career">Career Opportunity</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="mb-2 block font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary">
+                Message *
+              </label>
+              <textarea
+                required
+                rows={4}
+                className="w-full border-b border-[rgba(255,255,255,0.1)] bg-transparent py-3 text-primary outline-none transition-colors focus:border-accent-cyan resize-none"
+                placeholder="Tell us about your opportunity..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="btn btn-primary mt-4"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </section>
     </>
   );
