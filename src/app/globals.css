@@ -54,6 +54,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ============================================
+   SCROLL REVEAL FIX — GLOBAL
+   ============================================ */
+
+/* Fix pentru IntersectionObserver — elementele trebuie să poată fi "văzute" */
+.scroll-reveal-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dacă folosești vreun container cu overflow hidden pentru hero, 
+   asigură-te că nu acoperă și secțiunea de text */
+section, .section {
+  position: relative;
+  overflow: visible; /* NU hidden */
+}
+
+/* Fallback pentru cazul în care JS nu funcționează */
+.no-js .reveal-text {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
 /* Grid overlay background */
 .grid-overlay {
   position: fixed;
@@ -317,64 +340,4 @@ body {
     padding: 10px 16px;
     font-size: 11px;
   }
- /* ============================================
-   SCROLL REVEAL FIX — GLOBAL (nu în media query!)
-   ============================================ */
-
-/* Fix pentru IntersectionObserver — elementele trebuie să poată fi "văzute" */
-.scroll-reveal-container {
-  position: relative;
-  z-index: 1;
 }
-
-/* Dacă folosești vreun container cu overflow hidden pentru hero, 
-   asigură-te că nu acoperă și secțiunea de text */
-section, .section {
-  position: relative;
-  overflow: visible; /* NU hidden */
-}
-
-/* Fallback pentru cazul în care JS nu funcționează */
-.no-js .reveal-text {
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
-
-/* ============================================
-   MOBILE RESPONSIVE FIXES
-   ============================================ */
-@media (max-width: 768px) {
-  .aeth-card {
-    padding: 20px;
-  }
-  
-  h1, h2, h3, p {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  
-  .btn {
-    padding: 12px 20px;
-    font-size: 12px;
-  }
-  
-  .flex-wrap {
-    justify-content: center;
-  }
-  
-  .corner-tl, .corner-br {
-    display: none;
-  }
-}
-
-@media (max-width: 375px) {
-  .brand {
-    font-size: 18px;
-  }
-  
-  .btn {
-    padding: 10px 16px;
-    font-size: 11px;
-  }
-}
-/* ACOLADA DE ÎNCHIDERE PENTRU @media (max-width: 375px) — ADAUGĂ AICI */
