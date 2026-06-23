@@ -25,7 +25,7 @@ export function HeroSection() {
           </FadeIn>
 
           <h1 className="mb-8 text-[72px] font-bold leading-[0.9] tracking-[-0.04em] max-lg:text-[48px] max-md:text-[36px]">
-            <ScrollRevealText text="Building companies." />
+          <ScrollRevealText text="Building companies." delay={0.2} />
             <br />
             <ScrollRevealText text="Creating value." />
           </h1>
