@@ -16,8 +16,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      {/* Spacer pentru a compensa navbar-ul fixat (ticker + navbar) */}
-      <div className="h-[88px] md:h-[104px]" />
+      {/* Spacer pentru a compensa navbar-ul fixat */}
+      <div className="h-[120px] md:h-[120px]" />
       <main className="relative z-20 flex min-h-screen flex-col justify-between p-[60px] pt-0 max-md:p-6 max-md:pt-0">
         <div className="flex-1">{children}</div>
         {!isLogin && <Footer />}
