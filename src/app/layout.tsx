@@ -20,33 +20,21 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
   description:
-    "BLACK& is a diversified business group focused on identifying opportunities, building companies, and creating long-term value across strategic industries including construction, defense, clothing, food industry, and hospitality.",
-  keywords: [
-    "BLACK&", "business group", "investment", "private equity",
-    "construction", "defense", "technology", "clothing", "food industry", "hospitality",
-    "strategic partnerships", "company building", "long-term value"
-  ],
-  authors: [{ name: "BLACK&" }],
-  creator: "BLACK&",
-  publisher: "BLACK&",
+    "BLACK& develops intelligence technologies, deploys strategic capital and builds companies across sectors where insight creates opportunity and execution creates value.",
   metadataBase: new URL("https://blackandi.com"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
     description:
-      "A diversified business group building companies and creating long-term value across strategic industries.",
+      "BLACK& develops intelligence technologies, deploys strategic capital and builds companies.",
     url: "https://blackandi.com",
     siteName: "BLACK&",
-    locale: "en_US",
     type: "website",
     images: [
       {
         url: "https://blackandi.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "BLACK& — Built on Intelligence. Driven by Opportunity.",
+        alt: "BLACK&",
       },
     ],
   },
@@ -54,23 +42,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
     description:
-      "A diversified business group building companies and creating long-term value across strategic industries.",
+      "BLACK& develops intelligence technologies, deploys strategic capital and builds companies.",
     images: ["https://blackandi.com/og-image.jpg"],
-    creator: "@blackandgroup",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "your-google-verification-code",
   },
 };
 
@@ -81,51 +54,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${ibmPlexMono.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <meta name="theme-color" content="#050505" />
-        
-        {/* Favicons */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        
-        {/* OG Image */}
-        <meta property="og:image" content="https://blackandi.com/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="BLACK& — Built on Intelligence. Driven by Opportunity." />
-        
-        {/* Twitter Image */}
-        <meta name="twitter:image" content="https://blackandi.com/og-image.jpg" />
-        <meta name="twitter:image:alt" content="BLACK& — Built on Intelligence. Driven by Opportunity." />
-        
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "BLACK&",
-              alternateName: "BLACKAND",
-              url: "https://blackandi.com",
-              logo: "https://blackandi.com/logo.png",
-              sameAs: [
-                "https://linkedin.com/company/blackand",
-                "https://twitter.com/blackandgroup",
-              ],
-              description:
-                "A diversified business group focused on identifying opportunities, building companies, and creating long-term value across strategic industries.",
-              address: {
-                "@type": "PostalAddress",
-                addressCountry: "RO",
-              },
-            }),
-          }}
-        />
-      </head>
       <body className="min-h-screen bg-bg text-primary antialiased">
         <SmoothScroll>
           <div className="grid-overlay" />
