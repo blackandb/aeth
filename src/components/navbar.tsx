@@ -50,12 +50,13 @@ export function Navbar() {
     <nav className="fixed left-0 right-0 top-0 z-50 bg-[rgba(5,5,5,0.95)] backdrop-blur-xl">
 
       {/* ============================
-          DESKTOP NEWS TICKER
+          NEWS TICKER
       ============================ */}
 
-      <div className="news-ticker hidden md:flex">
+      <div className="news-ticker">
         <div className="news-ticker-label">
-          BLACK& NEWS
+          <span className="hidden md:inline">BLACK& NEWS</span>
+          <span className="md:hidden">NEWS</span>
         </div>
 
         <div className="news-ticker-viewport">
@@ -146,27 +147,6 @@ export function Navbar() {
 
           </div>
 
-        </div>
-
-        {/* ============================
-            MOBILE NEWS TICKER
-        ============================ */}
-
-        <div className="news-ticker flex md:hidden">
-          <div className="news-ticker-label">
-            NEWS
-          </div>
-
-          <div className="news-ticker-viewport">
-            <div className="news-ticker-track">
-              {[...newsItems, ...newsItems].map((item, index) => (
-                <div key={index} className="news-ticker-item">
-                  <span className="news-ticker-dot" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
       </div>
