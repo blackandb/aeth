@@ -13,6 +13,13 @@ const navLinks = [
   { label: "Updates", href: "/updates" },
 ];
 
+const newsItems = [
+  "CAESAREA Technologies enters active development for sovereign AI and critical infrastructure.",
+  "EEIL expands the European Energy Intelligence Layer across energy markets and infrastructure.",
+  "BLACK& establishes & Ventures to support company creation and strategic capital deployment.",
+  "BLACK& continues building the intelligence infrastructure for the next generation of enterprises.",
+];
+
 export function Navbar() {
   const pathname = usePathname();
   const [time, setTime] = useState("");
@@ -21,6 +28,7 @@ export function Navbar() {
   useEffect(() => {
     const update = () => {
       const now = new Date();
+
       setTime(
         now.toLocaleTimeString("en-GB", {
           hour12: false,
@@ -30,97 +38,172 @@ export function Navbar() {
         })
       );
     };
+
     update();
+
     const interval = setInterval(update, 1000);
+
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 bg-[rgba(5,5,5,0.95)] backdrop-blur-xl border-b border-[rgba(255,255,255,0.08)]">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        {/* Left: Logo */}
-        <Link href="/" className="brand shrink-0">
-          BLACK&
-        </Link>
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-[rgba(5,5,5,0.95)] backdrop-blur-xl">
 
-        {/* Center: Nav links */}
-        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`whitespace-nowrap font-[var(--font-mono)] text-[11px] uppercase tracking-[0.12em] transition-colors hover:text-primary ${
-                pathname === link.href || pathname.startsWith(link.href + "/")
-                  ? "text-accent-cyan"
-                  : "text-secondary"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+      {/* ============================
+          DESKTOP NEWS TICKER
+      ============================ */}
+
+      <div className="news-ticker hidden md:flex">
+        <div className="news-ticker-label">
+          BLACK& NEWS
         </div>
 
-        {/* Right: Status + Login */}
-        <div className="flex items-center gap-5">
-          <div className="status-bits hidden xl:block">
-            {time} UTC // V1.01
+        <div className="news-ticker-viewport">
+          <div className="news-ticker-track">
+            {[...newsItems, ...newsItems].map((item, index) => (
+              <div key={index} className="news-ticker-item">
+                <span className="news-ticker-dot" />
+                {item}
+              </div>
+            ))}
           </div>
-
-          <Link
-            href="/login"
-            className="hidden border border-[rgba(255,255,255,0.15)] px-4 py-2 font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary transition-colors hover:border-accent-cyan hover:text-accent-cyan sm:block"
-          >
-            LOGIN
-          </Link>
-
-          {/* Mobile menu toggle */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="flex flex-col gap-1.5 md:hidden"
-            aria-label="Toggle menu"
-          >
-            <span
-              className={`block h-px w-5 bg-primary transition-all ${
-                menuOpen ? "translate-y-[5px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`block h-px w-5 bg-primary transition-all ${
-                menuOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block h-px w-5 bg-primary transition-all ${
-                menuOpen ? "-translate-y-[5px] -rotate-45" : ""
-              }`}
-            />
-          </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="mt-6 flex flex-col gap-4 border-t border-[rgba(255,255,255,0.08)] pt-6 md:hidden">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary transition-colors hover:text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
+      {/* ============================
+          NAVBAR
+      ============================ */}
 
-          <Link
-            href="/login"
-            onClick={() => setMenuOpen(false)}
-            className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-accent-cyan"
-          >
-            LOGIN →
+      <div className="border-b border-[rgba(255,255,255,0.08)]">
+
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+
+          {/* Logo */}
+
+          <Link href="/" className="brand shrink-0">
+            BLACK&
           </Link>
+
+          {/* Desktop Navigation */}
+
+          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`whitespace-nowrap font-[var(--font-mono)] text-[11px] uppercase tracking-[0.12em] transition-colors hover:text-primary ${
+                  pathname === link.href ||
+                  pathname.startsWith(link.href + "/")
+                    ? "text-accent-cyan"
+                    : "text-secondary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Right */}
+
+          <div className="flex items-center gap-5">
+
+            <div className="status-bits hidden xl:block">
+              {time} UTC // V1.01
+            </div>
+
+            <Link
+              href="https://contact.blackandi.com"
+              className="hidden border border-[rgba(255,255,255,0.15)] px-4 py-2 font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary transition-colors hover:border-accent-cyan hover:text-accent-cyan sm:block"
+            >
+              TALK TO BLACK&
+            </Link>
+
+            {/* Mobile */}
+
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="flex flex-col gap-1.5 md:hidden"
+              aria-label="Toggle menu"
+            >
+              <span
+                className={`block h-px w-5 bg-primary transition-all ${
+                  menuOpen ? "translate-y-[5px] rotate-45" : ""
+                }`}
+              />
+
+              <span
+                className={`block h-px w-5 bg-primary transition-all ${
+                  menuOpen ? "opacity-0" : ""
+                }`}
+              />
+
+              <span
+                className={`block h-px w-5 bg-primary transition-all ${
+                  menuOpen ? "-translate-y-[5px] -rotate-45" : ""
+                }`}
+              />
+            </button>
+
+          </div>
+
+        </div>
+
+        {/* ============================
+            MOBILE NEWS TICKER
+        ============================ */}
+
+        <div className="news-ticker flex md:hidden">
+          <div className="news-ticker-label">
+            NEWS
+          </div>
+
+          <div className="news-ticker-viewport">
+            <div className="news-ticker-track">
+              {[...newsItems, ...newsItems].map((item, index) => (
+                <div key={index} className="news-ticker-item">
+                  <span className="news-ticker-dot" />
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* ============================
+          MOBILE MENU
+      ============================ */}
+
+      {menuOpen && (
+        <div className="border-b border-[rgba(255,255,255,0.08)] bg-[rgba(5,5,5,0.98)] px-4 py-6 md:hidden">
+
+          <div className="flex flex-col gap-4">
+
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-secondary transition-colors hover:text-primary"
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            <Link
+              href="https://contact.blackandi.com"
+              onClick={() => setMenuOpen(false)}
+              className="pt-2 font-[var(--font-mono)] text-[11px] uppercase tracking-[0.15em] text-accent-cyan"
+            >
+              TALK TO BLACK& →
+            </Link>
+
+          </div>
+
         </div>
       )}
+
     </nav>
   );
 }
