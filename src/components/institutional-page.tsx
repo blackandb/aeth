@@ -43,13 +43,13 @@ function schemaFor(page: InstitutionalPageData) {
               ...(page.document
                 ? {
                     alternativeHeadline: page.document.subtitle,
-                    pagination: `${page.document.pages} pages`,
+                    ...(page.document.pages ? { pagination: `${page.document.pages} pages` } : {}),
                     version: page.document.version,
                     citation: page.document.citation,
                     encoding: {
                       "@type": "MediaObject",
-                      contentUrl: `https://blackandi.com${page.document.pdfUrl}`,
-                      encodingFormat: "application/pdf",
+                      contentUrl: `https://blackandi.com${page.document.htmlUrl}`,
+                      encodingFormat: "text/html",
                     },
                   }
                 : {}),
@@ -132,12 +132,11 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
               <div><dt>Series</dt><dd>{page.document.series}</dd></div>
               <div><dt>Prepared by</dt><dd>{page.document.preparedBy}</dd></div>
               <div><dt>Version</dt><dd>{page.document.version}</dd></div>
-              <div><dt>Length</dt><dd>{page.document.pages} pages</dd></div>
+              <div><dt>Edition</dt><dd>{page.document.pages ? `${page.document.pages} pages · Responsive web edition` : "Responsive web edition"}</dd></div>
               <div><dt>Classification</dt><dd>{page.document.classification}</dd></div>
             </dl>
             <div className="research-document-actions">
-              <a className="btn btn-primary" href={page.document.pdfUrl} target="_blank" rel="noreferrer">Read full paper</a>
-              <a className="btn btn-secondary" href={page.document.pdfUrl} download>Download PDF</a>
+              <a className="btn btn-primary" href={page.document.htmlUrl}>Read full paper</a>
             </div>
           </div>
         </section>

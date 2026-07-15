@@ -139,12 +139,12 @@ export default function Home() {
         <div>
           <div className="section-kicker">06 / BLACK& Research</div>
           <h2>Intelligence Infrastructure Series</h2>
-          <p>Three public research papers on sovereign AI infrastructure, AI-native company creation and the path from corporate information to enterprise capability.</p>
-          <div className="research-meta"><span>3 published papers</span><span>Series v1.0</span><span>15 July 2026</span></div>
+          <p>Four public research papers on sovereign AI infrastructure, AI-native company creation, enterprise information and production-grade multi-agent architecture.</p>
+          <div className="research-meta"><span>4 published papers</span><span>Responsive web editions</span><span>15 July 2026</span></div>
           <Link className="btn btn-primary" href="/research">Explore BLACK& Research</Link>
         </div>
         <div className="research-framework" aria-label="Research framework">
-          {["Sovereign AI and European Strategic Infrastructure", "The Intelligence Company Builder", "From Information to Enterprise"].map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</div>)}
+          {["Sovereign AI and European Strategic Infrastructure", "The Intelligence Company Builder", "From Information to Enterprise", "The Architecture of Intelligence-Led Company Creation"].map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</div>)}
         </div>
       </section>
 

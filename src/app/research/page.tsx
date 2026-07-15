@@ -54,7 +54,7 @@ export default function ResearchPage() {
         </div>
         <div className="research-hub-register">
           <span className="live-dot" />
-          <div><strong>3 papers published</strong><small>Series v1.0 · 15 July 2026</small></div>
+          <div><strong>4 papers published</strong><small>Responsive web editions · 15 July 2026</small></div>
         </div>
       </header>
 
@@ -78,7 +78,7 @@ export default function ResearchPage() {
             </Link>
             <div className="research-paper-copy">
               <div className="research-paper-meta">
-                <span>Paper {paper.issue}</span><span>{paper.pages} pages</span><span>{paper.publicationDate}</span>
+                <span>Paper {paper.issue}</span><span>{paper.pages ? `${paper.pages} pages` : "Web edition"}</span><span>{paper.publicationDate}</span>
               </div>
               <h2><Link href={`/research/reports/${paper.slug}`}>{paper.title}</Link></h2>
               <h3>{paper.subtitle}</h3>
@@ -86,8 +86,7 @@ export default function ResearchPage() {
               <div className="research-paper-framework">{paper.framework}</div>
               <div className="research-paper-actions">
                 <Link className="btn btn-primary" href={`/research/reports/${paper.slug}`}>Research profile</Link>
-                <a className="btn btn-secondary" href={paper.pdfUrl} target="_blank" rel="noreferrer">Read PDF</a>
-                <a className="research-download" href={paper.pdfUrl} download>Download ↓</a>
+                <a className="btn btn-secondary" href={paper.htmlUrl}>Read paper</a>
               </div>
             </div>
           </article>

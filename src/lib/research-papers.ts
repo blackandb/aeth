@@ -13,12 +13,13 @@ export type ResearchPaper = {
   publicationDate: string;
   version: string;
   classification: string;
-  pages: number;
+  pages?: number;
   series: string;
   author: string;
   preparedBy: string;
   citation: string;
-  pdfUrl: string;
+  htmlUrl: string;
+  pdfUrl?: string;
   coverUrl: string;
 };
 
@@ -48,6 +49,7 @@ export const publishedResearchPapers: ResearchPaper[] = [
     author: "BLACK& Research, a division of BLACK HOLDINGS SRL",
     preparedBy: "SYSTEM INC AI Labs",
     citation: "BLACK& Research. 2026. \"Sovereign AI and European Strategic Infrastructure.\" BLACK& Research Series, v1.0. Botoșani: BLACK HOLDINGS SRL.",
+    htmlUrl: "/research/read/sovereign-ai-and-european-strategic-infrastructure",
     pdfUrl: "/research/papers/sovereign-ai-and-european-strategic-infrastructure.pdf",
     coverUrl: "/research/covers/sovereign-ai-and-european-strategic-infrastructure.png",
   },
@@ -76,6 +78,7 @@ export const publishedResearchPapers: ResearchPaper[] = [
     author: "BLACK& Research, a division of BLACK HOLDINGS SRL",
     preparedBy: "SYSTEM INC AI Labs",
     citation: "BLACK& Research. 2026. \"The Intelligence Company Builder.\" BLACK& Research Series, v1.0. Botoșani: BLACK HOLDINGS SRL.",
+    htmlUrl: "/research/read/the-intelligence-company-builder",
     pdfUrl: "/research/papers/the-intelligence-company-builder.pdf",
     coverUrl: "/research/covers/the-intelligence-company-builder.png",
   },
@@ -104,8 +107,36 @@ export const publishedResearchPapers: ResearchPaper[] = [
     author: "BLACK& Research, a division of BLACK HOLDINGS SRL",
     preparedBy: "SYSTEM INC AI Labs",
     citation: "BLACK& Research. 2026. \"From Information to Enterprise.\" BLACK& Research Series, v1.0. Botoșani: BLACK HOLDINGS SRL.",
+    htmlUrl: "/research/read/from-information-to-enterprise",
     pdfUrl: "/research/papers/from-information-to-enterprise.pdf",
     coverUrl: "/research/covers/from-information-to-enterprise.png",
+  },
+  {
+    slug: "the-architecture-of-intelligence-led-company-creation",
+    issue: "04",
+    title: "The Architecture of Intelligence-Led Company Creation",
+    subtitle: "Orchestration, Protocols, and Governance for AI-Native Departments",
+    thesis: "Production-grade AI departments depend less on selecting a single model than on an architecture that coordinates specialist agents, governed data, open protocols, persistent identity and accountable human oversight.",
+    summary: "This paper addresses the technical architecture beneath the Intelligence Company Builder methodology. It examines multi-agent orchestration, MCP and A2A protocols, hub-and-spoke and mesh patterns, the enterprise governance gap and the conditions under which EU AI Act obligations become relevant.",
+    methodology: "Synthesis of enterprise AI architecture research published between 2025 and 2026, including multi-agent performance, protocol adoption, agent governance and identity-management evidence, alongside a careful reading of the EU AI Act's high-risk classification framework.",
+    framework: "Data and Grounding → Specialised Agents → Orchestration → Governance and Oversight",
+    findings: [
+      "Orchestration has become a primary production architecture decision because complex workflows exceed the reliable scope of isolated general-purpose agents.",
+      "Open protocols such as MCP and A2A reduce brittle point integrations and create a path toward cross-vendor agent coordination.",
+      "Governance maturity continues to lag technical adoption, particularly in agent identity, action traceability and cross-agent oversight.",
+      "EU AI Act high-risk classification depends on intended purpose and deployment context, not on multi-agent architecture alone.",
+    ],
+    application: "Technology and institutional leaders can use the four-layer reference architecture to evaluate data grounding, agent specialization, orchestration openness, failure recovery, traceability and human authority before moving an agentic system into production.",
+    limitations: "The performance and governance statistics rely largely on 2025–2026 industry research rather than independently audited studies. The BLACK& reference architecture is a normative proprietary design and is not presented as third-party validation of production performance.",
+    publicationDate: "15 July 2026",
+    version: "1.0 — Initial publication",
+    classification: "Public — for distribution to institutional and government stakeholders",
+    series: "Intelligence Infrastructure Series",
+    author: "BLACK& Research, a division of BLACK HOLDINGS SRL",
+    preparedBy: "SYSTEM INC AI Labs",
+    citation: "BLACK& Research. 2026. \"The Architecture of Intelligence-Led Company Creation.\" BLACK& Research Series, v1.0. Botoșani: BLACK HOLDINGS SRL.",
+    htmlUrl: "/research/read/the-architecture-of-intelligence-led-company-creation",
+    coverUrl: "/research/covers/the-architecture-of-intelligence-led-company-creation.svg",
   },
 ];
 
