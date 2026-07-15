@@ -1,3 +1,5 @@
+import { publishedResearchPapers } from "@/lib/research-papers";
+
 export type InstitutionalSection = {
   title: string;
   body: string[];
@@ -14,6 +16,18 @@ export type InstitutionalPage = {
   author?: string;
   readingTime?: string;
   statusLabels?: string[];
+  document?: {
+    issue: string;
+    subtitle: string;
+    pdfUrl: string;
+    coverUrl: string;
+    pages: number;
+    version: string;
+    classification: string;
+    series: string;
+    preparedBy: string;
+    citation: string;
+  };
   sections: InstitutionalSection[];
   related?: { label: string; href: string }[];
 };
@@ -28,7 +42,8 @@ const page = (
   sections: InstitutionalSection[],
   related: { label: string; href: string }[] = [],
   kind: InstitutionalPage["kind"] = "page",
-  statusLabels: string[] = []
+  statusLabels: string[] = [],
+  document?: InstitutionalPage["document"]
 ): InstitutionalPage => ({
   path,
   eyebrow,
@@ -37,6 +52,7 @@ const page = (
   kind,
   updated: UPDATED,
   statusLabels,
+  document,
   sections,
   related,
 });
@@ -535,16 +551,7 @@ export const institutionalBasePages = [
   ...industryPages,
 ];
 
-const reportDefinitions = [
-  { slug: "the-intelligence-company-builder", title: "The Intelligence Company Builder", thesis: "Defines the category as an integrated operating model connecting proprietary understanding, technology, company formation, capital and governance.", framework: "Signal → Thesis → Conviction → System → Company → Asset", argument: "The scarce capability is not idea generation. It is the ability to recognize a structural opportunity, build the system required to act on it and preserve responsibility from the first thesis to the mature enterprise.", application: "The model is useful when an opportunity requires several capabilities at once: research, product architecture, leadership, capital, governance and patient execution." },
-  { slug: "from-information-to-enterprise", title: "From Information to Enterprise", thesis: "Examines why information alone does not create enterprise value and how context, judgment and execution convert evidence into operating capability.", framework: "Information → Context → Intelligence → Decision → Execution", argument: "Information becomes valuable only when an organization can establish what it means, which decision it changes, who has authority to act and how the result will be measured.", application: "Organizations should design the decision path before adding more data: define the question, evidence threshold, owner, action and review cycle." },
-  { slug: "architecture-of-intelligence-led-company-creation", title: "The Architecture of Intelligence-Led Company Creation", thesis: "Presents a gated company-creation architecture that makes assumptions, evidence, ownership and stop conditions explicit.", framework: "Thesis → Validation → Architecture → Formation → Operation", argument: "A company should emerge from progressively stronger evidence. Each stage must reduce a different uncertainty before legal formation, hiring and capital increase the cost of changing direction.", application: "Use explicit gates for problem validation, market definition, technical architecture, leadership, governance, capital and market entry." },
-  { slug: "strategic-intelligence-in-capital-allocation", title: "Strategic Intelligence in Capital Allocation", thesis: "Explains how evidence quality, timing, structure and downside conditions can improve capital decisions without making performance promises.", framework: "Evidence → Conviction → Exposure → Milestone → Review", argument: "Conviction is most useful when it changes the structure of a commitment: how much capital is exposed, which milestone releases the next amount and which signal requires a stop or redesign.", application: "Tie capital to evidence-producing milestones and preserve the ability to learn before the largest commitments become irreversible." },
-  { slug: "sovereign-ai-and-european-strategic-infrastructure", title: "Sovereign AI and European Strategic Infrastructure", thesis: "Analyzes sovereignty across data, compute, models, infrastructure, control, procurement and institutional accountability.", framework: "Data → Compute → Model → Control → Institution", argument: "Sovereignty is not achieved by model ownership alone. An institution must understand and control the full dependency chain, including data rights, infrastructure, deployment, change control and the authority to continue operating.", application: "Assess each layer separately, identify external dependencies and decide which capabilities must remain under direct institutional control." },
-  { slug: "european-energy-intelligence-landscape", title: "The European Energy Intelligence Landscape", thesis: "Maps the information requirements connecting European energy markets, physical infrastructure, regulation, security and capital.", framework: "Market → Grid → Regulation → Security → Capital", argument: "Energy decisions fail when price, physical capacity, regulation and geopolitical exposure are analyzed in isolation. The decision context must connect all five layers over the same time horizon.", application: "Build a shared energy intelligence layer that links market signals to infrastructure constraints, policy change, security exposure and investment consequences." },
-  { slug: "ai-in-infrastructure-and-construction", title: "AI in Infrastructure and Construction", thesis: "Identifies where AI can create measurable value across planning, procurement, cost, schedule, safety and asset operations—and where it cannot.", framework: "Plan → Procure → Build → Assure → Operate", argument: "AI creates the most value where uncertainty is expensive, evidence repeats and an accountable operator can act on the output. A model without workflow ownership rarely changes project performance.", application: "Prioritize use cases with measurable baselines, recurring decisions and reliable feedback: document control, schedule risk, procurement, quality and asset operations." },
-  { slug: "decision-infrastructure-for-modern-enterprises", title: "Decision Infrastructure for Modern Enterprises", thesis: "Defines decision infrastructure as the combination of trusted information, shared context, authority, workflow and institutional memory.", framework: "Source → Context → Authority → Action → Memory", argument: "Organizations do not suffer only from missing information. They suffer when evidence, interpretation, authority and execution live in separate systems and the reasoning behind a decision disappears after the meeting.", application: "Connect source provenance, shared definitions, decision rights, workflow and outcome review in one traceable operating loop." },
-];
+const reportDefinitions = publishedResearchPapers;
 
 const researchPages: InstitutionalPage[] = [
   page(
@@ -555,7 +562,7 @@ const researchPages: InstitutionalPage[] = [
     [
       { title: "The central question", body: ["How can an organization move from abundant information to a small number of high-quality decisions—and from those decisions to technologies and companies that endure? BLACK& Research studies that transition across strategy, product architecture, governance and capital."] },
       { title: "Research themes", body: ["The programme connects intelligence company building, decision infrastructure, capital allocation, sovereign AI, European energy systems and AI in infrastructure. Each theme is treated as an operating problem, not as a technology trend." ] },
-      { title: "Featured research", body: ["The research series introduces practical frameworks that leaders can use to define decisions, test conviction, structure company formation and preserve accountability during execution."], items: reportDefinitions.map((report) => `${report.title} — ${report.thesis}`) },
+      { title: "Published research", body: ["The first three professional papers in the Intelligence Infrastructure Series are now available in full. Each publication includes methodology, definitions, limitations, references, revision history and a suggested citation."], items: reportDefinitions.map((report) => `Paper ${report.issue} — ${report.title}: ${report.subtitle}`) },
     ],
     [
       { label: "Research standards", href: "/research/standards" },
@@ -607,9 +614,12 @@ const researchPages: InstitutionalPage[] = [
   page(
     "/research/reports",
     "Research / Reports",
-    "Research on intelligence, technology and enterprise creation.",
-    "Eight connected studies explore the operating architecture behind intelligence-led companies and strategic technologies.",
-    [{ title: "Research series", body: ["The series begins with a category definition and follows the path from information and conviction to systems, companies, infrastructure and institutional memory."], items: reportDefinitions.map((report) => `${report.title} — ${report.thesis}`) }],
+    "Published BLACK& Research papers.",
+    "Three public papers examine sovereign AI infrastructure, AI-native company creation and the path from corporate information to enterprise capability.",
+    [
+      { title: "Intelligence Infrastructure Series", body: ["The series connects public evidence with clearly identified BLACK& frameworks. Third-party findings, proprietary interpretation, limitations and revision status remain separated inside every publication."], items: reportDefinitions.map((report) => `Paper ${report.issue} · ${report.title} · ${report.pages} pages · ${report.version}`) },
+      { title: "Publication standard", body: ["Every published paper identifies author, preparation support, publication date, version, public classification, methodology, definitions, limitations, references, revision history and legal notice."] },
+    ],
     reportDefinitions.map((report) => ({ label: report.title, href: `/research/reports/${report.slug}` })),
     "collection"
   ),
@@ -656,13 +666,29 @@ const researchPages: InstitutionalPage[] = [
       report.title,
       report.thesis,
       [
-        { title: "Executive perspective", body: [report.thesis, report.argument] },
-        { title: "Operating framework", body: [`${report.framework}. Each transition represents a different management problem: understanding the input, forming a judgment, assigning authority, producing an operating result and learning from the outcome.`] },
-        { title: "Practical application", body: [report.application] },
-        { title: "Questions for leaders", body: ["What decision is being improved? Which evidence would change the current view? Who owns the action? Which dependency creates the greatest fragility? How will the organization know whether the result justified the original conviction?"] },
+        { title: "Executive summary", body: [report.summary, report.thesis] },
+        { title: "Methodology and scope", body: [report.methodology] },
+        { title: "Operating framework", body: [report.framework] },
+        { title: "Key findings", body: ["The paper identifies four principal findings:"], items: report.findings },
+        { title: "Institutional application", body: [report.application] },
+        { title: "Limitations", body: [report.limitations] },
+        { title: "Publication record", body: [`Author: ${report.author}. Prepared by: ${report.preparedBy}. Published: ${report.publicationDate}. Version: ${report.version}. Classification: ${report.classification}.`] },
       ],
       [{ label: "All reports", href: "/research/reports" }, { label: "Research standards", href: "/research/standards" }],
-      "report"
+      "report",
+      ["Published research", `Paper ${report.issue}`, "Public"],
+      {
+        issue: report.issue,
+        subtitle: report.subtitle,
+        pdfUrl: report.pdfUrl,
+        coverUrl: report.coverUrl,
+        pages: report.pages,
+        version: report.version,
+        classification: report.classification,
+        series: report.series,
+        preparedBy: report.preparedBy,
+        citation: report.citation,
+      }
     )
   ),
 ];

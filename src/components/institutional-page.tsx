@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { InstitutionalPage as InstitutionalPageData } from "@/lib/institutional-content";
 
 const organizationId = "https://blackandi.com/#organization";
@@ -38,6 +39,20 @@ function schemaFor(page: InstitutionalPageData) {
         dateModified: "2026-07-15",
         ...(page.kind === "article" || page.kind === "report"
           ? {
+              headline: page.title,
+              ...(page.document
+                ? {
+                    alternativeHeadline: page.document.subtitle,
+                    pagination: `${page.document.pages} pages`,
+                    version: page.document.version,
+                    citation: page.document.citation,
+                    encoding: {
+                      "@type": "MediaObject",
+                      contentUrl: `https://blackandi.com${page.document.pdfUrl}`,
+                      encodingFormat: "application/pdf",
+                    },
+                  }
+                : {}),
               author: {
                 "@type": "Organization",
                 "@id": organizationId,
@@ -99,6 +114,35 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
         )}
       </header>
 
+      {page.document && (
+        <section className="research-document" aria-label="Published research paper">
+          <div className="research-document-cover">
+            <Image
+              src={page.document.coverUrl}
+              alt={`${page.title} cover`}
+              width={1020}
+              height={1320}
+              priority
+            />
+          </div>
+          <div className="research-document-info">
+            <div className="section-kicker">Research paper {page.document.issue}</div>
+            <h2>{page.document.subtitle}</h2>
+            <dl>
+              <div><dt>Series</dt><dd>{page.document.series}</dd></div>
+              <div><dt>Prepared by</dt><dd>{page.document.preparedBy}</dd></div>
+              <div><dt>Version</dt><dd>{page.document.version}</dd></div>
+              <div><dt>Length</dt><dd>{page.document.pages} pages</dd></div>
+              <div><dt>Classification</dt><dd>{page.document.classification}</dd></div>
+            </dl>
+            <div className="research-document-actions">
+              <a className="btn btn-primary" href={page.document.pdfUrl} target="_blank" rel="noreferrer">Read full paper</a>
+              <a className="btn btn-secondary" href={page.document.pdfUrl} download>Download PDF</a>
+            </div>
+          </div>
+        </section>
+      )}
+
       <div className="institutional-layout">
         <aside className="institutional-index" aria-label="Page contents">
           <span className="institutional-index-label">On this page</span>
@@ -148,6 +192,13 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
             ))}
           </div>
         </nav>
+      )}
+
+      {page.document && (
+        <section className="research-citation" aria-label="Suggested citation">
+          <span>Suggested citation</span>
+          <p>{page.document.citation}</p>
+        </section>
       )}
 
     </article>

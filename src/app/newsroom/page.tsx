@@ -27,10 +27,10 @@ const latest = [
   {
     type: "Research",
     date: "15 July 2026",
-    title: "From signal to asset: the Intelligence Company Builder model",
-    summary: "BLACK& Research explains how proprietary understanding can move through conviction, technology and company formation into durable operating capability.",
-    href: "/research/reports/the-intelligence-company-builder",
-    cta: "Read the research",
+    title: "BLACK& publishes the first three papers in the Intelligence Infrastructure Series",
+    summary: "The public series examines sovereign AI and European strategic infrastructure, AI-native company creation and the path from corporate information to enterprise capability.",
+    href: "/research",
+    cta: "Explore the research series",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function NewsroomPage() {
         <aside className="news-briefing-rail" aria-label="Newsroom briefing">
           <div><span>01</span><p>Board v1.1 strengthens the secure mobile governance experience.</p></div>
           <div><span>02</span><p>SYSTEM INC AI moves toward coordinated, AI-operated company departments.</p></div>
-          <div><span>03</span><p>BLACK& Research defines the operating architecture behind intelligence-led enterprise building.</p></div>
+          <div><span>03</span><p>Three public papers establish the first BLACK& Intelligence Infrastructure Series.</p></div>
         </aside>
       </section>
 
