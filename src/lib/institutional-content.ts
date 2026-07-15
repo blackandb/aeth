@@ -692,9 +692,9 @@ const newsroomPages: InstitutionalPage[] = [
     "Verified developments and official records.",
     "Company developments, portfolio progress and institutional information from BLACK&.",
     [
-      { title: "BLACK& begins operating in Romania", body: ["BLACK HOLDINGS S.R.L., trading as BLACK&, was incorporated in Romania on 25 June 2026. The company was established to build intelligence technologies, companies and long-term enterprise assets through one integrated operating model."] },
-      { title: "A focused technology portfolio takes shape", body: ["BLACK& is developing five connected public initiatives: BLACK& Technologies, SYSTEM INC AI, CAESAREA Technologies, the European Energy Intelligence Layer and BLACK& Ventures. Together they cover group technology, AI-native company operations, sovereign decision infrastructure, energy intelligence and strategic company development."] },
-      { title: "SYSTEM INC AI advances the AI-native company model", body: ["SYSTEM INC AI is being built to give entrepreneurs coordinated AI departments across legal, finance, operations, sales, marketing, human resources, strategy and customer support from the first day of company formation."] },
+      { title: "BLACK& Board v1.1", body: ["The latest Board platform release improves performance, collaboration and secure mobile access to reports, intelligence and decisions."] },
+      { title: "Secure Board Communication Network", body: ["On 27 July 2026, BLACK& will introduce encrypted communication and native video conferencing inside the protected Board ecosystem."] },
+      { title: "The Intelligence Company Builder", body: ["BLACK& Research presents an operating framework connecting signal, conviction, technology, company formation and long-term enterprise value."] },
       { title: "Media contact", body: ["Institutional and media enquiries: hq@blackandi.com."] },
     ],
     [{ label: "Announcements", href: "/newsroom/announcements" }, { label: "Press releases", href: "/newsroom/press-releases" }, { label: "Media kit", href: "/newsroom/media-kit" }],
@@ -706,9 +706,9 @@ const newsroomPages: InstitutionalPage[] = [
     "Official announcements.",
     "A chronological view of the developments shaping BLACK& and its portfolio.",
     [
-      { title: "July 2026 — Portfolio development", body: ["BLACK& advances the development of SYSTEM INC AI, CAESAREA Technologies and EEIL while BLACK& Technologies strengthens the shared technical foundation of the group."] },
-      { title: "July 2026 — Institutional platform", body: ["BLACK& introduces a new public institutional platform explaining the company-building model, portfolio, technologies, industries and research agenda in one connected experience."] },
-      { title: "25 June 2026 — Incorporation", body: ["BLACK HOLDINGS S.R.L., trading as BLACK&, is incorporated in Romania under registration number J2026000163078."] },
+      { title: "15 July 2026 — Board v1.1", body: ["BLACK& releases an updated governance experience with improved performance, collaboration and secure mobile access."] },
+      { title: "27 July 2026 — Scheduled launch", body: ["The BLACK& Secure Board Communication Network introduces encrypted messaging and video conferencing for Board collaboration."] },
+      { title: "July 2026 — Research", body: ["BLACK& publishes The Intelligence Company Builder, a framework for moving from proprietary understanding to durable enterprise capability."] },
     ],
     [{ label: "Newsroom", href: "/newsroom" }],
     "collection"
@@ -719,7 +719,7 @@ const newsroomPages: InstitutionalPage[] = [
     "Press releases and supporting records.",
     "Core company information and recent developments for journalists, researchers and institutional partners.",
     [
-      { title: "Company profile", body: ["BLACK& is an Intelligence Company Builder. It develops intelligence technologies, creates companies and supports long-term enterprise development across selected industries. The company is operated by BLACK HOLDINGS S.R.L. in Romania and governed through a six-person Board."] },
+      { title: "Company profile", body: ["BLACK& is an Intelligence Company Builder. It develops intelligence technologies, creates companies and supports long-term enterprise development across selected industries. The company is governed through a six-person Board."] },
       { title: "Current portfolio", body: ["The public portfolio includes BLACK& Technologies, SYSTEM INC AI, CAESAREA Technologies, the European Energy Intelligence Layer — EEIL — and BLACK& Ventures."] },
       { title: "Media enquiries", body: ["For company verification, interviews and institutional enquiries, contact hq@blackandi.com."] },
     ],

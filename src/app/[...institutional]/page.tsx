@@ -9,7 +9,7 @@ import {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  const staticRoutes = new Set(["/industries", "/opportunities", "/insights"]);
+  const staticRoutes = new Set(["/industries", "/opportunities", "/insights", "/newsroom"]);
   return institutionalPaths
     .filter((path) => !path.startsWith("/insights/") && !staticRoutes.has(path))
     .map((path) => ({ institutional: path.split("/").filter(Boolean) }));

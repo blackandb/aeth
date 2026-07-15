@@ -9,12 +9,6 @@ const model = [
   { number: "05", title: "Long-Term Asset", text: "Build resilience, relevance and compounding enterprise value.", href: "/model/long-term-ownership" },
 ];
 
-const leadership = [
-  { initials: "BM", name: "Bruno Mihailescu", role: "Founder" },
-  { initials: "KA", name: "Kaschif Ali", role: "Founder" },
-  { initials: "AC", name: "Adam Constantin", role: "Founder" },
-];
-
 const industryLinks = [
   ["Technology", "/industries/technology"],
   ["Infrastructure & Construction", "/industries/infrastructure-construction"],
@@ -42,10 +36,6 @@ const organizationSchema = {
         addressLocality: "Botoșani",
         addressCountry: "RO",
       },
-      founder: leadership.map((person) => ({
-        "@type": "Person",
-        name: person.name,
-      })),
       email: "hq@blackandi.com",
     },
     {
@@ -81,7 +71,7 @@ export default function Home() {
           <dl>
             <div><dt>Category</dt><dd>Intelligence Company Builder</dd></div>
             <div><dt>Founded</dt><dd>25 June 2026</dd></div>
-            <div><dt>Legal entity</dt><dd>BLACK HOLDINGS S.R.L.</dd></div>
+            <div><dt>Operating model</dt><dd>Intelligence-led company building</dd></div>
             <div><dt>Governance</dt><dd>Six-person Board</dd></div>
             <div><dt>Portfolio</dt><dd>5 public entities</dd></div>
           </dl>
@@ -166,20 +156,22 @@ export default function Home() {
         <div className="development-list">
           <div><time>15 JUL 2026</time><span>Technology portfolio</span><h3>SYSTEM INC AI advances a coordinated model for AI-operated company departments.</h3><Link href="/companies/system-inc-ai">Explore SYSTEM INC AI ↗</Link></div>
           <div><time>15 JUL 2026</time><span>Strategic intelligence</span><h3>CAESAREA and EEIL extend the portfolio into sovereign and European energy decision infrastructure.</h3><Link href="/technologies">Explore technologies ↗</Link></div>
-          <div><time>25 JUN 2026</time><span>Corporate record</span><h3>BLACK HOLDINGS S.R.L., trading as BLACK&, is incorporated in Romania.</h3><Link href="/company/history">History ↗</Link></div>
+          <div><time>JUL 2026</time><span>BLACK& Research</span><h3>The Intelligence Company Builder introduces a practical model from signal to long-term asset.</h3><Link href="/research/reports/the-intelligence-company-builder">Read the research ↗</Link></div>
         </div>
       </section>
 
       <section className="leadership-feature">
         <div>
-          <div className="section-kicker">08 / Leadership</div>
-          <h2>Human accountability is part of the operating model.</h2>
-          <p>BLACK& was founded by Bruno Mihailescu, Kaschif Ali and Adam Constantin and is governed through a six-person Board.</p>
-          <Link href="/company/leadership">Leadership and governance →</Link>
+          <div className="section-kicker">08 / Governance</div>
+          <h2>Accountability is designed into every consequential decision.</h2>
+          <p>BLACK& is governed through a six-person Board, protected decision infrastructure and a long-term approach to oversight, risk and enterprise value.</p>
+          <Link href="/company/governance">Explore governance →</Link>
         </div>
         <div className="leader-grid">
-          {leadership.map((person) => <div key={person.name}><span>{person.initials}</span><h3>{person.name}</h3><p>{person.role}</p></div>)}
-          <div><span>+3</span><h3>BLACK& Board</h3><p>Six members</p></div>
+          <div><span>06</span><h3>Board oversight</h3><p>Six-person governance body</p></div>
+          <div><span>01</span><h3>Protected environment</h3><p>Secure information and decisions</p></div>
+          <div><span>∞</span><h3>Long-term alignment</h3><p>Enterprise value over short-term noise</p></div>
+          <div><span>✓</span><h3>Decision traceability</h3><p>Evidence, authority and review</p></div>
         </div>
       </section>
 

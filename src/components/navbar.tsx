@@ -17,10 +17,10 @@ const navLinks = [
 ];
 
 const newsItems = [
-  "CAESAREA Technologies enters active development for sovereign AI and critical infrastructure.",
-  "EEIL expands the European Energy Intelligence Layer across energy markets and infrastructure.",
-  "BLACK& Ventures supports company creation and strategic capital deployment.",
-  "BLACK& continues building the intelligence infrastructure for the next generation of enterprises.",
+  "BLACK& Board v1.1 strengthens secure executive collaboration.",
+  "27 July 2026: BLACK& Secure Board Communication Network launches.",
+  "SYSTEM INC AI coordinates specialist AI departments around one company context.",
+  "BLACK& Research introduces the Intelligence Company Builder framework.",
 ];
 
 export function Navbar() {
@@ -111,7 +111,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-5">
 
-            <div className="status-bits hidden xl:block">
+            <div className="nav-status status-bits">
               {time} UTC // INSTITUTIONAL
             </div>
 
