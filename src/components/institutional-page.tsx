@@ -82,6 +82,11 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
 
       <header className="institutional-hero">
         <div className="eyebrow">{page.eyebrow}</div>
+        {page.statusLabels && page.statusLabels.length > 0 && (
+          <div className="institutional-statuses" aria-label="Public status">
+            {page.statusLabels.map((status) => <span key={status}>{status}</span>)}
+          </div>
+        )}
         <h1>{page.title}</h1>
         <p className="institutional-deck">{page.description}</p>
 
@@ -130,6 +135,20 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
           ))}
         </div>
       </div>
+
+      {page.related && page.related.length > 0 && (
+        <nav className="institutional-related" aria-label="Explore this subject">
+          <div>
+            <div className="section-kicker">Continue</div>
+            <h2>Explore this subject.</h2>
+          </div>
+          <div className="institutional-related-grid">
+            {page.related.map((item) => (
+              <Link href={item.href} key={item.href}>{item.label}<span aria-hidden="true">&#8599;</span></Link>
+            ))}
+          </div>
+        </nav>
+      )}
 
     </article>
   );

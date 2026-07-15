@@ -90,7 +90,7 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
 
-          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-3 lg:flex xl:gap-5">
+          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-3 xl:flex 2xl:gap-5">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -117,7 +117,7 @@ export function Navbar() {
 
             <Link
               href="/contact"
-              className="hidden border border-[rgba(255,255,255,0.15)] px-4 py-2 font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary transition-colors hover:border-accent-cyan hover:text-accent-cyan sm:block"
+              className="hidden border border-[rgba(255,255,255,0.15)] px-4 py-2 font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary transition-colors hover:border-accent-cyan hover:text-accent-cyan md:block"
             >
               TALK TO BLACK&
             </Link>
@@ -126,7 +126,7 @@ export function Navbar() {
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="flex flex-col gap-1.5 lg:hidden"
+              className="flex flex-col gap-1.5 xl:hidden"
               aria-label="Toggle menu"
             >
               <span
@@ -159,7 +159,7 @@ export function Navbar() {
       ============================ */}
 
       {menuOpen && (
-        <div className="border-b border-[rgba(255,255,255,0.08)] bg-[rgba(5,5,5,0.98)] px-4 py-6 lg:hidden">
+        <div className="border-b border-[rgba(255,255,255,0.08)] bg-[rgba(5,5,5,0.98)] px-4 py-6 xl:hidden">
 
           <div className="flex flex-col gap-4">
 

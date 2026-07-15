@@ -13,6 +13,7 @@ export type InstitutionalPage = {
   updated?: string;
   author?: string;
   readingTime?: string;
+  statusLabels?: string[];
   sections: InstitutionalSection[];
   related?: { label: string; href: string }[];
 };
@@ -26,7 +27,8 @@ const page = (
   description: string,
   sections: InstitutionalSection[],
   related: { label: string; href: string }[] = [],
-  kind: InstitutionalPage["kind"] = "page"
+  kind: InstitutionalPage["kind"] = "page",
+  statusLabels: string[] = []
 ): InstitutionalPage => ({
   path,
   eyebrow,
@@ -34,6 +36,7 @@ const page = (
   description,
   kind,
   updated: UPDATED,
+  statusLabels,
   sections,
   related,
 });
@@ -47,7 +50,13 @@ const corePages: InstitutionalPage[] = [
     [
       { title: "Institutional purpose", body: ["BLACK& exists to convert disciplined understanding into operating capability. Intelligence informs conviction. Conviction directs technology, company formation, capital and governance."] },
       { title: "One organization, multiple capabilities", body: ["BLACK& brings strategic intelligence, technology development, company creation, operating support and long-term capital into one coordinated organization. The objective is not to accumulate ideas, but to turn a small number of well-understood opportunities into durable operating capability."], items: ["Develop intelligence around consequential problems", "Build technology that improves real decisions and workflows", "Create and support companies around validated theses", "Govern capital, risk and execution over the long term"] },
+      { title: "How the organization works", body: ["Research begins with a defined decision or structural problem. Product and technology work converts validated requirements into systems. Company formation establishes accountable leadership, legal structure and operating ownership. Governance connects evidence, authority, capital and post-decision review."] },
+      { title: "Portfolio architecture", body: ["BLACK& Technologies provides shared technology capability. SYSTEM INC AI focuses on AI-native company operations. CAESAREA Technologies develops sovereign decision-infrastructure research. EEIL focuses on European energy intelligence. BLACK& Ventures provides a venture-formation capability. Each profile states its own public status and evidence boundary."] },
+      { title: "Governance", body: ["A six-person Board provides strategic oversight through a protected information and decision environment. The public governance record separates currently maintained structure from standards or frameworks that remain proposed or pending formal approval."] },
+      { title: "Evidence and disclosure", body: ["BLACK& distinguishes a verified fact, an intended capability, a research initiative and a future plan. The website does not infer legal ownership, customers, revenue, certification, deployment or launch status from a portfolio name."] },
+      { title: "Who BLACK& works with", body: ["Relevant relationships can include operators, institutions, technology partners, researchers, strategic capital counterparties and company-building teams. Every relationship requires a defined mandate, decision authority, information boundary and accountable owner."] },
       { title: "Built for long-term enterprise", body: ["BLACK& is structured for work that compounds: shared technology, reusable operating knowledge, disciplined governance and companies designed to remain relevant beyond a single product cycle."] },
+      { title: "Institutional access", body: ["Public company, model, technology, research, trust and newsroom resources are available through this website. Institutional enquiries may be sent to hq@blackandi.com. Protected Board information is not part of the public website."] },
     ],
     [
       { label: "Company overview", href: "/company/overview" },
@@ -119,11 +128,12 @@ const corePages: InstitutionalPage[] = [
     "Governance built for consequential decisions.",
     "BLACK& governance is designed to separate evidence, recommendation, approval and execution while maintaining clear responsibility for strategic and operating decisions.",
     [
-      { title: "Board oversight", body: ["A six-person Board provides strategic oversight. Board materials, voting and confidential intelligence are managed through the protected BLACK& Board environment."] },
-      { title: "Decision discipline", body: ["Material proposals should identify the decision owner, evidence base, alternatives, principal risks, capital implications, implementation owner and review date before approval."] },
-      { title: "Portfolio governance", body: ["Each operating company should maintain defined authority, reporting expectations, milestone review and escalation paths appropriate to its legal status and stage."] },
-      { title: "Risk and conflicts", body: ["Conflicts must be declared before participation in a decision. Sensitive information is distributed according to role, confidentiality and legitimate need. Public committee details remain subject to Board confirmation."] },
-      { title: "Long-term accountability", body: ["Decisions are evaluated not only at approval but after implementation. Material assumptions, outcomes and corrective actions should remain traceable through Board records and audit history."] },
+      { title: "Current governance structure", body: ["BLACK& currently maintains a six-person Board as its central governance body. The Board reviews material strategic matters and uses the protected BLACK& Board environment for controlled distribution of Board materials, decision records and confidential intelligence.", "The public website does not identify Board members whose publication approval has not been recorded. Committee assignments and delegated authorities are published only after formal confirmation."], items: ["Six-person Board", "Protected Board information environment", "Recorded decisions and voting", "Role- and confidentiality-based distribution"] },
+      { title: "Current decision process", body: ["Material proposals presented through the Board environment identify the decision, responsible proposer, supporting evidence, deadline and available voting choices. Decisions that require a vote are retained with the submitted result and associated audit history.", "Conflicts are declared before participation. Sensitive information is distributed according to role, confidentiality and legitimate need."] },
+      { title: "Governance standard", body: ["The BLACK& governance standard requires a material proposal to identify its decision owner, evidence base, alternatives, principal risks, capital implications, implementation owner and review date before approval.", "The standard requires each operating company to define authority, reporting expectations, milestone review and escalation paths appropriate to its verified legal status and operating stage."] },
+      { title: "Proposed framework and approval status", body: ["Policies that have not completed formal Board approval are described as proposed frameworks, not as current controls. A proposed framework becomes an operative BLACK& requirement only after approval, assignment of an accountable owner, versioning and publication of its effective date."] },
+      { title: "Post-decision accountability", body: ["The governance standard requires material decisions to be reviewed after implementation. Assumptions, outcomes, deviations and corrective actions remain connected to the original decision so the Board can distinguish approval from operating performance."] },
+      { title: "Evidence boundary", body: ["This page distinguishes confirmed operating structure from governance standards. It does not claim the existence of undisclosed committees, external certifications or controls that have not been formally verified."] },
     ],
     [
       { label: "Leadership", href: "/company/leadership" },
@@ -181,11 +191,17 @@ const modelPages: InstitutionalPage[] = [
     "The BLACK& operating model.",
     "BLACK& converts information into intelligence, intelligence into conviction, conviction into technology and companies, and operating companies into long-term assets.",
     [
-      { title: "1. Identify opportunity", body: ["Signals are assessed against structural relevance, unmet need, timing, strategic importance, market structure and the possibility of a defensible intelligence advantage."] },
-      { title: "2. Develop conviction", body: ["Evidence is organized into a falsifiable thesis. Assumptions, risks and disconfirming information are documented before resources are committed."] },
-      { title: "3. Design technology", body: ["When software or information infrastructure is central to the thesis, BLACK& defines the user, decision environment, data inputs, system boundaries and validation path."] },
-      { title: "4. Form the company", body: ["A company is formed only when the market, operating model, leadership requirement, governance structure and initial capital plan are sufficiently defined."] },
-      { title: "5. Build the asset", body: ["Execution, operating support and governance convert the initial thesis into measurable capability. Long-term ownership is evaluated against strategic relevance and compounding value."] },
+      { title: "Operating sequence", body: ["The model is a gated sequence rather than an automatic pipeline. Every stage has defined inputs, a reviewable output, an accountable decision owner and an explicit reason to continue, redesign or stop."], items: ["Signal → evidence map", "Evidence → falsifiable thesis", "Thesis → system or formation proposal", "Proposal → governed operating company", "Operating evidence → long-term asset decision"] },
+      { title: "1. Identify opportunity", body: ["Signals are assessed against structural relevance, unmet need, timing, strategic importance, market structure and the possibility of a defensible intelligence advantage.", "Inputs include retained sources, user or institutional needs, regulation, infrastructure constraints, technology change and existing alternatives. The output is an opportunity brief with a named question, evidence gaps and an initial stop condition."] },
+      { title: "2. Develop conviction", body: ["Evidence is organized into a falsifiable thesis. Assumptions, risks and disconfirming information are documented before resources are committed.", "The decision owner must be able to state what new evidence would weaken or invalidate the thesis. Narrative appeal, addressable-market estimates or prior expenditure do not replace this test."] },
+      { title: "3. Design technology", body: ["When software or information infrastructure is central to the thesis, BLACK& defines the user, decision environment, data inputs, system boundaries and validation path.", "The output is a controlled product or system proposal covering intended use, permissions, human authority, evaluation, security dependencies, operating cost and limitations."] },
+      { title: "4. Form the company", body: ["A company is formed only when the market, operating model, leadership requirement, governance structure and initial capital plan are sufficiently defined.", "Formation requires a verified legal route, ownership decision, accountable leadership, milestone plan and clear boundary between BLACK& shared capability and company-level responsibility."] },
+      { title: "5. Build the asset", body: ["Execution, operating support and governance convert the initial thesis into measurable capability. Long-term ownership is evaluated against strategic relevance and compounding value.", "Operating evidence—not launch language—determines whether the company scales, changes direction, remains a research initiative or stops."] },
+      { title: "Decision criteria", body: ["Each gate tests evidence quality, problem materiality, user clarity, technical feasibility, legal and security constraints, capital intensity, strategic fit, leadership readiness and the relationship between controllable downside and potential long-term value."] },
+      { title: "Responsibilities", body: ["Research owners maintain sources and assumptions. Product or technology owners define system boundaries and validation. Company leadership owns execution. The Board or delegated authority reviews material capital, governance and risk decisions. Responsibility is not transferred to an AI model or an external source."] },
+      { title: "Stop conditions", body: ["Work pauses or stops when the problem is not material, evidence cannot support the thesis, the intended user is undefined, legal or security constraints cannot be responsibly resolved, technical validation fails, leadership is unavailable or the next capital commitment is not justified by milestone evidence."] },
+      { title: "Illustrative application", body: ["A fragmented institutional decision process may first produce a research brief, then a narrow decision-support prototype. Only if the prototype improves a defined workflow and the legal, security and operating responsibilities are clear does the work advance to company formation or broader deployment."] },
+      { title: "Limitations", body: ["The model is an operating discipline, not a prediction of commercial success. Evidence can be incomplete, timing can change and technical validation can fail. Some opportunities remain research, are pursued through partnerships or are rejected without forming a company."] },
     ],
     [
       { label: "Category definition", href: "/model/intelligence-company-building" },
@@ -308,12 +324,15 @@ const modelPages: InstitutionalPage[] = [
 
 export const portfolioCompanies = [
   {
-    slug: "blackand-technologies",
+    slug: "black-and-technologies",
     name: "BLACK& Technologies",
     category: "Technology capability",
     summary: "The BLACK& technology capability for AI platforms, enterprise software, applied AI and automation.",
     market: "Corporate and government",
-    status: "Active development",
+    status: "Internal technology platform",
+    statusLabels: ["Internal technology platform"],
+    operatingEntity: "BLACK HOLDINGS S.R.L.; separate entity status has not been publicly confirmed.",
+    capabilities: ["Applied AI systems", "Enterprise software architecture", "Automation and workflow design", "Shared intelligence infrastructure"],
     website: "https://blackandi.com/technologies",
   },
   {
@@ -322,7 +341,10 @@ export const portfolioCompanies = [
     category: "AI company operating system",
     summary: "A platform designed to turn an idea into a structured company supported by coordinated specialist AI agents.",
     market: "Entrepreneurs and operating teams",
-    status: "Product development",
+    status: "Product in development",
+    statusLabels: ["Product in development", "Planned launch"],
+    operatingEntity: "Operating entity pending public legal confirmation.",
+    capabilities: ["Coordinated specialist AI agents", "Company structure generation", "Cross-department operating context", "Human-controlled executive workflows"],
     website: "https://system-inc-ai.vercel.app/",
   },
   {
@@ -331,26 +353,35 @@ export const portfolioCompanies = [
     category: "Sovereign intelligence",
     summary: "Decision infrastructure for governments, security institutions and critical infrastructure environments.",
     market: "Government and critical infrastructure",
-    status: "Active development",
+    status: "Research initiative",
+    statusLabels: ["Research initiative"],
+    operatingEntity: "Operating entity pending public legal confirmation.",
+    capabilities: ["Sovereign information workflows", "Decision traceability", "Controlled institutional context", "Human authority and escalation"],
     website: "https://blackandi.com/companies/caesarea-technologies",
   },
   {
-    slug: "eeil",
+    slug: "european-energy-intelligence-layer",
     name: "European Energy Intelligence Layer — EEIL",
     category: "Energy intelligence",
     summary: "An intelligence layer focused on European energy markets, infrastructure and strategic decision requirements.",
     market: "Energy institutions and enterprises",
-    status: "Active development",
-    website: "https://blackandi.com/companies/eeil",
+    status: "Research initiative",
+    statusLabels: ["Research initiative"],
+    operatingEntity: "Operating entity pending public legal confirmation.",
+    capabilities: ["European market context", "Infrastructure and grid intelligence", "Regulatory monitoring", "Strategic energy decision support"],
+    website: "https://blackandi.com/companies/european-energy-intelligence-layer",
   },
   {
-    slug: "blackand-ventures",
+    slug: "black-and-ventures",
     name: "BLACK& Ventures",
     category: "Company creation and strategic capital",
     summary: "The BLACK& capability for venture formation, strategic capital and long-term company development.",
     market: "Selected company-building opportunities",
-    status: "Active development",
-    website: "https://blackandi.com/companies/blackand-ventures",
+    status: "Venture formation capability",
+    statusLabels: ["Venture formation capability"],
+    operatingEntity: "Legal identity and investment mandate pending public legal confirmation.",
+    capabilities: ["Opportunity structuring", "Company formation support", "Milestone-based capital planning", "Long-term company development"],
+    website: "https://blackandi.com/companies/black-and-ventures",
   },
 ];
 
@@ -363,6 +394,10 @@ const companyPages: InstitutionalPage[] = [
     [
       { title: "A connected portfolio", body: ["BLACK& Technologies provides the group’s technology foundation. SYSTEM INC AI develops an AI-native company operating system. CAESAREA Technologies focuses on sovereign decision infrastructure. EEIL turns fragmented European energy information into strategic context. BLACK& Ventures supports company formation and long-term development."], items: portfolioCompanies.map((company) => `${company.name} — ${company.summary}`) },
       { title: "Shared advantage", body: ["The portfolio is designed as a system rather than a collection of isolated businesses. Companies can draw on common intelligence, technology architecture, governance and operating experience while retaining a clear purpose and market focus."] },
+      { title: "How a portfolio relationship is defined", body: ["A portfolio relationship describes the approved role of a company, platform or initiative within the BLACK& operating model. It does not automatically establish separate incorporation, ownership percentage, consolidation, commercial availability or an investment offer."] },
+      { title: "Public status vocabulary", body: ["Every portfolio profile publishes a controlled status label so readers and automated systems do not infer commercial maturity, legal identity or launch status from a name alone."], items: ["Product in development — an identified product under active development", "Internal technology platform — shared capability used within the BLACK& operating model", "Research initiative — a defined research or validation programme, not a launched product", "Venture formation capability — company-building capability rather than a confirmed investment product", "Planned launch — an intended future release, subject to validation and change", "Private operating company — used only after the relevant legal and operating status is publicly confirmed"] },
+      { title: "Operating review", body: ["Portfolio work is reviewed against a defined thesis, named user, operating milestone, responsible owner, evidence quality, risk and next decision. A status changes only when the underlying evidence and publication approval change."] },
+      { title: "Evidence boundary", body: ["A portfolio listing confirms a public relationship to the BLACK& company-building agenda. It does not by itself confirm a separate legal entity, ownership percentage, revenue, customers, regulated authorization or commercial launch. Each profile states what is confirmed and what remains pending legal or operational verification."] },
     ],
     portfolioCompanies.map((company) => ({ label: company.name, href: `/companies/${company.slug}` })),
     "collection"
@@ -374,23 +409,31 @@ const companyPages: InstitutionalPage[] = [
       company.name,
       company.summary,
       [
-        { title: "Role within BLACK&", body: [company.slug === "blackand-technologies" ? "BLACK& Technologies is the group technology capability, translating company-building theses into secure software, AI systems and operating infrastructure." : `${company.name} is part of the BLACK& company-building portfolio and contributes a specialized capability to the wider group.`] },
-        { title: "Problem addressed", body: [company.slug === "system-inc-ai" ? "Company creation is slowed by fragmented legal, financial, operational and commercial systems. SYSTEM INC AI is designed to coordinate specialist AI departments around one shared company context." : company.slug === "caesarea-technologies" ? "Institutions operating critical systems require sovereign, traceable and secure environments for understanding complex information and supporting consequential decisions." : company.slug === "eeil" ? "European energy decisions depend on fragmented market, infrastructure, regulatory and geopolitical information that must be converted into consistent strategic context." : company.slug === "blackand-ventures" ? "High-conviction opportunities require a disciplined path from thesis and capital to company formation and accountable execution." : "Organizations require practical AI and information infrastructure connected to real operating decisions rather than isolated demonstrations."] },
+        { title: "Public classification", body: [`Published status: ${company.status}. This label describes the current public classification and is not a claim of revenue, customer adoption, regulated authorization or completed commercial launch.`] },
+        { title: "Role within BLACK&", body: [company.slug === "black-and-technologies" ? "BLACK& Technologies is the group technology capability, translating company-building theses into secure software, AI systems and operating infrastructure." : `${company.name} is part of the BLACK& company-building portfolio and contributes a specialized capability to the wider group.`] },
+        { title: "Problem addressed", body: [company.slug === "system-inc-ai" ? "Company creation is slowed by fragmented legal, financial, operational and commercial systems. SYSTEM INC AI is designed to coordinate specialist AI departments around one shared company context." : company.slug === "caesarea-technologies" ? "Institutions operating critical systems require sovereign, traceable and secure environments for understanding complex information and supporting consequential decisions." : company.slug === "european-energy-intelligence-layer" ? "European energy decisions depend on fragmented market, infrastructure, regulatory and geopolitical information that must be converted into consistent strategic context." : company.slug === "black-and-ventures" ? "High-conviction opportunities require a disciplined path from thesis and capital to company formation and accountable execution." : "Organizations require practical AI and information infrastructure connected to real operating decisions rather than isolated demonstrations."] },
         { title: "Market and intended users", body: [`Primary market: ${company.market}. The company is built around users who need dependable intelligence and operating capability in complex environments.`] },
-        { title: "Operating status", body: [`Current status: ${company.status}. Development is organized around product capability, practical deployment and accountable operating milestones.`] },
-        { title: "How it creates value", body: [company.slug === "system-inc-ai" ? "SYSTEM INC AI gives entrepreneurs access to coordinated AI departments across legal, finance, operations, sales, marketing, human resources, strategy and customer support from the first day of company formation." : company.slug === "caesarea-technologies" ? "CAESAREA is designed to help institutions transform complex, sensitive information into traceable strategic understanding while retaining sovereign control and human authority." : company.slug === "eeil" ? "EEIL connects market, infrastructure, regulatory and geopolitical information so energy organizations can evaluate change within one coherent decision context." : company.slug === "blackand-ventures" ? "BLACK& Ventures connects validated opportunity theses with formation capability, governance and strategic capital." : "BLACK& Technologies creates reusable technical foundations that reduce fragmentation across the group and accelerate the path from concept to operating product."] },
+        { title: "Capabilities", body: ["The current public capability definition includes:"], items: company.capabilities },
+        { title: "Operating entity", body: [company.operatingEntity] },
+        { title: "Development and validation", body: [`Current status: ${company.status}. Development is organized around defined users, product capability, practical validation and accountable operating milestones. A future launch statement remains distinct from a completed launch.`] },
+        { title: "How it creates value", body: [company.slug === "system-inc-ai" ? "SYSTEM INC AI gives entrepreneurs access to coordinated AI departments across legal, finance, operations, sales, marketing, human resources, strategy and customer support from the first day of company formation." : company.slug === "caesarea-technologies" ? "CAESAREA is designed to help institutions transform complex, sensitive information into traceable strategic understanding while retaining sovereign control and human authority." : company.slug === "european-energy-intelligence-layer" ? "EEIL connects market, infrastructure, regulatory and geopolitical information so energy organizations can evaluate change within one coherent decision context." : company.slug === "black-and-ventures" ? "BLACK& Ventures connects validated opportunity theses with formation capability, governance and strategic capital." : "BLACK& Technologies creates reusable technical foundations that reduce fragmentation across the group and accelerate the path from concept to operating product."] },
+        { title: "Security and governance", body: ["Access, data provenance, human review, confidentiality and change control are defined according to the intended deployment. Public descriptions exclude security-sensitive architecture and do not authorize use in a high-consequence environment without separate validation."] },
+        { title: "Documentation", body: ["Public documentation will be expanded as product boundaries, operating responsibility, validation results and legal status are approved for publication. Technical or commercial materials not linked from this profile should not be treated as official BLACK& documentation."] },
+        { title: "Limitations", body: ["The profile describes intended capability and current public status. It does not guarantee performance, availability, completeness or suitability for a particular decision. Model-assisted output requires authorized human review."] },
         { title: "Official links", body: [`Official public destination: ${company.website}`] },
       ],
-      [{ label: "Companies portfolio", href: "/companies" }, { label: "Related technologies", href: "/technologies" }, { label: "Newsroom", href: "/newsroom" }]
+      [{ label: "Companies portfolio", href: "/companies" }, { label: "Related technologies", href: "/technologies" }, { label: "Newsroom", href: "/newsroom" }],
+      "page",
+      company.statusLabels
     )
   ),
 ];
 
 const technologies = [
-  { slug: "blackand-intelligence-core", name: "BLACK& Intelligence Core", purpose: "Shared intelligence architecture for organizing sources, context and decision support across selected BLACK& environments.", users: "Authorized operating and governance teams", entity: "BLACK& Technologies", status: "Active development" },
-  { slug: "system-inc-ai", name: "SYSTEM INC AI", purpose: "Coordinates specialist AI departments to help structure and operate a company from one shared context.", users: "Entrepreneurs and company operators", entity: "SYSTEM INC AI", status: "Product development" },
-  { slug: "caesarea", name: "CAESAREA Decision Infrastructure", purpose: "Supports sovereign and critical-infrastructure decision environments with controlled intelligence workflows.", users: "Governments and critical infrastructure institutions", entity: "CAESAREA Technologies", status: "Active development" },
-  { slug: "eeil", name: "European Energy Intelligence Layer", purpose: "Structures European energy market, infrastructure, regulatory and strategic information for decision support.", users: "Energy institutions and enterprises", entity: "EEIL", status: "Active development" },
+  { slug: "blackand-intelligence-core", name: "BLACK& Intelligence Core", purpose: "Shared intelligence architecture for organizing sources, context and decision support across selected BLACK& environments.", problem: "Evidence, interpretation, authority and institutional memory are often separated across tools, making consequential decisions difficult to reconstruct.", users: "Authorized operating and governance teams", entity: "BLACK& Technologies", status: "Internal technology platform", capabilities: ["Source and provenance organization", "Shared institutional context", "Permission-aware retrieval", "Decision-support workflows", "Reviewable institutional memory"], limitations: "The public profile does not disclose security-sensitive architecture, connected sources or production coverage. Output remains dependent on source quality and authorized human review." },
+  { slug: "system-inc-ai", name: "SYSTEM INC AI", purpose: "Coordinates specialist AI departments to help structure and operate a company from one shared context.", problem: "New companies must coordinate legal, finance, operations, sales, marketing, people and support before they can afford a complete executive organization.", users: "Entrepreneurs and company operators", entity: "SYSTEM INC AI", status: "Product in development", capabilities: ["Specialist departmental agents", "Shared company context", "Structured company formation workflows", "Cross-department coordination", "Human-controlled executive review"], limitations: "The system does not replace licensed legal, tax, financial or employment professionals. Public performance evidence and production availability remain subject to release documentation." },
+  { slug: "caesarea", name: "CAESAREA Decision Infrastructure", purpose: "Supports sovereign and critical-infrastructure decision environments with controlled intelligence workflows.", problem: "Institutions handling critical information require traceable understanding without surrendering authority, sensitive context or operating continuity.", users: "Governments and critical infrastructure institutions", entity: "CAESAREA Technologies", status: "Research initiative", capabilities: ["Controlled intelligence workflows", "Source traceability", "Sovereign deployment research", "Human escalation", "Critical-decision context"], limitations: "No public profile is a claim of government deployment, security certification or suitability for classified data. Those matters require institution-specific evidence and authorization." },
+  { slug: "eeil", name: "European Energy Intelligence Layer", purpose: "Structures European energy market, infrastructure, regulatory and strategic information for decision support.", problem: "Energy decisions are weakened when price, physical capacity, regulation, security and capital are evaluated on separate timelines and systems.", users: "Energy institutions and enterprises", entity: "EEIL", status: "Research initiative", capabilities: ["Market context", "Infrastructure and grid mapping", "Regulatory monitoring", "Energy-security analysis", "Decision-oriented synthesis"], limitations: "EEIL does not provide trading advice, guaranteed forecasts or a complete public dataset. Methodology, coverage and update frequency must be evaluated for each use." },
 ];
 
 const technologyPages: InstitutionalPage[] = [
@@ -403,6 +446,10 @@ const technologyPages: InstitutionalPage[] = [
       { title: "Technology portfolio", body: ["The portfolio combines a shared intelligence foundation with specialized products for AI-operated companies, sovereign institutions and European energy decisions."], items: technologies.map((technology) => `${technology.name} — ${technology.purpose}`) },
       { title: "Designed as infrastructure", body: ["Each system is built around a defined user, a consequential decision and a clear chain of responsibility. Shared context connects specialist capabilities; permissions protect sensitive information; human governance remains present where judgment matters."] },
       { title: "From analysis to operation", body: ["The goal is not simply to generate answers. BLACK& technology is designed to organize evidence, coordinate work, preserve institutional memory and help authorized people move from understanding to execution."] },
+      { title: "Product definition", body: ["A public technology profile identifies the problem, intended users, capabilities, operating entity or responsible capability, current status, security principles, documentation route and material limitations. Intended capability is not represented as deployed performance."] },
+      { title: "Security and human authority", body: ["Source provenance, permissions, review, monitoring, change control and incident response are considered system requirements. High-consequence legal, financial, security, employment or governance decisions remain subject to authorized human authority."] },
+      { title: "Validation", body: ["Validation connects a system output to a defined user workflow and evaluation standard. A demonstration is not treated as production evidence, and a model response is not treated as proof without retained sources and contextual review."] },
+      { title: "Documentation boundary", body: ["Public profiles explain architecture only at an institutional level. Confidential sources, credentials, security-sensitive diagrams, internal prompts and unverified performance claims are excluded."] },
     ],
     technologies.map((technology) => ({ label: technology.name, href: `/technologies/${technology.slug}` })),
     "collection"
@@ -414,11 +461,15 @@ const technologyPages: InstitutionalPage[] = [
       technology.name,
       technology.purpose,
       [
+        { title: "Problem", body: [technology.problem] },
         { title: "Intended users", body: [technology.users] },
+        { title: "Capabilities", body: ["The current public capability definition includes:"], items: technology.capabilities },
         { title: "System architecture", body: ["The architecture separates source collection, context organization, model-assisted analysis, permissions, human review and accountable action. This creates a controlled path from raw information to useful operating output."] },
         { title: "Inputs and outputs", body: ["Inputs must have defined provenance and permission. Outputs are decision support or operating artifacts, not automatic proof. Every deployment must document limitations and escalation paths."] },
         { title: "Security and governance", body: ["Access control, source traceability, human oversight, monitoring, incident response and change control are treated as product requirements."] },
         { title: "Operating entity and status", body: [`Operating entity: ${technology.entity}. Public status: ${technology.status}.`] },
+        { title: "Documentation", body: ["The authoritative public documentation is the current technology profile and any methodology, security or release material linked from blackandi.com. Unlinked demonstrations, draft claims and third-party summaries are not official product documentation."] },
+        { title: "Limitations", body: [technology.limitations] },
         { title: "Human authority", body: ["Model output supports judgment; it does not replace accountable authority. Material decisions remain governed by the permissions, review requirements and escalation paths of the organization using the system."] },
       ],
       [{ label: "Technology portfolio", href: "/technologies" }, { label: "Responsible AI", href: "/company/responsible-ai" }, { label: "Research", href: "/research" }]
@@ -446,6 +497,10 @@ const industryPages: InstitutionalPage[] = [
       { title: "Confirmed areas of focus", body: ["The public institutional architecture covers technology, infrastructure and construction, security and defense, energy, food production, consumer systems and hospitality."], items: industries.map((industry) => `${industry.name} — ${industry.perspective}`) },
       { title: "How sectors are selected", body: ["BLACK& focuses on industries where complex information, strategic infrastructure and operational execution intersect. The strongest opportunities are those where better intelligence can improve a repeated, high-value decision and become part of the operating system of an enterprise."] },
       { title: "A cross-sector advantage", body: ["Lessons developed in one environment—such as data governance, decision traceability, AI coordination or risk monitoring—can strengthen companies in another. This transfer of capability is a central advantage of the BLACK& model."] },
+      { title: "Research before formation", body: ["An industry thesis can remain research for as long as the user, evidence, legal route, technical feasibility or company-building conditions are insufficiently defined. Sector inclusion does not require immediate company formation."] },
+      { title: "Decision requirements", body: ["Sector work identifies the material decision, responsible user, evidence sources, update cycle, legal and safety constraints, operating consequence and conditions under which the thesis must change."] },
+      { title: "Company-building threshold", body: ["A sector opportunity advances only when proprietary understanding can be translated into durable operating capability and when accountable leadership, governance and capital can be defined around it."] },
+      { title: "Disclosure boundary", body: ["A listed industry is an area of research and company-building interest. It is not a claim that BLACK& owns an operating company, customer relationship or regulated license in every listed market."] },
     ],
     industries.map((industry) => ({ label: industry.name, href: `/industries/${industry.slug}` })),
     "collection"
@@ -459,8 +514,12 @@ const industryPages: InstitutionalPage[] = [
       [
         { title: "Structural context", body: [`BLACK& examines ${industry.name.toLowerCase()} through changes in technology, regulation, infrastructure, capital, supply and institutional requirements. The purpose is to identify where fragmented information prevents responsible execution.`] },
         { title: "Intelligence requirements", body: [`Priority intelligence domains include ${industry.themes.join(", ")}. Each domain requires named sources, update cycles, definitions and accountable interpretation.`] },
-        { title: "Technology and operating opportunities", body: ["Relevant opportunities may involve information infrastructure, workflow systems, AI-supported analysis, operating software or company creation. Specific initiatives are linked only when their relationship is confirmed."] },
+        { title: "Users and decisions", body: ["The relevant user is not an abstract market. BLACK& begins with the operator, institution or leadership team responsible for a repeated material decision, then defines the evidence, timing, authority and consequence surrounding that decision."] },
+        { title: "Inputs and outputs", body: ["Inputs may include operational records, public and licensed sources, market structure, regulation, infrastructure constraints and expert judgment. Useful outputs include a decision brief, monitored signal, governed workflow, operating system or a documented decision not to proceed."] },
+        { title: "Technology and operating opportunities", body: ["Relevant opportunities may involve information infrastructure, workflow systems, AI-supported analysis, operating software or company creation. A technology becomes strategically relevant only when it improves a defined workflow and an accountable user can act on the result. Specific initiatives are linked only when their relationship is confirmed."] },
+        { title: "Company-building criteria", body: ["A sector thesis advances toward company formation only when the problem is material, the intended user is identifiable, evidence is sufficiently differentiated, the operating and legal route is credible, and the opportunity can support durable capability rather than a temporary feature."] },
         { title: "Risk and governance", body: ["Sector-specific legal, safety, security, data and operating constraints must be defined before product or capital decisions. High-consequence applications retain human authority and review."] },
+        { title: "Limitations", body: ["Industry interest is not evidence of an operating company, customer, regulated license or investment in every part of the sector. The public profile establishes a research and company-building perspective; entity-level claims appear only on a verified company or technology profile."] },
         { title: "BLACK& perspective", body: [industry.slug === "energy" ? "EEIL applies this perspective to European energy markets, infrastructure and strategic decision requirements." : industry.slug === "security-defense" ? "CAESAREA Technologies applies this perspective to sovereign intelligence and critical decision environments." : industry.slug === "technology" ? "BLACK& Technologies and SYSTEM INC AI apply this perspective to intelligence infrastructure and AI-native company operations." : `In ${industry.name.toLowerCase()}, BLACK& is interested in opportunities where technology can become a durable operating advantage rather than a standalone feature.`] },
       ],
       [{ label: "Industries", href: "/industries" }, { label: "Companies", href: "/companies" }, { label: "Research", href: "/research" }]
@@ -831,14 +890,111 @@ const trustPages: InstitutionalPage[] = [
     "Institutional trust requires visible responsibility.",
     "The BLACK& Trust Center connects legal identity, governance, privacy, responsible AI, research standards, security principles, incident reporting and official contact channels.",
     [
-      { title: "Identity and ownership", body: ["BLACK HOLDINGS S.R.L. is the Romanian legal entity trading as BLACK&. Detailed ownership disclosures are published only when legally reviewed and approved."] },
-      { title: "Governance", body: ["BLACK& is overseen by a six-person Board. Founders are Bruno Mihailescu, Kaschif Ali and Adam Constantin."] },
-      { title: "Privacy and data", body: ["BLACK& applies role-based access, purpose limitation and controlled handling to protected environments. Privacy requests and incident reports may be directed to hq@blackandi.com."] },
-      { title: "Responsible AI", body: ["AI-supported work retains human oversight, source verification, access control, limitations and escalation appropriate to consequence and context."] },
-      { title: "Research integrity", body: ["Public analysis follows source, method, authorship, conflict, correction and revision standards."] },
-      { title: "Vulnerability reporting", body: ["Security concerns should be sent to hq@blackandi.com with the subject ‘Security — Confidential’. Do not include unnecessary personal or confidential third-party data."] },
+      { title: "Trust register", body: ["This directory separates operative public policies, documented operating positions and controls still pending formal publication. Each linked record identifies scope, owner, version, review status and material limitations."], items: ["Security and access", "Data, privacy and retention", "Subprocessors and data residency", "Incident response", "Responsible disclosure", "AI transparency and provider inventory", "Document and policy register"] },
+      { title: "Identity and governance", body: ["BLACK HOLDINGS S.R.L. is the legal entity trading as BLACK&. BLACK& is overseen by a six-person Board. Detailed ownership, committee and delegated-authority disclosures are published only when legally reviewed and approved."] },
+      { title: "Current operational position", body: ["The BLACK& Board environment uses authenticated access and role-aware application permissions. The Trust Center does not represent those measures as an external certification or independent assurance report. Technical claims remain limited to controls that have been approved for public description."] },
+      { title: "Privacy and data", body: ["The current public privacy position covers purpose limitation, controlled access, retention review and rights requests. The detailed record identifies what is documented, what requires system-specific confirmation and how to contact the responsible owner."] },
+      { title: "AI transparency", body: ["AI-supported work retains authorized human review. The AI transparency record distinguishes intended use, model-provider disclosure, provider inventory, data handling, limitations and applications that require human authority."] },
+      { title: "Security reporting", body: ["Security concerns may be submitted to hq@blackandi.com with the subject ‘Security — Confidential’. The responsible-disclosure record explains safe reporting, acknowledgment and disclosure boundaries. Do not send exploit data, credentials or unnecessary personal information through an unapproved channel."] },
+      { title: "Assurance and certifications", body: ["No external security certification is claimed on this Trust Center unless the certificate, scope, issuing body and validity period are published. The absence of a listed certification must not be interpreted as certification."] },
     ],
-    [{ label: "Responsible AI", href: "/company/responsible-ai" }, { label: "Governance", href: "/company/governance" }, { label: "Research standards", href: "/research/standards" }, { label: "Privacy", href: "/privacy" }]
+    [{ label: "Security and access", href: "/company/trust/security" }, { label: "Data, privacy and retention", href: "/company/trust/data-privacy-retention" }, { label: "Subprocessors", href: "/company/trust/subprocessors" }, { label: "Incident response", href: "/company/trust/incident-response" }, { label: "Responsible disclosure", href: "/company/trust/responsible-disclosure" }, { label: "AI transparency", href: "/company/trust/ai-transparency" }, { label: "Policy register", href: "/company/trust/policy-register" }],
+    "collection"
+  ),
+  page(
+    "/company/trust/security",
+    "Trust / Security",
+    "Security and access control.",
+    "A public description of the security principles governing protected BLACK& environments, their current evidence boundary and the controls that require system-level verification.",
+    [
+      { title: "Record status", body: ["Owner: BLACK& technology and governance functions. Version: 1.0. Public status: operating position. Last reviewed: 15 July 2026. Next review occurs after a material architecture, provider or access-control change."] },
+      { title: "Access model", body: ["Protected environments require authenticated users and application permissions appropriate to role and confidentiality. Administrative authority, Board access and suspended or revoked states are treated as distinct authorization conditions."] },
+      { title: "Security lifecycle", body: ["Security requirements include account lifecycle controls, least-privilege review, protected secrets, event logging, incident escalation, recovery planning and review of externally hosted dependencies."] },
+      { title: "Evidence boundary", body: ["This public record is not a penetration-test report, SOC report, ISO certificate or guarantee that an incident cannot occur. Control effectiveness must be validated through retained technical evidence and periodic review."] },
+      { title: "Contact", body: ["Report a security concern to hq@blackandi.com with the subject ‘Security — Confidential’. Use the responsible-disclosure procedure before sending sensitive technical material."] },
+    ],
+    [{ label: "Responsible disclosure", href: "/company/trust/responsible-disclosure" }, { label: "Incident response", href: "/company/trust/incident-response" }, { label: "Trust Center", href: "/company/trust" }]
+  ),
+  page(
+    "/company/trust/data-privacy-retention",
+    "Trust / Data",
+    "Data, privacy and retention.",
+    "The BLACK& public data position defines purpose, access, retention review, rights handling and the boundary between public, internal, confidential and Board information.",
+    [
+      { title: "Record status", body: ["Owner: Data Protection Officer — Bruno Mihailescu. Version: 1.0. Public status: policy summary. Last reviewed: 15 July 2026."] },
+      { title: "Purpose and access", body: ["Personal and confidential information is handled for a defined operational, legal, security or governance purpose. Access is limited by role, authorization and legitimate need within the relevant system."] },
+      { title: "Retention", body: ["Retention depends on purpose, legal duty, security requirement and the relevant record category. BLACK& does not publish a universal retention period where a verified category schedule has not been approved. Records are reviewed for deletion, anonymization, archival or legal hold according to the applicable schedule."] },
+      { title: "Rights and contact", body: ["Privacy and data-rights requests may be sent to hq@blackandi.com and addressed to the Data Protection Officer. Identity verification may be required before protected information is disclosed or changed."] },
+      { title: "Data residency", body: ["Data residency depends on the approved provider and service configuration. System-specific residency is published only after provider, region, transfer mechanism and scope have been verified."] },
+    ],
+    [{ label: "Privacy policy", href: "/privacy" }, { label: "Subprocessors", href: "/company/trust/subprocessors" }, { label: "Trust Center", href: "/company/trust" }]
+  ),
+  page(
+    "/company/trust/subprocessors",
+    "Trust / Providers",
+    "Subprocessors and service dependencies.",
+    "A controlled public register for third-party providers that may support hosting, authentication, communications, monitoring or AI functionality.",
+    [
+      { title: "Record status", body: ["Owner: BLACK& technology and data-protection functions. Version: 1.0. Public status: disclosure framework. Last reviewed: 15 July 2026."] },
+      { title: "Publication rule", body: ["A provider is listed only after its service purpose, contracting entity, relevant data category, processing location or region, transfer basis and security review have been verified for publication."] },
+      { title: "Current public register", body: ["A complete verified subprocessor register is pending formal publication. This page therefore does not infer providers from website code, email routing or public demonstrations."] },
+      { title: "Material changes", body: ["Material provider changes require a documented review of purpose, access, retention, region, security, continuity and exit conditions. Where contractually required, affected users receive notice through the appropriate channel."] },
+    ],
+    [{ label: "Data and retention", href: "/company/trust/data-privacy-retention" }, { label: "AI transparency", href: "/company/trust/ai-transparency" }, { label: "Trust Center", href: "/company/trust" }]
+  ),
+  page(
+    "/company/trust/incident-response",
+    "Trust / Incidents",
+    "Incident response and recovery.",
+    "The incident-response framework defines triage, containment, evidence preservation, decision authority, notification, recovery and post-incident review.",
+    [
+      { title: "Record status", body: ["Owner: BLACK& technology and governance functions. Version: 1.0. Public status: response framework. Last reviewed: 15 July 2026."] },
+      { title: "Response sequence", body: ["A reported event is recorded, assessed for severity and assigned an accountable owner. Response can include containment, access revocation, provider escalation, evidence preservation, recovery and controlled communication."] },
+      { title: "Notification", body: ["Legal, contractual and stakeholder notification decisions depend on the confirmed scope, affected data or service, risk and applicable reporting deadline. Public statements are not issued before material facts and authority are established."] },
+      { title: "Recovery and review", body: ["Recovery verifies service integrity before normal operation resumes. A material incident receives a post-incident review covering root cause, control changes, owner, deadline and evidence of completion."] },
+      { title: "Report an incident", body: ["Send a concise initial report to hq@blackandi.com with the subject ‘Security — Confidential’. Do not include credentials or unnecessary protected information in the first message."] },
+    ],
+    [{ label: "Security", href: "/company/trust/security" }, { label: "Responsible disclosure", href: "/company/trust/responsible-disclosure" }, { label: "Trust Center", href: "/company/trust" }]
+  ),
+  page(
+    "/company/trust/responsible-disclosure",
+    "Trust / Disclosure",
+    "Responsible vulnerability disclosure.",
+    "A safe route for reporting suspected security weaknesses without creating additional harm or unauthorized access.",
+    [
+      { title: "Safe reporting", body: ["Report the affected public service, observed behavior, time, minimal reproduction steps and contact route. Stop testing if access to personal, confidential, Board or third-party information becomes possible."] },
+      { title: "Prohibited activity", body: ["Do not use destructive testing, denial of service, social engineering, credential attacks, persistence, data extraction or publication of an unremediated weakness. This page does not authorize activity prohibited by law or contract."] },
+      { title: "BLACK& response", body: ["BLACK& aims to acknowledge a credible report, assign an owner, assess severity and communicate a remediation or coordination path where contact is possible. A fixed response-time commitment is not published until the operational service level is formally approved."] },
+      { title: "Contact", body: ["Email hq@blackandi.com with the subject ‘Security — Confidential’. Request a protected transfer route before sending sensitive evidence."] },
+    ],
+    [{ label: "Security", href: "/company/trust/security" }, { label: "Incident response", href: "/company/trust/incident-response" }, { label: "Trust Center", href: "/company/trust" }]
+  ),
+  page(
+    "/company/trust/ai-transparency",
+    "Trust / AI",
+    "AI use and provider transparency.",
+    "The AI transparency record defines intended use, human authority, provider disclosure, data boundaries and limitations for BLACK& AI-supported systems.",
+    [
+      { title: "Record status", body: ["Owner: BLACK& technology and governance functions. Version: 1.0. Public status: transparency framework. Last reviewed: 15 July 2026."] },
+      { title: "AI use inventory", body: ["The public portfolio includes AI-supported research, intelligence, company-formation and operating-workflow concepts. A system enters the public inventory only when its intended use, owner, model or provider class, data boundary, human authority and operating status have been approved for disclosure."] },
+      { title: "Provider transparency", body: ["Model providers and material service dependencies are disclosed at the system level after contractual, security and publication review. BLACK& does not infer an enduring provider relationship from a prototype or public code reference."] },
+      { title: "Human authority", body: ["AI output supports authorized judgment. It does not independently approve legal, financial, employment, security, investment or Board decisions. High-consequence use requires a defined accountable human and escalation path."] },
+      { title: "Data boundary and limitations", body: ["Confidential data is used only in approved environments with a defined purpose and access. Outputs can be incomplete or incorrect and must be evaluated against retained sources, context and intended use."] },
+    ],
+    [{ label: "Responsible AI", href: "/company/responsible-ai" }, { label: "Subprocessors", href: "/company/trust/subprocessors" }, { label: "Trust Center", href: "/company/trust" }]
+  ),
+  page(
+    "/company/trust/policy-register",
+    "Trust / Register",
+    "Policy and document register.",
+    "A public index of approved policy summaries, responsible owners, versions and review status.",
+    [
+      { title: "Register rules", body: ["A record appears as operative only after an accountable owner, version, effective date and approval status are recorded. Draft and proposed frameworks remain explicitly labeled."] },
+      { title: "Current public records", body: ["The current public register includes the Privacy Policy, Terms, Governance page, Responsible AI page, Research Standards, Security and Access record, Data and Retention record, Incident Response framework and Responsible Disclosure procedure."] },
+      { title: "Version history", body: ["Version 1.0 — 15 July 2026: initial public Trust Center register. Material future changes will identify the affected record, change date and current version."] },
+      { title: "Certifications and assurance", body: ["No certification is listed without verified scope, issuing body and validity. No independent assurance report is currently published in this register."] },
+    ],
+    [{ label: "Privacy", href: "/privacy" }, { label: "Terms", href: "/terms" }, { label: "Governance", href: "/company/governance" }, { label: "Research standards", href: "/research/standards" }, { label: "Trust Center", href: "/company/trust" }]
   ),
   page(
     "/company/responsible-ai",

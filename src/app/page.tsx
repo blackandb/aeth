@@ -61,7 +61,7 @@ export default function Home() {
             BLACK& develops intelligence technologies, forms and operates companies, and deploys strategic capital across sectors where proprietary understanding can create long-term advantage.
           </p>
           <div className="authority-actions">
-            <Link href="/company/overview" className="btn btn-primary">Understand BLACK&</Link>
+            <Link href="/company" className="btn btn-primary">Understand BLACK&</Link>
             <Link href="/companies" className="btn btn-secondary">View Companies</Link>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Home() {
             <div><dt>Founded</dt><dd>25 June 2026</dd></div>
             <div><dt>Operating model</dt><dd>Intelligence-led company building</dd></div>
             <div><dt>Governance</dt><dd>Six-person Board</dd></div>
-            <div><dt>Portfolio</dt><dd>5 public entities</dd></div>
+            <div><dt>Portfolio</dt><dd>5 public portfolio profiles</dd></div>
           </dl>
           <Link href="/company/facts">Explore company facts <span>↗</span></Link>
         </div>
@@ -154,7 +154,7 @@ export default function Home() {
           <Link href="/newsroom">Open Newsroom →</Link>
         </div>
         <div className="development-list">
-          <div><time>15 JUL 2026</time><span>Technology portfolio</span><h3>SYSTEM INC AI advances a coordinated model for AI-operated company departments.</h3><Link href="/companies/system-inc-ai">Explore SYSTEM INC AI ↗</Link></div>
+          <div><time>15 JUL 2026</time><span>Product in development</span><h3>SYSTEM INC AI advances a coordinated model for AI-operated company departments.</h3><Link href="/companies/system-inc-ai">Explore SYSTEM INC AI ↗</Link></div>
           <div><time>15 JUL 2026</time><span>Strategic intelligence</span><h3>CAESAREA and EEIL extend the portfolio into sovereign and European energy decision infrastructure.</h3><Link href="/technologies">Explore technologies ↗</Link></div>
           <div><time>JUL 2026</time><span>BLACK& Research</span><h3>The Intelligence Company Builder introduces a practical model from signal to long-term asset.</h3><Link href="/research/reports/the-intelligence-company-builder">Read the research ↗</Link></div>
         </div>

@@ -1057,6 +1057,8 @@ section, .section {
 .institutional-breadcrumb a:hover { color: var(--color-accent-cyan); }
 .institutional-hero { max-width: 1000px; padding: 42px 0 80px; }
 .institutional-hero h1 { max-width: 1000px; font-size: clamp(2.55rem, 6vw, 6rem); line-height: .94; letter-spacing: -.06em; }
+.institutional-statuses { display: flex; flex-wrap: wrap; gap: 9px; margin: 0 0 22px; }
+.institutional-statuses span { padding: 8px 11px; border: 1px solid rgba(82,227,130,.34); border-radius: 999px; background: rgba(82,227,130,.055); color: #70e899; font-family: var(--font-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
 
 .nav-status { display: none; }
 @media (min-width: 1760px) {

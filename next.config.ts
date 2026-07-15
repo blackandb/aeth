@@ -27,8 +27,8 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/about",
-        destination: "/company/overview",
-        permanent: true,
+        destination: "/company",
+        statusCode: 301,
       },
       {
         source: "/blog",
@@ -43,6 +43,21 @@ const nextConfig: NextConfig = {
       {
         source: "/updates",
         destination: "/newsroom",
+        permanent: true,
+      },
+      {
+        source: "/companies/blackand-technologies",
+        destination: "/companies/black-and-technologies",
+        permanent: true,
+      },
+      {
+        source: "/companies/eeil",
+        destination: "/companies/european-energy-intelligence-layer",
+        permanent: true,
+      },
+      {
+        source: "/companies/blackand-ventures",
+        destination: "/companies/black-and-ventures",
         permanent: true,
       },
     ];
