@@ -1,15 +1,25 @@
 import Link from "next/link";
 
 const systemLinks = [
+  { label: "Overview", href: "/company/overview" },
+  { label: "Leadership", href: "/company/leadership" },
+  { label: "Governance", href: "/company/governance" },
+  { label: "Company Facts", href: "/company/facts" },
+  { label: "Trust Center", href: "/company/trust" },
+];
+
+const portfolioLinks = [
+  { label: "Companies", href: "/companies" },
+  { label: "Technologies", href: "/technologies" },
   { label: "Industries", href: "/industries" },
-  { label: "How We Build", href: "/how-we-build" },
-  { label: "Opportunities", href: "/opportunities" },
-  { label: "About", href: "/about" },
+  { label: "The BLACK& Model", href: "/model" },
 ];
 
 const protocolLinks = [
+  { label: "Research", href: "/research" },
   { label: "Insights", href: "/insights" },
-  { label: "Updates", href: "/updates" },
+  { label: "Newsroom", href: "/newsroom" },
+  { label: "Opportunities", href: "/opportunities" },
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },
 ];
@@ -22,7 +32,7 @@ export function Footer() {
       
       {/* Main footer content */}
       <div className="border-t border-[rgba(255,255,255,0.12)] pt-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_auto_auto_auto]">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.35fr_auto_auto_auto_auto]">
           {/* Brand column */}
           <div>
             <Link href="/" className="brand text-xl text-primary">
@@ -34,9 +44,25 @@ export function Footer() {
             </p>
 
             <p className="mt-3 max-w-[280px] text-sm leading-relaxed text-primary/90">
-              BLACK& develops intelligence technologies, deploys strategic capital
-              and builds enterprises designed to create lasting value across generations.
+              BLACK& develops intelligence technologies, forms and operates companies, and deploys strategic capital across selected industries.
             </p>
+
+            <p className="mt-4 max-w-[300px] font-[var(--font-mono)] text-[10px] uppercase leading-relaxed tracking-[0.1em] text-secondary">
+              BLACK HOLDINGS S.R.L. · ROMANIA · J2026000163078
+            </p>
+          </div>
+
+          <div>
+            <div className="mb-4 font-[var(--font-mono)] text-[11px] font-bold uppercase tracking-[0.15em] text-primary">
+              Portfolio
+            </div>
+            <div className="flex flex-col gap-3">
+              {portfolioLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="text-sm font-medium text-primary transition-colors hover:text-accent-cyan">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Company column */}
@@ -87,10 +113,10 @@ export function Footer() {
             </Link>
 
             <a
-              href="mailto:contact@blackandi.com"
+              href="mailto:hq@blackandi.com"
               className="block font-[var(--font-mono)] text-[11px] text-primary font-medium transition-colors hover:text-accent-cyan"
             >
-              <span className="text-accent-cyan">&gt;</span> contact@blackandi.com
+              <span className="text-accent-cyan">&gt;</span> hq@blackandi.com
             </a>
 
             <a

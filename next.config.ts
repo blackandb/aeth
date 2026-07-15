@@ -17,7 +17,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/how-it-works",
-        destination: "/how-we-build",
+        destination: "/model",
+        permanent: true,
+      },
+      {
+        source: "/how-we-build",
+        destination: "/model",
+        permanent: true,
+      },
+      {
+        source: "/about",
+        destination: "/company/overview",
         permanent: true,
       },
       {
@@ -27,7 +37,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/changelog",
-        destination: "/updates",
+        destination: "/newsroom",
+        permanent: true,
+      },
+      {
+        source: "/updates",
+        destination: "/newsroom",
         permanent: true,
       },
     ];

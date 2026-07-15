@@ -18,7 +18,10 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
+  title: {
+    default: "BLACK& — The Intelligence Company Builder",
+    template: "%s | BLACK&",
+  },
   description:
     "BLACK& develops intelligence technologies, deploys strategic capital and builds companies across sectors where insight creates opportunity and execution creates value.",
   metadataBase: new URL("https://blackandi.com"),
@@ -44,6 +47,20 @@ export const metadata: Metadata = {
     description:
       "BLACK& develops intelligence technologies, deploys strategic capital and builds companies.",
     images: ["https://blackandi.com/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://blackandi.com/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
