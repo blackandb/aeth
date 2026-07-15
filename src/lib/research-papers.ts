@@ -138,6 +138,33 @@ export const publishedResearchPapers: ResearchPaper[] = [
     htmlUrl: "/research/read/the-architecture-of-intelligence-led-company-creation",
     coverUrl: "/research/covers/the-architecture-of-intelligence-led-company-creation.svg",
   },
+  {
+    slug: "european-energy-intelligence-landscape",
+    issue: "05",
+    title: "European Energy Intelligence Landscape",
+    subtitle: "Power, Gas, Grids, and the Nuclear Pivot — Mapping Europe’s Energy Transition Through Current Institutional Data",
+    thesis: "Europe’s energy transition has moved beyond a generation problem: grid capacity, energy security, nuclear investment and the ability to reconcile fragmented institutional data now determine where strategic infrastructure and capital can be deployed.",
+    summary: "The paper maps Europe’s electricity crossover, the regulated phase-out of Russian gas, the transmission-grid bottleneck, the renewed nuclear investment pipeline and the divergence between national energy systems. Its interactive dashboard lets readers move between five structural shifts and the European Energy Intelligence Layer aggregation model.",
+    methodology: "Desk-research synthesis of European institutional, statistical, market and infrastructure sources published between 2020 and July 2026, including Eurostat, the European Commission, the Council of the EU, ENTSO-E, Ember, EIB, EBRD, ACER and contemporaneous industry analysis.",
+    framework: "Generation → Energy Security → Grids → Nuclear Capacity → Governed Intelligence",
+    findings: [
+      "Wind and solar supplied 30.1% of EU electricity in 2025, exceeding all fossil generation for the first time, while national renewable shares continued to diverge sharply.",
+      "The European Union has converted the reduction of Russian gas dependence into a legally binding phase-out, changing energy security from a market adjustment into a regulatory transition.",
+      "Transmission capacity and equipment availability are becoming binding constraints, with more than 100,000 kilometres of new lines identified alongside a stronger domestic manufacturing requirement.",
+      "Europe’s nuclear policy and investment cycle has reversed as firm power, AI infrastructure and industrial demand increase the strategic value of large reactors and small modular reactor programmes.",
+    ],
+    application: "Government, institutional and investment leaders can use the paper and its interactive comparisons to assess how energy mix, grid capacity, security of supply, nuclear policy and data fragmentation affect infrastructure siting and long-term capital decisions.",
+    limitations: "The paper is a desk-research synthesis rather than an engineering, econometric or investment assessment. Several figures are forward-looking planning estimates, policy proposals may change, and rapidly developing 2026 market events should be reverified against primary sources at the time of a decision.",
+    publicationDate: "15 July 2026",
+    version: "1.0 — Initial publication",
+    classification: "Public — institutional and government stakeholders",
+    series: "Intelligence Infrastructure Series",
+    author: "BLACK& Research, a division of BLACK HOLDINGS SRL",
+    preparedBy: "SYSTEM INC AI Labs, in partnership with EEIL",
+    citation: "BLACK& Research. 2026. \"European Energy Intelligence Landscape.\" BLACK& Research Series, v1.0. Botoșani: BLACK HOLDINGS SRL.",
+    htmlUrl: "/research/read/european-energy-intelligence-landscape",
+    coverUrl: "/research/covers/european-energy-intelligence-landscape.svg",
+  },
 ];
 
 export const researchPaperMap = new Map(

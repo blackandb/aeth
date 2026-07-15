@@ -20,7 +20,7 @@ const newsItems = [
   "BLACK& Board v1.1 strengthens secure executive collaboration.",
   "27 July 2026: BLACK& Secure Board Communication Network launches.",
   "SYSTEM INC AI coordinates specialist AI departments around one company context.",
-  "BLACK& Research publishes four responsive web papers in the Intelligence Infrastructure Series.",
+  "BLACK& Research publishes five responsive web papers, including an interactive European energy intelligence dashboard.",
 ];
 
 export function Navbar() {

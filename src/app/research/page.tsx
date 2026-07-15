@@ -5,7 +5,7 @@ import { publishedResearchPapers } from "@/lib/research-papers";
 
 export const metadata: Metadata = {
   title: { absolute: "BLACK& Research — Intelligence Infrastructure Series" },
-  description: "Published BLACK& Research papers on sovereign AI infrastructure, AI-native company creation and the transformation of information into enterprise capability.",
+  description: "Published BLACK& Research papers on sovereign AI infrastructure, AI-native company creation, enterprise intelligence architecture and Europe’s energy transition.",
   alternates: { canonical: "https://blackandi.com/research" },
   openGraph: {
     title: "BLACK& Research — Intelligence Infrastructure Series",
@@ -54,7 +54,7 @@ export default function ResearchPage() {
         </div>
         <div className="research-hub-register">
           <span className="live-dot" />
-          <div><strong>4 papers published</strong><small>Responsive web editions · 15 July 2026</small></div>
+          <div><strong>5 papers published</strong><small>Responsive web editions · interactive data · 15 July 2026</small></div>
         </div>
       </header>
 

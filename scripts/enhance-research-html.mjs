@@ -19,6 +19,9 @@ const papers = [
   {
     slug: "the-architecture-of-intelligence-led-company-creation",
   },
+  {
+    slug: "european-energy-intelligence-landscape",
+  },
 ];
 
 const enhancementStyles = `
@@ -59,6 +62,11 @@ for (const paper of papers) {
   if (html.includes("data-black-research-enhancement")) continue;
 
   const canonical = `https://blackandi.com/research/read/${paper.slug}`;
+  html = html.replace(/<link\s+rel=["']canonical["'][^>]*>\s*/gi, "");
+  html = html.replaceAll(
+    `https://blackandi.com/research/${paper.slug}/`,
+    canonical,
+  );
   html = html.replace(
     "</head>",
     `<link rel="canonical" href="${canonical}">\n${enhancementStyles}\n</head>`,

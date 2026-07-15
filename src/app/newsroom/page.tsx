@@ -27,8 +27,8 @@ const latest = [
   {
     type: "Research",
     date: "15 July 2026",
-    title: "BLACK& publishes four papers in the Intelligence Infrastructure Series",
-    summary: "The responsive web series examines sovereign AI infrastructure, AI-native company creation, the path from information to enterprise and production-grade multi-agent architecture.",
+    title: "BLACK& publishes five papers in the Intelligence Infrastructure Series",
+    summary: "The responsive web series now adds an interactive European energy intelligence landscape to its work on sovereign AI, AI-native company creation, enterprise information and multi-agent architecture.",
     href: "/research",
     cta: "Explore the research series",
   },
@@ -65,7 +65,7 @@ export default function NewsroomPage() {
         <aside className="news-briefing-rail" aria-label="Newsroom briefing">
           <div><span>01</span><p>Board v1.1 strengthens the secure mobile governance experience.</p></div>
           <div><span>02</span><p>SYSTEM INC AI moves toward coordinated, AI-operated company departments.</p></div>
-          <div><span>03</span><p>Four responsive web papers establish the BLACK& Intelligence Infrastructure Series.</p></div>
+          <div><span>03</span><p>Five responsive web papers establish the BLACK& Intelligence Infrastructure Series.</p></div>
         </aside>
       </section>
 

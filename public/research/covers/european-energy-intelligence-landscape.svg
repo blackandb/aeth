@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="1320" viewBox="0 0 1020 1320" role="img" aria-labelledby="title desc">
+  <title id="title">European Energy Intelligence Landscape</title>
+  <desc id="desc">Cover of the fifth BLACK&amp; Research paper in the Intelligence Infrastructure Series.</desc>
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0f10"/>
+      <stop offset="1" stop-color="#171912"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="34%" r="58%">
+      <stop offset="0" stop-color="#c9a24b" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#c9a24b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1020" height="1320" fill="url(#field)"/>
+  <rect width="1020" height="1320" fill="url(#glow)"/>
+  <g fill="none" stroke="#c9a24b" stroke-opacity=".34">
+    <path d="M610 205 C775 265 842 394 812 548 C788 672 700 754 560 806"/>
+    <path d="M662 164 C862 240 940 408 899 594 C864 752 751 855 574 920"/>
+    <path d="M521 257 C657 299 719 407 698 518 C680 616 615 683 505 724"/>
+    <circle cx="610" cy="504" r="9" fill="#e4c878" stroke="none"/>
+    <circle cx="783" cy="633" r="7" fill="#c9a24b" stroke="none"/>
+    <circle cx="504" cy="722" r="7" fill="#c9a24b" stroke="none"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="96" y="132" fill="#e4c878" font-size="18" font-weight="700" letter-spacing="2">BLACK&amp; RESEARCH</text>
+    <text x="96" y="162" fill="#9b9b93" font-size="13" letter-spacing="1">SYSTEM INC AI LABS · IN PARTNERSHIP WITH EEIL</text>
+    <text x="96" y="280" fill="#f2f0ea" font-size="48" font-weight="700">
+      <tspan x="96" dy="0">European Energy</tspan>
+      <tspan x="96" dy="61">Intelligence</tspan>
+      <tspan x="96" dy="61">Landscape</tspan>
+    </text>
+    <text x="96" y="520" fill="#e4c878" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-style="italic">
+      <tspan x="96" dy="0">Power, gas, grids, and the nuclear pivot—</tspan>
+      <tspan x="96" dy="38">mapping Europe’s energy transition</tspan>
+      <tspan x="96" dy="38">through current institutional data.</tspan>
+    </text>
+    <g transform="translate(96 770)">
+      <rect width="828" height="1" fill="#c9a24b" fill-opacity=".55"/>
+      <text y="65" fill="#8f8f87" font-size="14" font-weight="700">INTERACTIVE RESEARCH EDITION</text>
+      <text y="104" fill="#f2f0ea" font-family="Georgia, 'Times New Roman', serif" font-size="22">Five structural shifts · Six interactive dashboard views</text>
+      <text y="178" fill="#8f8f87" font-size="14" font-weight="700">PUBLICATION DATE</text>
+      <text y="212" fill="#f2f0ea" font-family="Georgia, 'Times New Roman', serif" font-size="21">15 July 2026</text>
+      <text y="276" fill="#8f8f87" font-size="14" font-weight="700">VERSION · CLASSIFICATION</text>
+      <text y="310" fill="#f2f0ea" font-family="Georgia, 'Times New Roman', serif" font-size="20">1.0 · Public — institutional and government stakeholders</text>
+    </g>
+    <text x="96" y="1230" fill="#c9a24b" font-size="14" font-weight="700" letter-spacing="1.5">INTELLIGENCE INFRASTRUCTURE SERIES · PAPER 05</text>
+  </g>
+</svg>

@@ -563,7 +563,7 @@ const researchPages: InstitutionalPage[] = [
     [
       { title: "The central question", body: ["How can an organization move from abundant information to a small number of high-quality decisions—and from those decisions to technologies and companies that endure? BLACK& Research studies that transition across strategy, product architecture, governance and capital."] },
       { title: "Research themes", body: ["The programme connects intelligence company building, decision infrastructure, capital allocation, sovereign AI, European energy systems and AI in infrastructure. Each theme is treated as an operating problem, not as a technology trend." ] },
-      { title: "Published research", body: ["Four professional papers in the Intelligence Infrastructure Series are now available as responsive web publications. Each paper includes methodology, definitions, limitations, references, revision history and a suggested citation."], items: reportDefinitions.map((report) => `Paper ${report.issue} — ${report.title}: ${report.subtitle}`) },
+      { title: "Published research", body: ["Five professional papers in the Intelligence Infrastructure Series are now available as responsive web publications. The fifth publication adds an interactive European energy dashboard. Each paper includes methodology, definitions, limitations, references, revision history and a suggested citation."], items: reportDefinitions.map((report) => `Paper ${report.issue} — ${report.title}: ${report.subtitle}`) },
     ],
     [
       { label: "Research standards", href: "/research/standards" },
@@ -616,9 +616,9 @@ const researchPages: InstitutionalPage[] = [
     "/research/reports",
     "Research / Reports",
     "Published BLACK& Research papers.",
-    "Four public web papers examine sovereign AI infrastructure, AI-native company creation, enterprise information and the architecture of coordinated AI departments.",
+    "Five public web papers examine sovereign AI infrastructure, AI-native company creation, enterprise information, coordinated AI departments and Europe’s energy transition.",
     [
-      { title: "Intelligence Infrastructure Series", body: ["The series connects public evidence with clearly identified BLACK& frameworks. Third-party findings, proprietary interpretation, limitations and revision status remain separated inside every publication."], items: reportDefinitions.map((report) => `Paper ${report.issue} · ${report.title} · ${report.pages} pages · ${report.version}`) },
+      { title: "Intelligence Infrastructure Series", body: ["The series connects public evidence with clearly identified BLACK& frameworks. Third-party findings, proprietary interpretation, limitations and revision status remain separated inside every publication."], items: reportDefinitions.map((report) => `Paper ${report.issue} · ${report.title} · ${report.pages ? `${report.pages} pages` : "Interactive web edition"} · ${report.version}`) },
       { title: "Publication standard", body: ["Every published paper identifies author, preparation support, publication date, version, public classification, methodology, definitions, limitations, references, revision history and legal notice."] },
     ],
     reportDefinitions.map((report) => ({ label: report.title, href: `/research/reports/${report.slug}` })),
