@@ -74,7 +74,7 @@ export function HeroBackground() {
       time += 0.012;
       
       // Clear cu fade trail
-      ctx.fillStyle = "rgba(5, 5, 5, 0.12)";
+      ctx.fillStyle = "rgba(3, 4, 4, 0.12)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       const w = canvas.width;
@@ -95,7 +95,7 @@ export function HeroBackground() {
           
           if (dist < maxDist) {
             const opacity = (1 - dist/maxDist) * 0.1;
-            ctx.strokeStyle = `rgba(0, 240, 255, ${opacity})`;
+            ctx.strokeStyle = `rgba(82, 227, 130, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(x1, y1);
@@ -115,18 +115,18 @@ export function HeroBackground() {
           
           ctx.beginPath();
           ctx.arc(x, y, 12 * pulse, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(0, 240, 255, ${0.04 * pulse})`;
+          ctx.fillStyle = `rgba(82, 227, 130, ${0.04 * pulse})`;
           ctx.fill();
           
           ctx.beginPath();
           ctx.arc(x, y, 6 * pulse, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(0, 240, 255, ${0.15 * pulse})`;
+          ctx.strokeStyle = `rgba(82, 227, 130, ${0.15 * pulse})`;
           ctx.lineWidth = 1;
           ctx.stroke();
           
           ctx.beginPath();
           ctx.arc(x, y, 2.5, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(0, 240, 255, ${0.6 * pulse})`;
+          ctx.fillStyle = `rgba(82, 227, 130, ${0.6 * pulse})`;
           ctx.fill();
         } else {
           ctx.beginPath();
@@ -159,9 +159,9 @@ export function HeroBackground() {
         const ty = y - dy * (trailLength / dist);
         
         const trailGradient = ctx.createLinearGradient(tx, ty, x, y);
-        trailGradient.addColorStop(0, "rgba(255, 45, 85, 0)");
-        trailGradient.addColorStop(0.5, "rgba(255, 45, 85, 0.4)"); // Mai intens
-        trailGradient.addColorStop(1, "rgba(255, 45, 85, 0.95)");
+        trailGradient.addColorStop(0, "rgba(82, 227, 130, 0)");
+        trailGradient.addColorStop(0.5, "rgba(82, 227, 130, 0.3)");
+        trailGradient.addColorStop(1, "rgba(82, 227, 130, 0.85)");
         
         ctx.strokeStyle = trailGradient;
         ctx.lineWidth = 3;
@@ -178,18 +178,18 @@ export function HeroBackground() {
         
         ctx.beginPath();
         ctx.arc(x, y, 3.5, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255, 45, 85, 0.9)";
+        ctx.fillStyle = "rgba(82, 227, 130, 0.9)";
         ctx.fill();
         
         // Glow intens
         ctx.beginPath();
         ctx.arc(x, y, 10, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255, 45, 85, 0.25)";
+        ctx.fillStyle = "rgba(82, 227, 130, 0.2)";
         ctx.fill();
         
         ctx.beginPath();
         ctx.arc(x, y, 18, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255, 45, 85, 0.08)";
+        ctx.fillStyle = "rgba(82, 227, 130, 0.06)";
         ctx.fill();
       }
 
@@ -207,14 +207,14 @@ export function HeroBackground() {
           ctx.font = "300 10px 'IBM Plex Mono', monospace";
           ctx.textAlign = "center";
           
-          ctx.fillStyle = `rgba(255, 45, 85, ${opacity * 0.08})`;
+          ctx.fillStyle = `rgba(255, 255, 255, ${opacity * 0.06})`;
           ctx.fillText(item.text, x + 1, y + 1);
           
-          ctx.fillStyle = `rgba(0, 240, 255, ${opacity * 0.5})`;
+          ctx.fillStyle = `rgba(82, 227, 130, ${opacity * 0.5})`;
           ctx.fillText(item.text, x, y);
           
           const textWidth = ctx.measureText(item.text).width;
-          ctx.fillStyle = `rgba(0, 240, 255, ${opacity * 0.2})`;
+          ctx.fillStyle = `rgba(82, 227, 130, ${opacity * 0.2})`;
           ctx.font = "300 9px 'IBM Plex Mono', monospace";
           ctx.fillText("[", x - textWidth/2 - 6, y);
           ctx.fillText("]", x + textWidth/2 + 6, y);
@@ -223,12 +223,12 @@ export function HeroBackground() {
 
       // Scan line orizontală
       const scanY = (time * 40) % h;
-      ctx.fillStyle = "rgba(0, 240, 255, 0.03)";
+      ctx.fillStyle = "rgba(82, 227, 130, 0.025)";
       ctx.fillRect(0, scanY - 1, w, 2);
 
       // Grid overlay subtil
       const gridSize = 80;
-      ctx.strokeStyle = "rgba(0, 240, 255, 0.01)";
+      ctx.strokeStyle = "rgba(82, 227, 130, 0.01)";
       ctx.lineWidth = 0.5;
       
       for (let x = 0; x < w; x += gridSize) {

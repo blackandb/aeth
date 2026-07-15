@@ -97,7 +97,7 @@ export default function IndustriesPage() {
             >
               <div className="max-w-[500px]">
                 <span className="section-number">
-                  {l.num} // {l.cat}
+                  {l.num}{" // "}{l.cat}
                 </span>
                 <p className="mt-3 text-sm leading-relaxed text-secondary">
                   {l.desc}
@@ -119,7 +119,7 @@ export default function IndustriesPage() {
       <section className="flex flex-col items-center py-24 text-center">
         <div className="eyebrow justify-center">Opportunities</div>
         <h2 className="mt-4 text-[40px] font-bold tracking-[-0.04em]">
-          Let's build the future together.
+          Let&apos;s build the future together.
         </h2>
         <p className="mt-4 max-w-[440px] text-secondary">
           We are open to discussing strategic partnerships, investments, and new

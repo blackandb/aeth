@@ -181,7 +181,7 @@ function CountUp({ end, duration, decimals }: { end: number; duration: number; d
   );
 }
 
-function AnimatedNumber({ value, duration, decimals }: { value: number; duration: number; decimals: number }) {
+function AnimatedNumber({ value, decimals }: { value: number; duration: number; decimals: number }) {
   return <span>{value.toFixed(decimals)}</span>;
 }
 

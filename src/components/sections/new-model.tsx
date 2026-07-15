@@ -39,7 +39,7 @@ export function NewModelSection() {
           <FadeIn key={pillar.title} delay={0.15 * index}>
             <div className="aeth-card">
               <span className="section-number mb-4 block">
-                {pillar.num} // {pillar.title}
+                {pillar.num}{" // "}{pillar.title}
               </span>
               <h3 className="mb-4 text-2xl font-bold">{pillar.title}</h3>
               <p className="leading-relaxed text-secondary">

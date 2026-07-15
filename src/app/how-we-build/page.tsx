@@ -71,7 +71,7 @@ export default function HowWeBuildPage() {
             >
               <div className="max-w-[500px]">
                 <span className="section-number">
-                  {step.num} // {step.cat}
+                  {step.num}{" // "}{step.cat}
                 </span>
                 <h2 className="mt-3 text-2xl font-bold">{step.title}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-secondary">
@@ -102,7 +102,7 @@ export default function HowWeBuildPage() {
           Ready to build with us?
         </h2>
         <p className="mt-4 max-w-[440px] text-secondary">
-          Let's discuss how we can transform your opportunity into a thriving
+          Let&apos;s discuss how we can transform your opportunity into a thriving
           business.
         </p>
         <div className="mt-8">

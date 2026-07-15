@@ -95,7 +95,7 @@ export default function OpportunitiesPage() {
               {/* Coloana 1: Titlu + Descriere */}
               <div className="min-w-0 xl:w-[380px] xl:shrink-0">
                 <span className="section-number">
-                  {String(i + 1).padStart(2, "0")} // {opp.status}
+                  {String(i + 1).padStart(2, "0")}{" // "}{opp.status}
                 </span>
                 <h2 className="mt-3 text-2xl font-bold">{opp.title}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-secondary">

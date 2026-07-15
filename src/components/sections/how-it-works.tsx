@@ -25,7 +25,7 @@ export function HowItWorksSection() {
       <FadeIn delay={0.15} className="mt-16 grid grid-cols-1 gap-px sm:grid-cols-2">
         {steps.map((s) => (
           <div key={s.num} className="aeth-card">
-            <span className="section-number">{s.num} // {s.cat}</span>
+            <span className="section-number">{s.num}{" // "}{s.cat}</span>
             <h3 className="mt-3 text-lg font-bold">{s.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-secondary">{s.desc}</p>
             <div className="mt-4 flex flex-wrap gap-2">

@@ -30,7 +30,7 @@ export function ShiftSection() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-4">
             {pillars.map((p) => (
               <div key={p.num} className="aeth-card">
-                <span className="section-number">{p.num} // {p.cat}</span>
+                <span className="section-number">{p.num}{" // "}{p.cat}</span>
                 <h3 className="mt-3 text-lg font-bold">{p.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-secondary">{p.desc}</p>
               </div>

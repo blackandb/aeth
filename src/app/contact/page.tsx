@@ -39,11 +39,11 @@ export default function ContactPage() {
       <section className="flex min-h-[70vh] flex-col justify-center py-24">
         <div className="eyebrow">Contact</div>
         <h1 className="max-w-[600px] text-[56px] font-bold leading-[0.95] tracking-[-0.04em] max-lg:text-[40px] max-md:text-[32px]">
-          Let's build the future together.
+          Let&apos;s build the future together.
         </h1>
         <p className="mt-6 max-w-[500px] text-lg leading-[1.5] text-secondary">
           We are open to discussing strategic partnerships, investments, and new
-          opportunities. Reach out and let's explore what's possible.
+          opportunities. Reach out and let&apos;s explore what&apos;s possible.
         </p>
       </section>
 
@@ -83,7 +83,7 @@ export default function ContactPage() {
             Send a Message
           </h2>
           <p className="mt-4 text-secondary">
-            Fill out the form below and we'll get back to you within 48 hours.
+            Fill out the form below and we&apos;ll get back to you within 48 hours.
           </p>
 
           <form className="mt-12 space-y-6">

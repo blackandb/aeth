@@ -15,11 +15,11 @@ const metrics = [
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[85vh] items-center">
+    <section className="black-hero relative flex min-h-[85vh] items-center">
       <HeroBackground />
 
-      <div className="relative z-10 flex w-full items-end justify-between gap-12 max-lg:flex-col max-lg:items-start">
-        <div className="max-w-[600px]">
+      <div className="black-hero-layout relative z-10 flex w-full items-end justify-between gap-12 max-lg:flex-col max-lg:items-start">
+        <div className="black-hero-copy max-w-[600px]">
           <FadeIn delay={0}>
             <div className="eyebrow">The Intelligence Company Builder</div>
           </FadeIn>
@@ -64,12 +64,12 @@ export function HeroSection() {
         <FadeIn
           delay={0.4}
           direction="right"
-          className="flex flex-col gap-4 max-lg:mt-12 max-lg:flex-row max-lg:flex-wrap max-lg:gap-6"
+          className="black-hero-metrics flex flex-col gap-4 max-lg:mt-12 max-lg:flex-row max-lg:flex-wrap max-lg:gap-6"
         >
           {metrics.map((m) => (
             <div
               key={m.label}
-              className="border-l border-[rgba(255,255,255,0.1)] pl-4"
+              className="black-metric-card border-l border-[rgba(255,255,255,0.1)] pl-4"
             >
               <span className="block font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary">
                 {m.label}

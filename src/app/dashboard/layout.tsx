@@ -34,7 +34,7 @@ export default function DashboardLayout({
       <div className="flex flex-col items-center justify-center gap-4 p-8 text-center md:hidden">
         <span className="text-xl font-bold">⚙ AETH // DASHBOARD</span>
         <p className="text-sm text-secondary">Dashboard is optimized for desktop. Please open on a larger screen for the full experience.</p>
-        <a href="/" className="btn btn-secondary">← Back to Site</a>
+        <Link href="/" className="btn btn-secondary">← Back to Site</Link>
       </div>
 
       {/* Top HUD bar */}
