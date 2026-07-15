@@ -26,16 +26,16 @@ const protocolLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative z-10 mt-16">
+    <footer className="black-footer relative z-10 mt-16">
       {/* Layer de fundal semi-transparent pentru contrast */}
       <div className="absolute inset-0 bg-bg/80 backdrop-blur-sm -z-10" />
       
       {/* Main footer content */}
-      <div className="border-t border-[rgba(255,255,255,0.12)] pt-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.35fr_auto_auto_auto_auto]">
+      <div className="black-footer-main border-t border-[rgba(255,255,255,0.12)]">
+        <div className="black-footer-grid grid grid-cols-1 md:grid-cols-[1.35fr_auto_auto_auto_auto]">
           {/* Brand column */}
-          <div>
-            <Link href="/" className="brand text-xl text-primary">
+          <div className="black-footer-brand">
+            <Link href="/" className="brand text-primary">
               BLACK&
             </Link>
 
@@ -43,7 +43,7 @@ export function Footer() {
               The Intelligence Company Builder
             </p>
 
-            <p className="mt-3 max-w-[280px] text-sm leading-relaxed text-primary/90">
+            <p className="black-footer-description mt-4 max-w-[360px] leading-relaxed text-primary/90">
               BLACK& develops intelligence technologies, forms and operates companies, and deploys strategic capital across selected industries.
             </p>
 
@@ -132,7 +132,7 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="mt-12 flex flex-col items-center justify-center border-t border-[rgba(255,255,255,0.12)] py-6 md:flex-row md:justify-between">
+      <div className="black-footer-bottom flex flex-col items-center justify-center border-t border-[rgba(255,255,255,0.12)] md:flex-row md:justify-between">
         <div className="font-[var(--font-mono)] text-[10px] uppercase tracking-[0.15em] text-primary font-medium text-center">
           © 2026 BLACK&. All rights reserved.
         </div>

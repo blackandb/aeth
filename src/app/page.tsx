@@ -85,7 +85,7 @@ export default function Home() {
             <div><dt>Governance</dt><dd>Six-person Board</dd></div>
             <div><dt>Portfolio</dt><dd>5 public entities</dd></div>
           </dl>
-          <Link href="/company/facts">Open canonical company facts <span>↗</span></Link>
+          <Link href="/company/facts">Explore company facts <span>↗</span></Link>
         </div>
       </section>
 
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="section-kicker">01 / What BLACK& is</div>
         <div>
           <h2>Intelligence, technology, capital and execution within one operating model.</h2>
-          <p>BLACK& is not presented as a conventional investment firm, venture studio, consultancy or software company. It integrates research, product architecture, company formation, strategic capital, governance and operating execution.</p>
+          <p>BLACK& brings research, product architecture, company formation, strategic capital, governance and operating execution into one connected system for building enduring enterprises.</p>
           <Link href="/model/intelligence-company-building">Read the category definition →</Link>
         </div>
       </section>
@@ -149,9 +149,9 @@ export default function Home() {
         <div>
           <div className="section-kicker">06 / BLACK& Research</div>
           <h2>The Intelligence Company Builder</h2>
-          <p>A flagship research brief defining the category, its operating stages and its differences from venture studios, holding companies, private equity, consultancies and software companies.</p>
-          <div className="research-meta"><span>Framework brief</span><span>Institutional draft</span><span>Updated 15 July 2026</span></div>
-          <Link className="btn btn-primary" href="/research/reports/the-intelligence-company-builder">Open research brief</Link>
+          <p>An operating framework for transforming proprietary understanding into technology, governed companies and long-term assets.</p>
+          <div className="research-meta"><span>BLACK& Research</span><span>Company Building</span><span>15 July 2026</span></div>
+          <Link className="btn btn-primary" href="/research/reports/the-intelligence-company-builder">Read the research</Link>
         </div>
         <div className="research-framework" aria-label="Research framework">
           {["Signal", "Thesis", "Conviction", "System", "Company", "Asset"].map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</div>)}
@@ -160,12 +160,12 @@ export default function Home() {
 
       <section className="authority-block">
         <div className="authority-section-head">
-          <div><div className="section-kicker">07 / Latest developments</div><h2>Official records, not promotional updates.</h2></div>
+          <div><div className="section-kicker">07 / Latest developments</div><h2>Building the BLACK& portfolio.</h2></div>
           <Link href="/newsroom">Open Newsroom →</Link>
         </div>
         <div className="development-list">
-          <div><time>15 JUL 2026</time><span>Institutional platform</span><h3>BLACK& publishes its institutional information architecture and research standards.</h3><Link href="/company/facts">Company facts ↗</Link></div>
-          <div><time>15 JUL 2026</time><span>Research programme</span><h3>Eight flagship research briefs establish the initial BLACK& analytical agenda.</h3><Link href="/research/reports">Research reports ↗</Link></div>
+          <div><time>15 JUL 2026</time><span>Technology portfolio</span><h3>SYSTEM INC AI advances a coordinated model for AI-operated company departments.</h3><Link href="/companies/system-inc-ai">Explore SYSTEM INC AI ↗</Link></div>
+          <div><time>15 JUL 2026</time><span>Strategic intelligence</span><h3>CAESAREA and EEIL extend the portfolio into sovereign and European energy decision infrastructure.</h3><Link href="/technologies">Explore technologies ↗</Link></div>
           <div><time>25 JUN 2026</time><span>Corporate record</span><h3>BLACK HOLDINGS S.R.L., trading as BLACK&, is incorporated in Romania.</h3><Link href="/company/history">History ↗</Link></div>
         </div>
       </section>
@@ -179,7 +179,7 @@ export default function Home() {
         </div>
         <div className="leader-grid">
           {leadership.map((person) => <div key={person.name}><span>{person.initials}</span><h3>{person.name}</h3><p>{person.role}</p></div>)}
-          <div><span>+3</span><h3>BLACK& Board</h3><p>Profiles pending approval</p></div>
+          <div><span>+3</span><h3>BLACK& Board</h3><p>Six members</p></div>
         </div>
       </section>
 

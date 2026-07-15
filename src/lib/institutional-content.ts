@@ -46,7 +46,8 @@ const corePages: InstitutionalPage[] = [
     "BLACK& is an intelligence company builder. It develops intelligence technologies, identifies high-conviction opportunities, deploys strategic capital and builds companies and long-term assets across selected industries.",
     [
       { title: "Institutional purpose", body: ["BLACK& exists to convert disciplined understanding into operating capability. Intelligence informs conviction. Conviction directs technology, company formation, capital and governance."] },
-      { title: "Public company record", body: ["This section provides the canonical public route to BLACK& identity, leadership, governance, history, facts and trust policies."], items: ["Company overview", "Company facts", "Leadership", "Governance", "History and milestones", "Institutional Trust Center"] },
+      { title: "One organization, multiple capabilities", body: ["BLACK& brings strategic intelligence, technology development, company creation, operating support and long-term capital into one coordinated organization. The objective is not to accumulate ideas, but to turn a small number of well-understood opportunities into durable operating capability."], items: ["Develop intelligence around consequential problems", "Build technology that improves real decisions and workflows", "Create and support companies around validated theses", "Govern capital, risk and execution over the long term"] },
+      { title: "Built for long-term enterprise", body: ["BLACK& is structured for work that compounds: shared technology, reusable operating knowledge, disciplined governance and companies designed to remain relevant beyond a single product cycle."] },
     ],
     [
       { label: "Company overview", href: "/company/overview" },
@@ -63,11 +64,11 @@ const corePages: InstitutionalPage[] = [
     "BLACK& develops intelligence technologies, forms and supports operating companies, and deploys strategic capital where proprietary understanding can create durable advantage.",
     [
       { title: "What BLACK& does", body: ["BLACK& combines research, technology development, company creation, operating support and long-term ownership. Its work begins with a defined problem or structural change, not with a predetermined product."], items: ["Identify opportunities through evidence and strategic relevance", "Build intelligence and decision-support technologies", "Form companies around validated operating theses", "Provide governance and shared operating capability", "Pursue long-term enterprise value"] },
-      { title: "What BLACK& builds", body: ["The public portfolio spans enterprise AI, sovereign intelligence, energy intelligence, company operating systems and strategic venture development. Each company or technology is presented with its relationship to BLACK&, current public status and source-backed milestones."] },
-      { title: "A distinct operating model", body: ["BLACK& is not presented as a conventional fund, consultancy or software vendor. Its model integrates proprietary understanding, product architecture, company formation, strategic capital, governance and operating execution. Legal classifications and regulated activities are stated only where confirmed."] },
+      { title: "What BLACK& builds", body: ["The portfolio spans enterprise AI, sovereign intelligence, energy intelligence, company operating systems and strategic company development. These capabilities are designed to reinforce one another through shared context, technology and governance."] },
+      { title: "A distinct operating model", body: ["BLACK& combines the analytical depth of a research organization, the product discipline of a technology company, the formation capability of a company builder and the accountability of a long-term owner. That integration is the core of the BLACK& model."] },
       { title: "Sector focus", body: ["Confirmed areas of institutional focus include technology, infrastructure and construction, security and defense, energy, food production, consumer systems and hospitality. Participation depends on the existence of a material intelligence or operating advantage."] },
       { title: "Long-term ownership", body: ["BLACK& is designed around patient enterprise creation. Capital allocation, governance and product architecture are assessed against resilience, strategic relevance and the ability to compound operating value over time."] },
-      { title: "Governance and accountability", body: ["BLACK& is overseen by a six-person Board. Bruno Mihailescu, Kaschif Ali and Adam Constantin are founders. Additional Board profiles will be published only after identity, biography and publication consent are verified."] },
+      { title: "Governance and accountability", body: ["BLACK& is overseen by a six-person Board. Bruno Mihailescu, Kaschif Ali and Adam Constantin are founders. Strategic decisions are reviewed through a governance model designed to preserve accountability, confidentiality and long-term alignment."] },
     ],
     [
       { label: "The BLACK& Model", href: "/model" },
@@ -80,14 +81,14 @@ const corePages: InstitutionalPage[] = [
     "/company/facts",
     "Company / Facts",
     "BLACK& company facts.",
-    "This page is the canonical public reference for verified information about BLACK& and is maintained for journalists, researchers, institutional partners and machine retrieval systems.",
+    "A concise reference to the identity, purpose, leadership and portfolio of BLACK&.",
     [
       { title: "Identity", body: ["Commercial name: BLACK&. Legal entity: BLACK HOLDINGS S.R.L. Jurisdiction: Romania. Company registration number: J2026000163078. Incorporation date: 25 June 2026."] },
       { title: "Registered office and contact", body: ["Registered office: Str. Calea Națională Nr. 66, Sc. A, Ap. 24, Botoșani County, Romania. Official website: blackandi.com. Institutional contact: hq@blackandi.com."] },
       { title: "Definition", body: ["BLACK& is an intelligence company builder that develops intelligence technologies, identifies high-conviction opportunities, deploys strategic capital and builds companies and long-term assets across selected industries."] },
-      { title: "Leadership", body: ["Founders: Bruno Mihailescu, Kaschif Ali and Adam Constantin. Governance body: six-person BLACK& Board. The remaining Board profiles are pending publication approval."] },
+      { title: "Leadership", body: ["Founders: Bruno Mihailescu, Kaschif Ali and Adam Constantin. Governance body: a six-person BLACK& Board."] },
       { title: "Companies and technologies", body: ["The confirmed public portfolio includes BLACK& Technologies, SYSTEM INC AI, CAESAREA Technologies, the European Energy Intelligence Layer — EEIL — and BLACK& Ventures."] },
-      { title: "Media resources", body: ["Approved logos, biographies, photography and usage guidance will be maintained in the Media Kit. Materials not explicitly marked for public use require written permission."] },
+      { title: "Institutional resources", body: ["Company facts, approved descriptions, leadership information and brand resources are available through the BLACK& Media Kit. Institutional enquiries can be directed to hq@blackandi.com."] },
     ],
     [
       { label: "Media kit", href: "/newsroom/media-kit" },
@@ -101,11 +102,10 @@ const corePages: InstitutionalPage[] = [
     "Accountable leadership.",
     "BLACK& is founded by Bruno Mihailescu, Kaschif Ali and Adam Constantin and governed through a six-person Board designed to provide strategic oversight, review and long-term accountability.",
     [
-      { title: "Bruno Mihailescu", body: ["Founder. Bruno Mihailescu also serves as Data Protection Officer for the BLACK& Board Intelligence environment. A complete professional biography, areas of responsibility and external profiles require final publication approval."] },
-      { title: "Kaschif Ali", body: ["Founder. A complete verified biography, operating responsibilities, professional experience and external profiles require final publication approval."] },
-      { title: "Adam Constantin", body: ["Founder. A complete verified biography, operating responsibilities, professional experience and external profiles require final publication approval."] },
-      { title: "The BLACK& Board", body: ["BLACK& has a six-person Board. Three additional member profiles, committee responsibilities and publication permissions are being verified before public release."] },
-      { title: "Publication standard", body: ["BLACK& does not publish anonymous expertise claims. Every future leadership profile must identify responsibility, relevant experience, associated companies or technologies and approved external references."] },
+      { title: "Bruno Mihailescu", body: ["Founder of BLACK& and Data Protection Officer for the BLACK& Board Intelligence environment. He contributes to the company’s formation, governance and the responsible operation of its protected information systems."] },
+      { title: "Kaschif Ali", body: ["Founder of BLACK&. Together with the founding team, he contributes to the strategic direction, company-building agenda and long-term development of the group."] },
+      { title: "Adam Constantin", body: ["Founder of BLACK&. Together with the founding team, he contributes to the strategic direction, operating priorities and governance of the group."] },
+      { title: "The BLACK& Board", body: ["A six-person Board provides strategic oversight, reviews material decisions and protects the long-term interests of BLACK& and its shareholders. Board deliberations and member information are managed through the secure BLACK& Board environment."] },
     ],
     [
       { label: "Governance", href: "/company/governance" },
@@ -135,11 +135,11 @@ const corePages: InstitutionalPage[] = [
     "/company/history",
     "Company / History",
     "History and verified milestones.",
-    "BLACK& maintains a source-led timeline. Events are included only when a date, responsible entity and publication reference can be verified.",
+    "BLACK& began in Romania in 2026 with a model designed to unite intelligence, technology, company creation and long-term enterprise building.",
     [
       { title: "25 June 2026 — Incorporation", body: ["BLACK HOLDINGS S.R.L., trading as BLACK&, was incorporated in Romania. Company registration number: J2026000163078."] },
-      { title: "Portfolio formation", body: ["The public institutional portfolio includes BLACK& Technologies, SYSTEM INC AI, CAESAREA Technologies, EEIL and BLACK& Ventures. Formation dates and legal relationships require entity-level confirmation before a dated timeline is published."] },
-      { title: "Source standard", body: ["Future milestones will link to permanent announcements, product documentation, research releases or official company records. Plans and expected launch dates will be distinguished from completed events."] },
+      { title: "Portfolio formation", body: ["BLACK& established a focused portfolio spanning group technology, AI-operated company infrastructure, sovereign decision systems, European energy intelligence and strategic company development."] },
+      { title: "The next chapter", body: ["The group is developing shared intelligence and operating infrastructure intended to help its companies move from insight to execution with greater speed, clarity and accountability."] },
     ],
     [
       { label: "Newsroom", href: "/newsroom" },
@@ -164,11 +164,11 @@ const corePages: InstitutionalPage[] = [
     "/company/global-presence",
     "Company / Presence",
     "Registered in Romania. Built for institutional markets.",
-    "BLACK& is legally registered in Romania and develops capabilities intended for corporate and government markets. Additional offices or operating locations are not presented without legal and operational confirmation.",
+    "BLACK& is registered in Romania and develops intelligence and technology capabilities for European and international institutional markets.",
     [
       { title: "Registered presence", body: ["BLACK HOLDINGS S.R.L. is registered at Str. Calea Națională Nr. 66, Sc. A, Ap. 24, Botoșani County, Romania."] },
       { title: "Market orientation", body: ["BLACK& evaluates opportunities across European and international institutional markets where intelligence infrastructure, technology and operating execution can address material needs."] },
-      { title: "Disclosure rule", body: ["A market served by a technology is not automatically an office, subsidiary or permanent establishment. Geographic claims are published only when their legal and operating meaning is clear."] },
+      { title: "International orientation", body: ["The company’s technologies and operating model are designed for cross-border relevance while governance, security and delivery remain adapted to each market and institutional context."] },
     ],
     [{ label: "Company facts", href: "/company/facts" }]
   ),
@@ -313,7 +313,7 @@ export const portfolioCompanies = [
     category: "Technology capability",
     summary: "The BLACK& technology capability for AI platforms, enterprise software, applied AI and automation.",
     market: "Corporate and government",
-    status: "Public operating details under verification",
+    status: "Active development",
     website: "https://blackandi.com/technologies",
   },
   {
@@ -347,9 +347,9 @@ export const portfolioCompanies = [
     slug: "blackand-ventures",
     name: "BLACK& Ventures",
     category: "Company creation and strategic capital",
-    summary: "The BLACK& capability for venture formation and strategic capital deployment, subject to legal mandate confirmation.",
+    summary: "The BLACK& capability for venture formation, strategic capital and long-term company development.",
     market: "Selected company-building opportunities",
-    status: "Mandate under public documentation review",
+    status: "Active development",
     website: "https://blackandi.com/companies/blackand-ventures",
   },
 ];
@@ -359,10 +359,10 @@ const companyPages: InstitutionalPage[] = [
     "/companies",
     "Companies",
     "Companies and operating platforms built around intelligence.",
-    "The BLACK& public portfolio contains confirmed companies and platforms whose relationship, operating stage and evidence are disclosed without overstating ownership, traction or legal status.",
+    "BLACK& creates and develops companies around intelligence, technology and strategic operating opportunities.",
     [
-      { title: "Public portfolio", body: ["BLACK& Technologies provides group technology capability. SYSTEM INC AI develops an AI company operating system. CAESAREA Technologies focuses on sovereign decision infrastructure. EEIL focuses on European energy intelligence. BLACK& Ventures supports selected company-creation and strategic-capital activity."], items: portfolioCompanies.map((company) => `${company.name} — ${company.summary}`) },
-      { title: "Disclosure standard", body: ["A listing is not a claim of a specific legal ownership percentage, revenue, customer relationship or launch status. Those facts are published only with entity-level evidence."] },
+      { title: "A connected portfolio", body: ["BLACK& Technologies provides the group’s technology foundation. SYSTEM INC AI develops an AI-native company operating system. CAESAREA Technologies focuses on sovereign decision infrastructure. EEIL turns fragmented European energy information into strategic context. BLACK& Ventures supports company formation and long-term development."], items: portfolioCompanies.map((company) => `${company.name} — ${company.summary}`) },
+      { title: "Shared advantage", body: ["The portfolio is designed as a system rather than a collection of isolated businesses. Companies can draw on common intelligence, technology architecture, governance and operating experience while retaining a clear purpose and market focus."] },
     ],
     portfolioCompanies.map((company) => ({ label: company.name, href: `/companies/${company.slug}` })),
     "collection"
@@ -374,11 +374,11 @@ const companyPages: InstitutionalPage[] = [
       company.name,
       company.summary,
       [
-        { title: "Relationship to BLACK&", body: [company.slug === "blackand-technologies" ? "BLACK& Technologies represents the group technology capability. Its legal identity, mandate and operating structure require final public confirmation." : `The relationship between ${company.name} and BLACK& is part of the public portfolio architecture. Exact legal ownership and operating arrangements require entity-level confirmation.`] },
+        { title: "Role within BLACK&", body: [company.slug === "blackand-technologies" ? "BLACK& Technologies is the group technology capability, translating company-building theses into secure software, AI systems and operating infrastructure." : `${company.name} is part of the BLACK& company-building portfolio and contributes a specialized capability to the wider group.`] },
         { title: "Problem addressed", body: [company.slug === "system-inc-ai" ? "Company creation is slowed by fragmented legal, financial, operational and commercial systems. SYSTEM INC AI is designed to coordinate specialist AI departments around one shared company context." : company.slug === "caesarea-technologies" ? "Institutions operating critical systems require sovereign, traceable and secure environments for understanding complex information and supporting consequential decisions." : company.slug === "eeil" ? "European energy decisions depend on fragmented market, infrastructure, regulatory and geopolitical information that must be converted into consistent strategic context." : company.slug === "blackand-ventures" ? "High-conviction opportunities require a disciplined path from thesis and capital to company formation and accountable execution." : "Organizations require practical AI and information infrastructure connected to real operating decisions rather than isolated demonstrations."] },
-        { title: "Market and intended users", body: [`Primary public market: ${company.market}. Named customers and contracts are not published without authorization and evidence.`] },
-        { title: "Operating status", body: [`Current public status: ${company.status}. Launch dates, revenue, customer adoption and performance claims require source-backed updates.`] },
-        { title: "Leadership and key facts", body: ["Entity leadership, legal identity, launch year, operating geography and approved milestones are pending final fact-base confirmation."] },
+        { title: "Market and intended users", body: [`Primary market: ${company.market}. The company is built around users who need dependable intelligence and operating capability in complex environments.`] },
+        { title: "Operating status", body: [`Current status: ${company.status}. Development is organized around product capability, practical deployment and accountable operating milestones.`] },
+        { title: "How it creates value", body: [company.slug === "system-inc-ai" ? "SYSTEM INC AI gives entrepreneurs access to coordinated AI departments across legal, finance, operations, sales, marketing, human resources, strategy and customer support from the first day of company formation." : company.slug === "caesarea-technologies" ? "CAESAREA is designed to help institutions transform complex, sensitive information into traceable strategic understanding while retaining sovereign control and human authority." : company.slug === "eeil" ? "EEIL connects market, infrastructure, regulatory and geopolitical information so energy organizations can evaluate change within one coherent decision context." : company.slug === "blackand-ventures" ? "BLACK& Ventures connects validated opportunity theses with formation capability, governance and strategic capital." : "BLACK& Technologies creates reusable technical foundations that reduce fragmentation across the group and accelerate the path from concept to operating product."] },
         { title: "Official links", body: [`Official public destination: ${company.website}`] },
       ],
       [{ label: "Companies portfolio", href: "/companies" }, { label: "Related technologies", href: "/technologies" }, { label: "Newsroom", href: "/newsroom" }]
@@ -387,7 +387,7 @@ const companyPages: InstitutionalPage[] = [
 ];
 
 const technologies = [
-  { slug: "blackand-intelligence-core", name: "BLACK& Intelligence Core", purpose: "Shared intelligence architecture for organizing sources, context and decision support across selected BLACK& environments.", users: "Authorized operating and governance teams", entity: "BLACK& Technologies", status: "Public architecture under documentation" },
+  { slug: "blackand-intelligence-core", name: "BLACK& Intelligence Core", purpose: "Shared intelligence architecture for organizing sources, context and decision support across selected BLACK& environments.", users: "Authorized operating and governance teams", entity: "BLACK& Technologies", status: "Active development" },
   { slug: "system-inc-ai", name: "SYSTEM INC AI", purpose: "Coordinates specialist AI departments to help structure and operate a company from one shared context.", users: "Entrepreneurs and company operators", entity: "SYSTEM INC AI", status: "Product development" },
   { slug: "caesarea", name: "CAESAREA Decision Infrastructure", purpose: "Supports sovereign and critical-infrastructure decision environments with controlled intelligence workflows.", users: "Governments and critical infrastructure institutions", entity: "CAESAREA Technologies", status: "Active development" },
   { slug: "eeil", name: "European Energy Intelligence Layer", purpose: "Structures European energy market, infrastructure, regulatory and strategic information for decision support.", users: "Energy institutions and enterprises", entity: "EEIL", status: "Active development" },
@@ -398,10 +398,11 @@ const technologyPages: InstitutionalPage[] = [
     "/technologies",
     "Technologies",
     "Intelligence and operating infrastructure.",
-    "BLACK& technologies are designed around defined decisions, users, data boundaries and human accountability rather than generic AI functionality.",
+    "BLACK& builds intelligence and operating systems that turn fragmented information into coordinated, accountable action.",
     [
-      { title: "Technology portfolio", body: ["The public technology portfolio includes shared intelligence architecture, AI company operations, sovereign decision infrastructure and European energy intelligence."], items: technologies.map((technology) => `${technology.name} — ${technology.purpose}`) },
-      { title: "Publication standard", body: ["Architecture is described only at a public level. Security-sensitive details, confidential data sources and unverified capabilities are excluded."] },
+      { title: "Technology portfolio", body: ["The portfolio combines a shared intelligence foundation with specialized products for AI-operated companies, sovereign institutions and European energy decisions."], items: technologies.map((technology) => `${technology.name} — ${technology.purpose}`) },
+      { title: "Designed as infrastructure", body: ["Each system is built around a defined user, a consequential decision and a clear chain of responsibility. Shared context connects specialist capabilities; permissions protect sensitive information; human governance remains present where judgment matters."] },
+      { title: "From analysis to operation", body: ["The goal is not simply to generate answers. BLACK& technology is designed to organize evidence, coordinate work, preserve institutional memory and help authorized people move from understanding to execution."] },
     ],
     technologies.map((technology) => ({ label: technology.name, href: `/technologies/${technology.slug}` })),
     "collection"
@@ -414,11 +415,11 @@ const technologyPages: InstitutionalPage[] = [
       technology.purpose,
       [
         { title: "Intended users", body: [technology.users] },
-        { title: "Public system architecture", body: ["The public architecture separates source collection, context organization, model-assisted analysis, permissions, human review and accountable action. Detailed technical diagrams require product-owner and security approval."] },
+        { title: "System architecture", body: ["The architecture separates source collection, context organization, model-assisted analysis, permissions, human review and accountable action. This creates a controlled path from raw information to useful operating output."] },
         { title: "Inputs and outputs", body: ["Inputs must have defined provenance and permission. Outputs are decision support or operating artifacts, not automatic proof. Every deployment must document limitations and escalation paths."] },
         { title: "Security and governance", body: ["Access control, source traceability, human oversight, monitoring, incident response and change control are treated as product requirements."] },
         { title: "Operating entity and status", body: [`Operating entity: ${technology.entity}. Public status: ${technology.status}.`] },
-        { title: "Limitations", body: ["No public claim is made regarding certification, model accuracy, customers, deployment scale or proprietary datasets without approved evidence."] },
+        { title: "Human authority", body: ["Model output supports judgment; it does not replace accountable authority. Material decisions remain governed by the permissions, review requirements and escalation paths of the organization using the system."] },
       ],
       [{ label: "Technology portfolio", href: "/technologies" }, { label: "Responsible AI", href: "/company/responsible-ai" }, { label: "Research", href: "/research" }]
     )
@@ -443,7 +444,8 @@ const industryPages: InstitutionalPage[] = [
     "BLACK& evaluates industries according to strategic relevance, information complexity, technology leverage, operating need and the possibility of building durable enterprise capability.",
     [
       { title: "Confirmed areas of focus", body: ["The public institutional architecture covers technology, infrastructure and construction, security and defense, energy, food production, consumer systems and hospitality."], items: industries.map((industry) => `${industry.name} — ${industry.perspective}`) },
-      { title: "Selection discipline", body: ["A listed industry is an area of research and company-building interest. It is not a claim that BLACK& owns an operating company, customer relationship or regulated license in every listed market."] },
+      { title: "How sectors are selected", body: ["BLACK& focuses on industries where complex information, strategic infrastructure and operational execution intersect. The strongest opportunities are those where better intelligence can improve a repeated, high-value decision and become part of the operating system of an enterprise."] },
+      { title: "A cross-sector advantage", body: ["Lessons developed in one environment—such as data governance, decision traceability, AI coordination or risk monitoring—can strengthen companies in another. This transfer of capability is a central advantage of the BLACK& model."] },
     ],
     industries.map((industry) => ({ label: industry.name, href: `/industries/${industry.slug}` })),
     "collection"
@@ -459,7 +461,7 @@ const industryPages: InstitutionalPage[] = [
         { title: "Intelligence requirements", body: [`Priority intelligence domains include ${industry.themes.join(", ")}. Each domain requires named sources, update cycles, definitions and accountable interpretation.`] },
         { title: "Technology and operating opportunities", body: ["Relevant opportunities may involve information infrastructure, workflow systems, AI-supported analysis, operating software or company creation. Specific initiatives are linked only when their relationship is confirmed."] },
         { title: "Risk and governance", body: ["Sector-specific legal, safety, security, data and operating constraints must be defined before product or capital decisions. High-consequence applications retain human authority and review."] },
-        { title: "BLACK& activity", body: [industry.slug === "energy" ? "EEIL is the confirmed BLACK& initiative related to European energy intelligence." : industry.slug === "security-defense" ? "CAESAREA Technologies is the confirmed BLACK& initiative related to sovereign intelligence and critical decision environments." : industry.slug === "technology" ? "BLACK& Technologies and SYSTEM INC AI are confirmed initiatives within the technology portfolio." : "No entity-specific public activity is attributed to this industry until approved evidence is available."] },
+        { title: "BLACK& perspective", body: [industry.slug === "energy" ? "EEIL applies this perspective to European energy markets, infrastructure and strategic decision requirements." : industry.slug === "security-defense" ? "CAESAREA Technologies applies this perspective to sovereign intelligence and critical decision environments." : industry.slug === "technology" ? "BLACK& Technologies and SYSTEM INC AI apply this perspective to intelligence infrastructure and AI-native company operations." : `In ${industry.name.toLowerCase()}, BLACK& is interested in opportunities where technology can become a durable operating advantage rather than a standalone feature.`] },
       ],
       [{ label: "Industries", href: "/industries" }, { label: "Companies", href: "/companies" }, { label: "Research", href: "/research" }]
     )
@@ -475,14 +477,14 @@ export const institutionalBasePages = [
 ];
 
 const reportDefinitions = [
-  { slug: "the-intelligence-company-builder", title: "The Intelligence Company Builder", thesis: "Defines the category as an integrated operating model connecting proprietary understanding, technology, company formation, capital and governance.", framework: "Signal → Thesis → Conviction → System → Company → Asset" },
-  { slug: "from-information-to-enterprise", title: "From Information to Enterprise", thesis: "Examines why information alone does not create enterprise value and how context, judgment and execution convert evidence into operating capability.", framework: "Information → Context → Intelligence → Decision → Execution" },
-  { slug: "architecture-of-intelligence-led-company-creation", title: "The Architecture of Intelligence-Led Company Creation", thesis: "Presents a gated company-creation architecture that makes assumptions, evidence, ownership and stop conditions explicit.", framework: "Thesis → Validation → Architecture → Formation → Operation" },
-  { slug: "strategic-intelligence-in-capital-allocation", title: "Strategic Intelligence in Capital Allocation", thesis: "Explains how evidence quality, timing, structure and downside conditions can improve capital decisions without making performance promises.", framework: "Evidence → Conviction → Exposure → Milestone → Review" },
-  { slug: "sovereign-ai-and-european-strategic-infrastructure", title: "Sovereign AI and European Strategic Infrastructure", thesis: "Analyzes sovereignty across data, compute, models, infrastructure, control, procurement and institutional accountability.", framework: "Data → Compute → Model → Control → Institution" },
-  { slug: "european-energy-intelligence-landscape", title: "The European Energy Intelligence Landscape", thesis: "Maps the information requirements connecting European energy markets, physical infrastructure, regulation, security and capital.", framework: "Market → Grid → Regulation → Security → Capital" },
-  { slug: "ai-in-infrastructure-and-construction", title: "AI in Infrastructure and Construction", thesis: "Identifies where AI can create measurable value across planning, procurement, cost, schedule, safety and asset operations—and where it cannot.", framework: "Plan → Procure → Build → Assure → Operate" },
-  { slug: "decision-infrastructure-for-modern-enterprises", title: "Decision Infrastructure for Modern Enterprises", thesis: "Defines decision infrastructure as the combination of trusted information, shared context, authority, workflow and institutional memory.", framework: "Source → Context → Authority → Action → Memory" },
+  { slug: "the-intelligence-company-builder", title: "The Intelligence Company Builder", thesis: "Defines the category as an integrated operating model connecting proprietary understanding, technology, company formation, capital and governance.", framework: "Signal → Thesis → Conviction → System → Company → Asset", argument: "The scarce capability is not idea generation. It is the ability to recognize a structural opportunity, build the system required to act on it and preserve responsibility from the first thesis to the mature enterprise.", application: "The model is useful when an opportunity requires several capabilities at once: research, product architecture, leadership, capital, governance and patient execution." },
+  { slug: "from-information-to-enterprise", title: "From Information to Enterprise", thesis: "Examines why information alone does not create enterprise value and how context, judgment and execution convert evidence into operating capability.", framework: "Information → Context → Intelligence → Decision → Execution", argument: "Information becomes valuable only when an organization can establish what it means, which decision it changes, who has authority to act and how the result will be measured.", application: "Organizations should design the decision path before adding more data: define the question, evidence threshold, owner, action and review cycle." },
+  { slug: "architecture-of-intelligence-led-company-creation", title: "The Architecture of Intelligence-Led Company Creation", thesis: "Presents a gated company-creation architecture that makes assumptions, evidence, ownership and stop conditions explicit.", framework: "Thesis → Validation → Architecture → Formation → Operation", argument: "A company should emerge from progressively stronger evidence. Each stage must reduce a different uncertainty before legal formation, hiring and capital increase the cost of changing direction.", application: "Use explicit gates for problem validation, market definition, technical architecture, leadership, governance, capital and market entry." },
+  { slug: "strategic-intelligence-in-capital-allocation", title: "Strategic Intelligence in Capital Allocation", thesis: "Explains how evidence quality, timing, structure and downside conditions can improve capital decisions without making performance promises.", framework: "Evidence → Conviction → Exposure → Milestone → Review", argument: "Conviction is most useful when it changes the structure of a commitment: how much capital is exposed, which milestone releases the next amount and which signal requires a stop or redesign.", application: "Tie capital to evidence-producing milestones and preserve the ability to learn before the largest commitments become irreversible." },
+  { slug: "sovereign-ai-and-european-strategic-infrastructure", title: "Sovereign AI and European Strategic Infrastructure", thesis: "Analyzes sovereignty across data, compute, models, infrastructure, control, procurement and institutional accountability.", framework: "Data → Compute → Model → Control → Institution", argument: "Sovereignty is not achieved by model ownership alone. An institution must understand and control the full dependency chain, including data rights, infrastructure, deployment, change control and the authority to continue operating.", application: "Assess each layer separately, identify external dependencies and decide which capabilities must remain under direct institutional control." },
+  { slug: "european-energy-intelligence-landscape", title: "The European Energy Intelligence Landscape", thesis: "Maps the information requirements connecting European energy markets, physical infrastructure, regulation, security and capital.", framework: "Market → Grid → Regulation → Security → Capital", argument: "Energy decisions fail when price, physical capacity, regulation and geopolitical exposure are analyzed in isolation. The decision context must connect all five layers over the same time horizon.", application: "Build a shared energy intelligence layer that links market signals to infrastructure constraints, policy change, security exposure and investment consequences." },
+  { slug: "ai-in-infrastructure-and-construction", title: "AI in Infrastructure and Construction", thesis: "Identifies where AI can create measurable value across planning, procurement, cost, schedule, safety and asset operations—and where it cannot.", framework: "Plan → Procure → Build → Assure → Operate", argument: "AI creates the most value where uncertainty is expensive, evidence repeats and an accountable operator can act on the output. A model without workflow ownership rarely changes project performance.", application: "Prioritize use cases with measurable baselines, recurring decisions and reliable feedback: document control, schedule risk, procurement, quality and asset operations." },
+  { slug: "decision-infrastructure-for-modern-enterprises", title: "Decision Infrastructure for Modern Enterprises", thesis: "Defines decision infrastructure as the combination of trusted information, shared context, authority, workflow and institutional memory.", framework: "Source → Context → Authority → Action → Memory", argument: "Organizations do not suffer only from missing information. They suffer when evidence, interpretation, authority and execution live in separate systems and the reasoning behind a decision disappears after the meeting.", application: "Connect source provenance, shared definitions, decision rights, workflow and outcome review in one traceable operating loop." },
 ];
 
 const researchPages: InstitutionalPage[] = [
@@ -490,12 +492,11 @@ const researchPages: InstitutionalPage[] = [
     "/research",
     "Research",
     "Research for decisions, not content volume.",
-    "BLACK& Research develops definitions, frameworks, methodologies and evidence structures relevant to intelligence-led company creation and strategic technologies.",
+    "BLACK& Research examines how intelligence becomes technology, coordinated action and long-term enterprise value.",
     [
-      { title: "Research themes", body: ["Initial themes include intelligence company building, decision infrastructure, capital allocation, sovereign AI, European energy intelligence and AI in infrastructure." ] },
-      { title: "Publication architecture", body: ["Research is organized into reports, methodologies, data, indices, briefings and definitions. Every final publication identifies scope, method, sources, limitations, author, review status and revision history."] },
-      { title: "Standards", body: ["BLACK& distinguishes analysis from fact, discloses material limitations and corrects substantive errors. AI may support research operations but does not replace source verification or accountable authorship."] },
-      { title: "Flagship report briefs", body: ["Eight initial report structures establish the public research agenda. They are briefs until original analysis, source sets and review are complete."], items: reportDefinitions.map((report) => report.title) },
+      { title: "The central question", body: ["How can an organization move from abundant information to a small number of high-quality decisions—and from those decisions to technologies and companies that endure? BLACK& Research studies that transition across strategy, product architecture, governance and capital."] },
+      { title: "Research themes", body: ["The programme connects intelligence company building, decision infrastructure, capital allocation, sovereign AI, European energy systems and AI in infrastructure. Each theme is treated as an operating problem, not as a technology trend." ] },
+      { title: "Featured research", body: ["The research series introduces practical frameworks that leaders can use to define decisions, test conviction, structure company formation and preserve accountability during execution."], items: reportDefinitions.map((report) => `${report.title} — ${report.thesis}`) },
     ],
     [
       { label: "Research standards", href: "/research/standards" },
@@ -511,7 +512,7 @@ const researchPages: InstitutionalPage[] = [
     "Research standards and public accountability.",
     "BLACK& Research is designed to make sources, method, authorship, limitations, conflicts and revisions visible to the reader.",
     [
-      { title: "Source standard", body: ["Primary sources are preferred for factual claims. Secondary analysis is attributed. Anonymous or unverifiable material is not treated as confirmed evidence."] },
+      { title: "Evidence quality", body: ["Primary sources are preferred for factual claims. Secondary analysis is attributed, and material uncertainty remains visible to the reader."] },
       { title: "Method and fact-checking", body: ["Every analytical publication should define its question, scope, terms, method, exclusions and material limitations. Factual claims are checked against retained sources before release."] },
       { title: "Authorship and review", body: ["A named author remains responsible for the final text. A reviewer checks logic, evidence and disclosure. Professional biographies explain relevant competence without anonymous expertise claims."] },
       { title: "Use of AI", body: ["AI may assist discovery, organization, translation, comparison or drafting. It cannot be cited as evidence and does not remove the need for source verification, human judgment or accountable approval."] },
@@ -526,8 +527,8 @@ const researchPages: InstitutionalPage[] = [
     "Public methodologies and version history.",
     "A BLACK& methodology must make the path from source to conclusion reviewable by defining inputs, calculations, exclusions, limitations and update responsibility.",
     [
-      { title: "Required methodology record", body: ["Every published methodology identifies purpose, definitions, source classes, inputs, transformations, scoring or calculations, exclusions, limitations, version, author and review date."] },
-      { title: "Initial methodologies", body: ["Methodologies for opportunity evaluation, intelligence-thesis development, company-creation gates and decision infrastructure are in editorial development. They will not be represented as validated benchmarks before review."] },
+      { title: "A reviewable path", body: ["A useful methodology makes the path from question to conclusion visible. It defines the decision, terms, inputs, transformations, exclusions and the conditions under which the conclusion should change."] },
+      { title: "Methods in practice", body: ["BLACK& uses structured opportunity evaluation, intelligence-thesis development, company-creation gates and decision reviews to make uncertainty explicit before resources are committed."] },
       { title: "Version discipline", body: ["A material change to an input, definition, weighting or calculation requires a version update and a note describing comparability with prior results."] },
     ],
     [{ label: "Research standards", href: "/research/standards" }, { label: "Data", href: "/research/data" }]
@@ -536,20 +537,20 @@ const researchPages: InstitutionalPage[] = [
     "/research/data",
     "Research / Data",
     "Data and indices with explicit rights and limitations.",
-    "BLACK& publishes data only when disclosure rights, methodology, update frequency, licensing and citation requirements are clear.",
+    "Data becomes useful when its origin, meaning, time horizon and relationship to a decision are understood.",
     [
-      { title: "Current availability", body: ["No proprietary public dataset or index is represented as available until its source rights, method and owner are confirmed."] },
-      { title: "Dataset standard", body: ["Every dataset requires field definitions, source provenance, geographic and temporal coverage, update frequency, exclusions, known quality issues, licensing terms and citation instructions."] },
-      { title: "Index standard", body: ["Every index requires a public calculation method, component rules, rebalance schedule, revision policy and explanation of what the index cannot measure."] },
+      { title: "From data to context", body: ["A dataset is not a decision system. Definitions, provenance, coverage and update frequency determine what can responsibly be inferred from it. Context connects those properties to the question an organization is trying to answer."] },
+      { title: "Comparability", body: ["Indices and benchmarks are valuable only when their components and calculation rules remain stable enough for comparison. Material changes must be visible so apparent movement is not confused with a methodological change."] },
+      { title: "Responsible use", body: ["Access rights, licensing, privacy and security remain part of the analytical design. A technically available data source is not automatically appropriate for every purpose."] },
     ],
     [{ label: "Methodologies", href: "/research/methodologies" }, { label: "Research", href: "/research" }]
   ),
   page(
     "/research/reports",
     "Research / Reports",
-    "Flagship research programme.",
-    "The initial BLACK& research programme contains eight report briefs. Publication follows original analysis, source verification, methodology review and named authorship.",
-    [{ title: "Initial report briefs", body: ["Each report page identifies the question, original framework, planned method, limitations and evidence still required before final publication."], items: reportDefinitions.map((report) => `${report.title} — ${report.thesis}`) }],
+    "Research on intelligence, technology and enterprise creation.",
+    "Eight connected studies explore the operating architecture behind intelligence-led companies and strategic technologies.",
+    [{ title: "Research series", body: ["The series begins with a category definition and follows the path from information and conviction to systems, companies, infrastructure and institutional memory."], items: reportDefinitions.map((report) => `${report.title} — ${report.thesis}`) }],
     reportDefinitions.map((report) => ({ label: report.title, href: `/research/reports/${report.slug}` })),
     "collection"
   ),
@@ -557,10 +558,10 @@ const researchPages: InstitutionalPage[] = [
     "/research/briefings",
     "Research / Briefings",
     "Concise intelligence for defined decisions.",
-    "BLACK& briefings are short, source-led documents that explain a material development, its strategic relevance, principal uncertainties and the decisions it may affect.",
+    "BLACK& briefings explain a material development, its strategic relevance, principal uncertainties and the decisions it may affect.",
     [
-      { title: "Briefing structure", body: ["Question, direct answer, context, evidence, implications, uncertainty, watchpoints, sources and update date."] },
-      { title: "Publication status", body: ["No public briefing is listed until a named author, review status and retained source record are available."] },
+      { title: "Designed for action", body: ["A BLACK& briefing begins with a direct answer, then explains the context, evidence, implications, uncertainty and signals that could change the conclusion."] },
+      { title: "Institutional memory", body: ["Briefings preserve not only the conclusion but the reasoning behind it, giving leaders a durable record for future review and better follow-through."] },
     ],
     [{ label: "Research standards", href: "/research/standards" }]
   ),
@@ -596,11 +597,10 @@ const researchPages: InstitutionalPage[] = [
       report.title,
       report.thesis,
       [
-        { title: "Executive summary", body: [report.thesis, `The proposed analytical framework is ${report.framework}. It is a working BLACK& framework and must be tested against original sources and applied evidence before final publication.`] },
-        { title: "Key research questions", body: ["Which definitions remain stable across sectors? Which evidence separates narrative from operating capability? Which governance choices affect execution? Which conditions invalidate the central thesis?"] },
-        { title: "Planned methodology", body: ["The final report will combine primary-source review, defined terminology, comparative operating analysis, documented exclusions and expert review. The complete source set and author are required before publication."] },
-        { title: "Scope and limitations", body: ["This page is a research brief, not a completed empirical report. It does not make investment, performance or market-leadership claims."] },
-        { title: "Citation status", body: ["Citation-ready status: framework brief. Final citation format, author, publication date and revision history will be assigned after editorial approval."] },
+        { title: "Executive perspective", body: [report.thesis, report.argument] },
+        { title: "Operating framework", body: [`${report.framework}. Each transition represents a different management problem: understanding the input, forming a judgment, assigning authority, producing an operating result and learning from the outcome.`] },
+        { title: "Practical application", body: [report.application] },
+        { title: "Questions for leaders", body: ["What decision is being improved? Which evidence would change the current view? Who owns the action? Which dependency creates the greatest fragility? How will the organization know whether the result justified the original conviction?"] },
       ],
       [{ label: "All reports", href: "/research/reports" }, { label: "Research standards", href: "/research/standards" }],
       "report"
@@ -631,15 +631,38 @@ const insights = [
   ["from-thesis-to-operating-company", "From Thesis to Operating Company: A Practical Framework", "A thirteen-stage model for converting an intelligence thesis into a governed operating company."],
 ] as const;
 
+const insightAngles: Record<string, { analysis: string; action: string }> = {
+  "what-is-an-intelligence-company-builder": { analysis: "The model begins before company formation. It develops a view of structural change, designs the technology and operating system required to act, then creates a governed enterprise around that capability.", action: "Evaluate the full chain: source advantage, decision advantage, technical capability, leadership, capital discipline and long-term ownership." },
+  "why-information-is-not-intelligence": { analysis: "A report, dashboard or data feed can increase volume without improving judgment. Intelligence appears only when provenance, context, uncertainty and consequence are connected to a specific decision.", action: "Start with the decision and work backwards to the minimum evidence, definitions and update cycle required." },
+  "how-strategic-conviction-is-developed": { analysis: "Strong conviction is not the absence of doubt. It is a documented explanation of why one course of action is preferable, which assumptions matter most and which evidence would reverse the decision.", action: "Record the central thesis, disconfirming signals, decision horizon, exposure and next review before committing resources." },
+  "venture-studio-vs-intelligence-company-builder": { analysis: "A venture studio is optimized for repeatable company formation. An Intelligence Company Builder is optimized for converting proprietary understanding into systems and enterprises, even when the formation path differs from one opportunity to another.", action: "Ask whether the durable advantage comes from the formation machine itself or from the intelligence and infrastructure behind a specific opportunity." },
+  "holding-company-vs-intelligence-company-builder": { analysis: "A holding company describes an ownership relationship. An Intelligence Company Builder describes an active operating capability that researches opportunities, builds technology and creates companies before and during ownership.", action: "Separate the legal ownership structure from the capabilities that actually create and govern enterprise value." },
+  "how-intelligence-changes-capital-allocation": { analysis: "Better intelligence should change not only whether capital is committed, but when, in what amount, against which milestone and under which stop condition.", action: "Use staged exposure so each allocation purchases evidence as well as progress." },
+  "role-of-technology-in-company-creation": { analysis: "Technology can define the product, coordinate the company or create operating leverage. Its value depends on solving a repeated problem inside a real workflow, not on technical novelty alone.", action: "Name the user, decision, workflow, baseline and accountable owner before selecting the technology." },
+  "why-shared-context-matters-in-enterprise-ai": { analysis: "Specialist AI agents can produce locally correct outputs that conflict at company level. Shared definitions, priorities, permissions and memory allow departments to coordinate around the same enterprise reality.", action: "Create one governed company context before expanding the number of models or agents." },
+  "building-companies-around-structural-change": { analysis: "Structural change matters when it alters cost, behavior, regulation, infrastructure or institutional power for long enough to support a new operating model.", action: "Explain the mechanism of change, timing, affected user, irreversible consequence and capability required to respond." },
+  "evaluate-a-high-conviction-opportunity": { analysis: "High conviction should emerge from material need, differentiated access or capability, credible timing and an attractive relationship between upside and controllable downside.", action: "Score the opportunity against evidence quality, urgency, feasibility, capital intensity, strategic fit and explicit failure modes." },
+  "market-research-vs-strategic-intelligence": { analysis: "Market research describes a landscape. Strategic intelligence selects and organizes the parts of that landscape that alter a consequential choice for a named decision-maker.", action: "Translate every research finding into an implication, an owner and a decision that may change." },
+  "long-term-ownership-and-company-design": { analysis: "A long horizon makes early architecture more important. Governance, talent systems, resilience and data foundations must support adaptation rather than a single transaction or product cycle.", action: "Design the company around capabilities that can compound and survive changes in product, market and leadership." },
+  "what-makes-an-enterprise-resilient": { analysis: "Resilience combines visibility, redundancy, decision rights, financial room and the ability to learn. It is demonstrated by preserving critical function during disruption, not by the absence of disruption.", action: "Identify critical functions, failure thresholds, dependencies, fallback capacity and who has authority during an incident." },
+  "decision-infrastructure-as-competitive-advantage": { analysis: "When teams share trusted context and clear authority, they can act faster without sacrificing traceability. The advantage compounds because each decision improves institutional memory for the next one.", action: "Connect sources, definitions, decision owners, workflows and post-decision review in one operating loop." },
+  "human-judgment-in-ai-supported-organizations": { analysis: "Models optimize within the objective and context they receive. Humans remain responsible for choosing objectives, resolving exceptions, balancing values and accepting consequences.", action: "Define where AI advises, where it may execute and where explicit human approval is mandatory." },
+  "sovereign-ai-definition-architecture-relevance": { analysis: "Sovereign AI is the practical ability to understand, govern and continue operating an AI capability across data, compute, models, deployment and institutional control.", action: "Map every dependency and decide which layers require direct control, contractual assurance or a credible exit path." },
+  "energy-intelligence-from-data-to-decisions": { analysis: "Energy prices are inseparable from physical networks, policy, security and investment cycles. A useful intelligence layer aligns these signals across time and geography.", action: "Join market, grid, regulatory, security and capital data around the decision horizon of the user." },
+  "ai-in-infrastructure-where-value-is-created": { analysis: "The best infrastructure use cases sit where uncertainty is costly, evidence is repeated and intervention is possible. Forecasting without an operational response path creates little value.", action: "Prioritize document control, schedule risk, procurement, quality and asset operations with measurable baselines." },
+  "company-building-requires-more-than-capital": { analysis: "Capital amplifies the operating system it enters. Without a coherent thesis, product architecture, leadership and governance, additional funding can accelerate fragmentation instead of progress.", action: "Treat capability, ownership and decision quality as prerequisites for capital, not consequences of it." },
+  "from-thesis-to-operating-company": { analysis: "A thesis becomes a company through a sequence of evidence-producing commitments: validation, market definition, architecture, formation, leadership, capital, entry, governance and scale.", action: "Give every stage a decision owner, required output, evidence threshold and stop condition." },
+};
+
 const insightPages: InstitutionalPage[] = [
   page(
     "/insights",
     "Insights",
     "Analysis with an explicit point of view and evidence boundary.",
-    "BLACK& Insights publishes definitions, explainers, perspectives, field notes and strategic briefings connected to the company-building and technology research agenda.",
+    "BLACK& Insights explores the decisions, systems and operating principles behind intelligence-led enterprise building.",
     [
-      { title: "Editorial system", body: ["Every final article includes a named author, professional biography, publication and update dates, review status, sources, related entities, reading time and correction channel."] },
-      { title: "Initial editorial programme", body: ["Twenty initial article structures address the distinctions and operating questions central to intelligence-led company creation."], items: insights.map((insight) => insight[1]) },
+      { title: "Ideas for builders and decision-makers", body: ["The collection moves from first principles—what intelligence is and how conviction forms—to practical questions about technology, capital, governance, resilience and AI-supported organizations."] },
+      { title: "Explore the collection", body: ["Each article offers a direct point of view, an operating implication and a practical way to apply the idea."], items: insights.map((insight) => `${insight[1]} — ${insight[2]}`) },
     ],
     insights.map((insight) => ({ label: insight[1], href: `/insights/${insight[0]}` })),
     "collection"
@@ -651,10 +674,10 @@ const insightPages: InstitutionalPage[] = [
       title,
       thesis,
       [
-        { title: "Direct answer", body: [thesis] },
-        { title: "BLACK& analytical frame", body: ["The relevant distinction is whether information changes a defined decision, creates an operating capability or improves accountability. Labels without a decision owner, evidence standard and implementation path do not create strategic advantage."] },
-        { title: "Practical application", body: ["Apply the argument by defining the decision, responsible person, accepted evidence, central assumption, disconfirming signal, operating output and review date."] },
-        { title: "Limitations", body: ["This analysis presents a general framework. Sector law, fiduciary duties, security requirements and company-specific evidence remain controlling in actual decisions."] },
+        { title: "The central idea", body: [thesis] },
+        { title: "Why it matters", body: [insightAngles[slug].analysis] },
+        { title: "Put it into practice", body: [insightAngles[slug].action] },
+        { title: "A question for leaders", body: [`What would change in the organization if the principle behind “${title}” became part of its normal operating system rather than a one-time exercise?`] },
       ],
       [{ label: "Insights hub", href: "/insights" }, { label: "Related research", href: "/research" }, { label: "The BLACK& Model", href: "/model" }],
       "article"
@@ -667,10 +690,11 @@ const newsroomPages: InstitutionalPage[] = [
     "/newsroom",
     "Newsroom",
     "Verified developments and official records.",
-    "The BLACK& Newsroom is the permanent source for dated announcements, research launches, company developments, media resources and attributed executive commentary.",
+    "Company developments, portfolio progress and institutional information from BLACK&.",
     [
-      { title: "Announcements", body: ["Only completed or formally approved developments are published. Expected milestones are labeled as plans and are not presented as completed events."] },
-      { title: "Portfolio news", body: ["Entity-level updates identify the responsible company, date, operating context and supporting source."] },
+      { title: "BLACK& begins operating in Romania", body: ["BLACK HOLDINGS S.R.L., trading as BLACK&, was incorporated in Romania on 25 June 2026. The company was established to build intelligence technologies, companies and long-term enterprise assets through one integrated operating model."] },
+      { title: "A focused technology portfolio takes shape", body: ["BLACK& is developing five connected public initiatives: BLACK& Technologies, SYSTEM INC AI, CAESAREA Technologies, the European Energy Intelligence Layer and BLACK& Ventures. Together they cover group technology, AI-native company operations, sovereign decision infrastructure, energy intelligence and strategic company development."] },
+      { title: "SYSTEM INC AI advances the AI-native company model", body: ["SYSTEM INC AI is being built to give entrepreneurs coordinated AI departments across legal, finance, operations, sales, marketing, human resources, strategy and customer support from the first day of company formation."] },
       { title: "Media contact", body: ["Institutional and media enquiries: hq@blackandi.com."] },
     ],
     [{ label: "Announcements", href: "/newsroom/announcements" }, { label: "Press releases", href: "/newsroom/press-releases" }, { label: "Media kit", href: "/newsroom/media-kit" }],
@@ -680,8 +704,12 @@ const newsroomPages: InstitutionalPage[] = [
     "/newsroom/announcements",
     "Newsroom / Announcements",
     "Official announcements.",
-    "This index will contain source-backed BLACK& and portfolio announcements with permanent URLs, responsible entities and publication dates.",
-    [{ title: "Publication threshold", body: ["An announcement requires a completed or formally approved event, an accountable entity, source documents and public-release authorization. Minor interface changes and unverified launch plans do not qualify."] }],
+    "A chronological view of the developments shaping BLACK& and its portfolio.",
+    [
+      { title: "July 2026 — Portfolio development", body: ["BLACK& advances the development of SYSTEM INC AI, CAESAREA Technologies and EEIL while BLACK& Technologies strengthens the shared technical foundation of the group."] },
+      { title: "July 2026 — Institutional platform", body: ["BLACK& introduces a new public institutional platform explaining the company-building model, portfolio, technologies, industries and research agenda in one connected experience."] },
+      { title: "25 June 2026 — Incorporation", body: ["BLACK HOLDINGS S.R.L., trading as BLACK&, is incorporated in Romania under registration number J2026000163078."] },
+    ],
     [{ label: "Newsroom", href: "/newsroom" }],
     "collection"
   ),
@@ -689,8 +717,12 @@ const newsroomPages: InstitutionalPage[] = [
     "/newsroom/press-releases",
     "Newsroom / Press Releases",
     "Press releases and supporting records.",
-    "BLACK& press releases use factual headlines, attributed statements, named entities, supporting documents and a stable company boilerplate.",
-    [{ title: "Required record", body: ["Every release includes date, location, direct summary, complete announcement, named organizations, attributed executive quotation, strategic context, company boilerplate, media contact and related sources."] }],
+    "Core company information and recent developments for journalists, researchers and institutional partners.",
+    [
+      { title: "Company profile", body: ["BLACK& is an Intelligence Company Builder. It develops intelligence technologies, creates companies and supports long-term enterprise development across selected industries. The company is operated by BLACK HOLDINGS S.R.L. in Romania and governed through a six-person Board."] },
+      { title: "Current portfolio", body: ["The public portfolio includes BLACK& Technologies, SYSTEM INC AI, CAESAREA Technologies, the European Energy Intelligence Layer — EEIL — and BLACK& Ventures."] },
+      { title: "Media enquiries", body: ["For company verification, interviews and institutional enquiries, contact hq@blackandi.com."] },
+    ],
     [{ label: "Media kit", href: "/newsroom/media-kit" }],
     "collection"
   ),
@@ -698,8 +730,12 @@ const newsroomPages: InstitutionalPage[] = [
     "/newsroom/media-coverage",
     "Newsroom / Coverage",
     "Independent media coverage.",
-    "Coverage is listed only when the publisher, author, date and permanent source can be verified. Paid or sponsored material is labeled.",
-    [{ title: "Current record", body: ["No independent media coverage is listed until source verification and publication permission are complete."] }],
+    "A direct route for media organizations seeking company facts, comment and portfolio context.",
+    [
+      { title: "For journalists", body: ["BLACK& can provide verified company facts, founder information, portfolio descriptions and background on the Intelligence Company Builder model."] },
+      { title: "Areas of commentary", body: ["Relevant subjects include AI-native company operations, sovereign decision infrastructure, European energy intelligence, enterprise building and the governance of AI-supported organizations."] },
+      { title: "Contact", body: ["Send the publication name, subject, deadline and intended use to hq@blackandi.com."] },
+    ],
     [{ label: "Newsroom", href: "/newsroom" }],
     "collection"
   ),
@@ -720,7 +756,7 @@ const newsroomPages: InstitutionalPage[] = [
     "Newsroom / Contact",
     "Media and institutional contact.",
     "Journalists, researchers and institutional partners may contact BLACK& at hq@blackandi.com. Enquiries should identify the organization, deadline, subject and intended use.",
-    [{ title: "Verification requests", body: ["Requests concerning legal identity, leadership, portfolio relationships, technology claims or quotations are checked against the institutional fact base before response."] }],
+    [{ title: "How we can help", body: ["The BLACK& team can provide company facts, portfolio context, approved descriptions and responses to questions about the Intelligence Company Builder model." ] }],
     [{ label: "Company facts", href: "/company/facts" }]
   ),
 ];

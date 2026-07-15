@@ -85,12 +85,13 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
         <h1>{page.title}</h1>
         <p className="institutional-deck">{page.description}</p>
 
-        <div className="institutional-meta">
-          <span>Official BLACK& source</span>
-          <span>Updated {page.updated}</span>
-          {page.readingTime && <span>{page.readingTime}</span>}
-          <span>Review status: Institutional draft</span>
-        </div>
+        {(page.kind === "article" || page.kind === "report") && (
+          <div className="institutional-meta" aria-label="Publication details">
+            <span>BLACK& Research</span>
+            <span>{page.updated}</span>
+            {page.readingTime && <span>{page.readingTime}</span>}
+          </div>
+        )}
       </header>
 
       <div className="institutional-layout">
@@ -116,14 +117,7 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
               </div>
               <div>
                 <h2>{section.title}</h2>
-                {section.body.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className={paragraph.includes("[FACT REQUIRED") || paragraph.includes("[LEGAL REVIEW") || paragraph.includes("[EVIDENCE REQUIRED") ? "evidence-required" : undefined}
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {section.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                 {section.items && (
                   <ul>
                     {section.items.map((item) => (
@@ -137,33 +131,6 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
         </div>
       </div>
 
-      {page.related && page.related.length > 0 && (
-        <section className="institutional-related" aria-labelledby="related-title">
-          <div>
-            <div className="eyebrow">Continue</div>
-            <h2 id="related-title">Related institutional sources</h2>
-          </div>
-          <div className="institutional-related-grid">
-            {page.related.map((item) => (
-              <Link href={item.href} key={`${item.href}-${item.label}`}>
-                <span>{item.label}</span>
-                <span aria-hidden="true">↗</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      <footer className="institutional-citation">
-        <span>Citation guidance</span>
-        <p>
-          BLACK&, “{page.title},” blackandi.com{page.path}, updated 15 July 2026.
-        </p>
-        <a href="mailto:hq@blackandi.com?subject=BLACK%26%20correction%20request">
-          Request a correction
-        </a>
-      </footer>
     </article>
   );
 }
-
