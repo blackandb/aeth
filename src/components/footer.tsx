@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { LanguageControl } from "@/components/language-control";
 
@@ -13,7 +15,7 @@ export function Footer() {
       <div className="footer-statement"><span>BLACK&</span><h2>Transforming Intelligence<br />Into Enterprise.</h2></div>
       <div className="footer-grid">
         <div className="footer-company"><p>The Intelligence Company Builder.</p><p>We engineer intelligence systems for environments where reliability, security and operational clarity matter.</p></div>
-        {groups.map((group) => <div key={group.title}><h3>{group.title}</h3>{group.links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div>)}
+        {groups.map((group) => <nav key={group.title} aria-label={`${group.title} links`}><h3>{group.title}</h3>{group.links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>)}
       </div>
       <div className="footer-bottom"><span>© 2026 BLACK&</span><span>BLACK HOLDINGS S.R.L. · ROMANIA</span><Link href="/legal/privacy">Privacy</Link><button type="button" onClick={() => window.dispatchEvent(new Event("blackand:manage-consent"))}>Cookie settings</button><LanguageControl /></div>
     </footer>

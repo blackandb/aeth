@@ -21,6 +21,14 @@ export function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
+
   return (
     <nav className="black-nav" aria-label="Primary navigation">
       <div className="black-nav-inner">
@@ -34,20 +42,18 @@ export function Navbar() {
         </div>
         <div className="black-nav-actions">
           <Link href="/contact" className="nav-engage">Engage BLACK& <span aria-hidden="true">↗</span></Link>
-          <button className="menu-trigger" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="mobile-navigation">
+          <button className={`menu-trigger${menuOpen ? " is-open" : ""}`} type="button" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="mobile-navigation">
             <span className="sr-only">{menuOpen ? "Close menu" : "Open menu"}</span>
             <i /><i />
           </button>
         </div>
       </div>
-      {menuOpen && (
-        <div id="mobile-navigation" className="mobile-navigation">
+        <div id="mobile-navigation" className={`mobile-navigation${menuOpen ? " is-open" : ""}`} aria-hidden={!menuOpen}>
           <div className="mobile-nav-label">Navigation / BLACK&</div>
           {navLinks.map((link, index) => <Link onClick={() => setMenuOpen(false)} key={link.href} href={link.href}><span>0{index + 1}</span>{link.label}</Link>)}
           <Link onClick={() => setMenuOpen(false)} href="/industries/government" className="mobile-government"><span>Priority</span>Government & Public Sector</Link>
           <Link onClick={() => setMenuOpen(false)} href="/contact" className="mobile-engage">Engage BLACK& ↗</Link>
         </div>
-      )}
     </nav>
   );
 }
