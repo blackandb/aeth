@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     template: "%s | BLACK&",
   },
   description:
-    "BLACK& develops intelligence technologies, deploys strategic capital and builds companies across sectors where insight creates opportunity and execution creates value.",
+    "BLACK& engineers intelligence systems and builds operating companies for environments where reliability, security and operational clarity matter.",
   metadataBase: new URL("https://blackandi.com"),
   openGraph: {
-    title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
+    title: "BLACK& — The Intelligence Company Builder",
     description:
-      "BLACK& develops intelligence technologies, deploys strategic capital and builds companies.",
+      "Transforming Intelligence Into Enterprise.",
     url: "https://blackandi.com",
     siteName: "BLACK&",
     type: "website",
@@ -43,13 +43,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BLACK& — Built on Intelligence. Driven by Opportunity.",
+    title: "BLACK& — The Intelligence Company Builder",
     description:
-      "BLACK& develops intelligence technologies, deploys strategic capital and builds companies.",
+      "Transforming Intelligence Into Enterprise.",
     images: ["https://blackandi.com/og-image.jpg"],
   },
   alternates: {
     canonical: "https://blackandi.com/",
+    languages: { en: "https://blackandi.com/", ro: "https://blackandi.com/ro", de: "https://blackandi.com/de", fr: "https://blackandi.com/fr" },
   },
   robots: {
     index: true,

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { InstitutionalPage as InstitutionalPageData } from "@/lib/institutional-content";
+import { SubprocessorRegistry } from "@/components/subprocessor-registry";
 
 const organizationId = "https://blackandi.com/#organization";
 
@@ -113,6 +114,8 @@ export function InstitutionalPage({ page }: { page: InstitutionalPageData }) {
           </div>
         )}
       </header>
+
+      {page.path === "/trust/subprocessors" && <SubprocessorRegistry />}
 
       {page.document && (
         <section className="research-document" aria-label="Published research paper">

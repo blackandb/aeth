@@ -1,128 +1,68 @@
-# AETH — Built for the AI Era
+# BLACK& — Institutional Website
 
-[![Deploy with Vercel](https://img.shields.io/badge/Vercel-Live-00F0FF?style=flat&logo=vercel&logoColor=white)](https://aeth-iota.vercel.app)
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat&logo=next.js)](https://nextjs.org)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+The public institutional website for **BLACK&**, an Intelligence Company Builder. The site explains the organization, operating model, portfolio, technologies, industries, governance, research, and opportunity routes through permanent, citation-ready pages.
 
-An intelligent website platform designed for the post-search internet. AETH helps founders build web presences that work simultaneously for human visitors, AI systems, and search engines.
+## Principles
 
-**[Live Demo](https://aeth-iota.vercel.app)** · **[Repository](https://github.com/mksvlbv/aeth)**
+- direct institutional answers before promotional language;
+- verified facts separated from approved positioning and disclosed limitations;
+- permanent canonical routes for search engines, journalists, researchers, and AI retrieval systems;
+- structured entity relationships and JSON-LD;
+- no unsupported performance, ownership, customer, regulatory, or deployment claims;
+- accessible, responsive executive presentation with reduced-motion support.
 
----
+## Main surfaces
 
-## Preview
+| Area | Routes |
+| --- | --- |
+| Company | `/company`, facts, leadership, governance, history, trust, contact |
+| Model | `/model` and the intelligence-to-long-term-ownership process |
+| Companies | `/companies` and individual public portfolio profiles |
+| Technologies | `/technologies`, capability profiles, responsible AI, security, data governance |
+| Industries | `/industries` and seven sector perspectives |
+| Research | `/research`, standards, reports, briefs, and interactive web editions |
+| News and insights | `/newsroom`, `/insights`, and dated institutional developments |
+| Opportunities | `/opportunities` and defined founder, technology, research, capital, and institutional routes |
 
-> Homepage hero with real-time telemetry panel, scroll-triggered animations, and monolith visual.
+Institutional page records live in `src/lib/institutional-content.ts` and render through `src/components/institutional-page.tsx`. Research metadata lives in `src/lib/research-papers.ts`.
 
-![AETH Homepage](https://aeth-iota.vercel.app/opengraph-image)
+## Technology
 
----
+- Next.js 16 App Router and React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion, GSAP, and Lenis
+- Vercel-compatible production output
 
-## Overview
-
-AETH is a full-stack product concept and MVP — a modern SaaS marketing site with a functional dashboard, blog, and 20 production routes. Built to demonstrate frontend engineering, product design, and UI/UX thinking.
-
-## Features
-
-- **20 production routes** — marketing site, dashboard, blog, legal pages, auth
-- **Dashboard HUD** — 3 views (overview, editor, settings) with live clock, widgets, AI assistant panel
-- **Scroll animations** — Framer Motion fade-ins triggered on viewport entry
-- **Responsive** — fully tested at 375px (mobile) and 1440px (desktop)
-- **SEO-ready** — unique `<title>` and `<meta description>` on every page
-- **OG Image** — dynamic Open Graph image for social sharing
-- **Blog with content** — 2 full articles + 4 stub cards with dynamic routing
-- **Dark theme** — custom design system with cyan/red accents, monospace labels
-- **Card micro-interactions** — hover glow, lift, and border transitions
-- **Branded 404** — custom not-found page matching design language
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| **Framework** | Next.js 16 (App Router, React 19) |
-| **Styling** | Tailwind CSS v4 |
-| **Animations** | Framer Motion |
-| **Typography** | Inter + IBM Plex Mono |
-| **Icons** | Lucide React |
-| **Deploy** | Vercel |
-
-## Pages (20 routes)
-
-| Route | Description |
-|-------|-------------|
-| `/` | Homepage — hero, 9 content sections, scroll animations |
-| `/features` | Product architecture — 5-layer system stack |
-| `/how-it-works` | 4-step process with metrics |
-| `/pricing` | 3-tier pricing cards |
-| `/about` | Origin, mission, values |
-| `/blog` | Article grid (6 posts) |
-| `/blog/[slug]` | Dynamic blog posts |
-| `/changelog` | Version history |
-| `/contact` | Book a Demo form |
-| `/login` | Auth screen with demo skip |
-| `/dashboard` | System overview — 7 HUD widgets, live clock |
-| `/dashboard/editor` | Visual block editor + AI assistant |
-| `/dashboard/settings` | Account, config, notifications |
-| `/privacy` | Privacy policy |
-| `/terms` | Terms of service |
-| `404` | Branded not-found page |
-
-## Getting Started
+## Local development
 
 ```bash
-git clone https://github.com/mksvlbv/aeth.git
-cd aeth
-npm install
+git clone <repository-url> blackand-website
+cd blackand-website
+npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open `http://localhost:3000`.
 
-### Production build
+## Verification
 
 ```bash
+npm run lint
 npm run build
-npm start
 ```
 
-## Project Structure
+Before publishing a factual change, update the fact base and claims registry in `docs/`, then ensure the public copy preserves the correct evidence or limitation language.
 
-```
-src/
-├── app/                  # Next.js App Router pages
-│   ├── dashboard/        # Dashboard (overview, editor, settings)
-│   ├── blog/             # Blog + dynamic [slug] posts
-│   ├── contact/          # Book a Demo form
-│   └── ...               # All other routes
-├── components/
-│   ├── sections/         # Homepage sections (hero, shift, benefits, etc.)
-│   ├── navbar.tsx        # Responsive navbar with active states
-│   ├── footer.tsx        # Site footer with links
-│   ├── fade-in.tsx       # Scroll-triggered animation wrapper
-│   └── site-shell.tsx    # Layout shell (navbar + footer)
-```
+## Documentation
 
-## Design Decisions
-
-- **Dark-on-dark palette** — `#050505` bg, `#00F0FF` cyan, `#FF2D55` red — inspired by developer tool aesthetics
-- **Monospace labels** — IBM Plex Mono for system labels and data points, creating a technical/engineering feel
-- **Dashboard as product demo** — HUD-style layout with live clock, real metrics, and AI assistant to demonstrate product depth
-- **Mobile-first responsive** — all marketing pages tested on 375px; dashboard shows "desktop recommended" on mobile
-
-## What I Learned
-
-- Building a complete SaaS product site from concept to deploy
-- Next.js 16 App Router patterns: layouts, dynamic routes, metadata API, OG image generation
-- Tailwind CSS v4 with custom design tokens and `@theme` directive
-- Framer Motion scroll-triggered animations with `whileInView` and viewport detection
-- Responsive design across 14 unique page layouts
-- Git workflow and Vercel CI/CD pipeline
+- `docs/BLACK-INSTITUTIONAL-FACT-BASE.md` — verified facts, approved positioning, and unresolved facts
+- `docs/BLACK-CLAIMS-REGISTRY.md` — claim classification and review status
+- `docs/BLACK-INSTITUTIONAL-DELIVERY.md` — information architecture and publication model
+- `docs/BLACK-MANAGEMENT-QUESTIONNAIRE.md` — outstanding management inputs
+- `BLACK-STYLE-REBUILD.md` — visual-system summary
+- `AI_ARCHITECTURE.md` — implementation architecture and AI-assisted workflow
 
 ## License
 
 [MIT](./LICENSE)
-
-## Author
-
-**Maksym Volobuiev** — [GitHub](https://github.com/mksvlbv)

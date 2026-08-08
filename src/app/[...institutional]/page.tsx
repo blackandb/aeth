@@ -5,12 +5,13 @@ import {
   getInstitutionalPage,
   institutionalPaths,
 } from "@/lib/institutional-content";
+import { corporatePageMap, corporatePaths } from "@/lib/corporate-content";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   const staticRoutes = new Set(["/industries", "/opportunities", "/insights", "/newsroom", "/research"]);
-  return institutionalPaths
+  return [...new Set([...institutionalPaths, ...corporatePaths])]
     .filter((path) => !path.startsWith("/insights/") && !staticRoutes.has(path))
     .map((path) => ({ institutional: path.split("/").filter(Boolean) }));
 }
@@ -22,7 +23,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { institutional } = await params;
   const path = `/${institutional.join("/")}`;
-  const page = getInstitutionalPage(path);
+  const page = corporatePageMap.get(path) ?? getInstitutionalPage(path);
   if (!page) return {};
 
   const canonical = `https://blackandi.com${page.path}`;
@@ -45,7 +46,8 @@ export default async function InstitutionalRoute({
   params: Promise<{ institutional: string[] }>;
 }) {
   const { institutional } = await params;
-  const page = getInstitutionalPage(`/${institutional.join("/")}`);
+  const path = `/${institutional.join("/")}`;
+  const page = corporatePageMap.get(path) ?? getInstitutionalPage(path);
   if (!page) notFound();
   return <InstitutionalPage page={page} />;
 }

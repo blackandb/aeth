@@ -7,7 +7,7 @@ The existing BLACK& website has been reconfigured into the same premium visual l
 ## Visual system
 
 - near-black executive canvas with white typography;
-- BLACK& live green used as a restrained operational accent;
+- restrained silver used as an operational accent;
 - glass panels with fine borders, depth and soft reflections;
 - modern rounded cards and controls;
 - pointer-responsive ambient light;
@@ -32,4 +32,3 @@ No marketing copy, legal copy, page content, routes or SEO structure were remove
 - `npm run lint` — passed;
 - `npm run build` — passed;
 - 19 Next.js routes generated successfully.
-

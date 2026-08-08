@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EngagementBriefForm } from "@/components/engagement-brief-form";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -8,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const routes = [
-  { label: "Build with BLACK&", text: "Submit a company-building or technology opportunity with a defined problem, evidence and requested relationship.", href: "/opportunities/build-with-us" },
+  { label: "Build with BLACK&", text: "Frame a company-building or technology opportunity with a defined problem, evidence and requested relationship.", href: "#engagement-brief" },
   { label: "Institutional partnerships", text: "Discuss a defined collaboration with a corporation, government, institution, researcher or technology provider.", href: "/opportunities/partner-with-us" },
   { label: "Media and research", text: "Request company verification, founder information, research context or approved media resources.", href: "/newsroom/contact" },
-  { label: "Privacy and security", text: "Contact the DPO or report a security concern through the confidential institutional channel.", href: "/company/trust" },
+  { label: "Privacy and security", text: "Raise a privacy or security concern through the official institutional channel.", href: "/trust" },
 ];
 
 export default function ContactPage() {
@@ -35,6 +36,8 @@ export default function ContactPage() {
         <a className="btn btn-primary" href="mailto:hq@blackandi.com">Email BLACK&</a>
       </section>
 
+      <EngagementBriefForm />
+
       <section className="contact-routes">
         {routes.map((route, index) => (
           <Link href={route.href} key={route.href}>
@@ -48,7 +51,7 @@ export default function ContactPage() {
       <section className="contact-note">
         <h2>Before sending confidential information</h2>
         <p>Do not send trade secrets, regulated personal data, classified information or security-sensitive architecture until BLACK& confirms an approved confidentiality and data-handling route.</p>
-        <Link href="/company/trust">Review the Institutional Trust Center →</Link>
+        <Link href="/trust">Review the Trust Center →</Link>
       </section>
     </main>
   );
